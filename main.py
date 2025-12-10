@@ -205,6 +205,14 @@ async def generate_lesson_plan(
 ):
     """Generate a new lesson plan using OpenAI"""
     
+    # Validate grade level (K-8 only)
+    valid_grades = ['K', '1', '2', '3', '4', '5', '6', '7', '8']
+    if request.grade_level not in valid_grades:
+        raise HTTPException(
+            status_code=400,
+            detail="Invalid grade level. Only Kindergarten through 8th grade are supported."
+        )
+    
     # Check organization usage limits
     org = db.query(models.Organization).filter(
         models.Organization.id == current_user.organization_id
@@ -252,7 +260,13 @@ CRITICAL BILINGUAL FORMATTING RULES:
     
     language_instruction = language_instructions.get(request.language, language_instructions["bilingual"])
     
-    prompt = f"""You are an expert K-12 educator specializing in Texas curriculum design with expertise in bilingual education. Generate a comprehensive, standards-aligned lesson plan.
+    # Determine which sections to include based on subject
+    # Math and Language Arts: Full lesson plan with all interventions
+    # Science and Social Studies: Basic lesson plan only
+    is_full_lesson = request.subject.lower() in ['mathematics', 'english language arts']
+    
+    if is_full_lesson:
+        prompt = f"""You are an expert K-8 educator specializing in Texas curriculum design with expertise in bilingual education. Generate a comprehensive, standards-aligned lesson plan.
 
 LANGUAGE REQUIREMENT: {language_instruction}
 
@@ -264,7 +278,7 @@ REQUIREMENTS:
 - Duration: {request.duration} minutes
 - Language Mode: {request.language}
 
-Generate a complete lesson plan with the following sections in JSON format:
+Generate a complete lesson plan with ALL sections in JSON format:
 
 {{
   "lessonTitle": "Engaging title for the lesson (bilingual if applicable)",
@@ -332,6 +346,45 @@ Generate a complete lesson plan with the following sections in JSON format:
     "dataCollection": "Detailed progress monitoring plan",
     "collaborationPlan": "Who to involve (specialists, parents, etc.)",
     "resources": ["Specialized materials and supports"]
+  }}
+}}
+
+Make the content practical, engaging, and directly applicable to {request.grade_level} grade {request.subject}."""
+    else:
+        # Science and Social Studies - Basic lesson plan only
+        prompt = f"""You are an expert K-8 educator specializing in Texas curriculum design with expertise in bilingual education. Generate a comprehensive, standards-aligned lesson plan.
+
+LANGUAGE REQUIREMENT: {language_instruction}
+
+REQUIREMENTS:
+- Grade Level: {request.grade_level}
+- Subject: {request.subject}
+- TEKS Standard: {request.teks_standard}
+- Learning Objective: {request.learning_objective}
+- Duration: {request.duration} minutes
+- Language Mode: {request.language}
+
+Generate a lesson plan with the following sections in JSON format (NO Learning Stations, Small Group, or Tier interventions for {request.subject}):
+
+{{
+  "lessonTitle": "Engaging title for the lesson (bilingual if applicable)",
+  "mainLessonPlan": {{
+    "objective": "Clear, measurable learning objective aligned to TEKS (in requested language)",
+    "materials": ["List of required materials (bilingual format if applicable)"],
+    "anticipatorySet": "Hook/engagement activity (5 min)",
+    "directInstruction": "Step-by-step teaching procedure with teacher actions",
+    "modelingAndChecking": "How to model the concept and check for understanding",
+    "closure": "Summary and reflection activity"
+  }},
+  "guidedPractice": {{
+    "description": "Detailed guided practice activities where teacher provides support",
+    "activities": ["3-4 structured practice activities with teacher guidance"],
+    "differentiationStrategies": ["Support strategies for diverse learners"]
+  }},
+  "independentPractice": {{
+    "description": "Activities students complete with minimal assistance",
+    "activities": ["3-4 independent practice tasks"],
+    "assessmentCriteria": ["How to assess student work"]
   }}
 }}
 
