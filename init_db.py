@@ -25,7 +25,7 @@ def init_db():
         ).first()
         
         if existing_admin:
-            print("❌ Super admin already exists!")
+            print("âŒ Super admin already exists!")
             print(f"   Email: {existing_admin.email}")
             return
         
@@ -42,7 +42,7 @@ def init_db():
         db.commit()
         db.refresh(org)
         
-        print("✅ Created Edu-SmartAI organization")
+        print("âœ… Created Edu-SmartAI organization")
         
         # Create super admin user
         admin_email = input("\nEnter super admin email: ").strip()
@@ -50,7 +50,7 @@ def init_db():
         admin_name = input("Enter super admin full name: ").strip()
         
         if not admin_email or not admin_password or not admin_name:
-            print("❌ All fields are required!")
+            print("âŒ All fields are required!")
             return
         
         admin_user = models.User(
@@ -65,7 +65,7 @@ def init_db():
         db.commit()
         
         print("\n" + "="*50)
-        print("✅ SETUP COMPLETE!")
+        print("âœ… SETUP COMPLETE!")
         print("="*50)
         print(f"Super Admin Email: {admin_email}")
         print(f"Organization ID: {org.id}")
@@ -76,7 +76,7 @@ def init_db():
         print("="*50)
         
     except Exception as e:
-        print(f"❌ Error: {e}")
+        print(f"âŒ Error: {e}")
         db.rollback()
     finally:
         db.close()
@@ -100,7 +100,7 @@ def create_demo_org():
         db.commit()
         db.refresh(demo_org)
         
-        print(f"✅ Created demo organization (ID: {demo_org.id})")
+        print(f"âœ… Created demo organization (ID: {demo_org.id})")
         
         # Create demo teacher
         demo_teacher = models.User(
@@ -114,12 +114,12 @@ def create_demo_org():
         db.add(demo_teacher)
         db.commit()
         
-        print("✅ Created demo teacher")
+        print("âœ… Created demo teacher")
         print(f"   Email: teacher@demo.edu")
         print(f"   Password: demo123")
         
     except Exception as e:
-        print(f"❌ Error creating demo: {e}")
+        print(f"âŒ Error creating demo: {e}")
         db.rollback()
     finally:
         db.close()

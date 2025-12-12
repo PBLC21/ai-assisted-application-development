@@ -25,7 +25,8 @@ from auth import (
 )
 
 # Import TEKS router
-from modules.teks import router as teks_router
+# TEMPORARILY DISABLED - Will re-enable after adding modules folder to GitHub
+# from modules.teks import router as teks_router
 
 # Load environment variables
 load_dotenv()
@@ -53,7 +54,8 @@ app.add_middleware(
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 # Include TEKS router
-app.include_router(teks_router)
+# TEMPORARILY DISABLED - Will re-enable after adding modules folder to GitHub
+# app.include_router(teks_router)
 
 # OAuth2 scheme
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
