@@ -25,8 +25,8 @@ from auth import (
 )
 
 # Import TEKS router
-# TEMPORARILY DISABLED - Will re-enable after adding modules folder to GitHub
-# from modules.teks import router as teks_router
+
+from modules.teks import router as teks_router
 
 # Load environment variables
 load_dotenv()
@@ -54,8 +54,8 @@ app.add_middleware(
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 # Include TEKS router
-# TEMPORARILY DISABLED - Will re-enable after adding modules folder to GitHub
-# app.include_router(teks_router)
+
+app.include_router(teks_router)
 
 # OAuth2 scheme
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
@@ -302,13 +302,13 @@ REQUIREMENTS:
 - Language Mode: {request.language}
 
 {f'''
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-🎯 CRITICAL: TEACHER'S CUSTOM STORY/CONTEXT REQUEST
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”
+ðŸŽ¯ CRITICAL: TEACHER'S CUSTOM STORY/CONTEXT REQUEST
+â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”
 
 {request.teacher_notes}
 
-⚠️ MANDATORY IMPLEMENTATION REQUIREMENTS:
+âš ï¸ MANDATORY IMPLEMENTATION REQUIREMENTS:
 1. CREATE A STORY/CONTEXT that matches the teacher's request above
 2. Write the story at {story_complexity} (age-appropriate for grade {request.grade_level})
 3. INTEGRATE this story throughout the ENTIRE lesson plan:
@@ -328,7 +328,7 @@ Example: If teacher requests "Jorge and Yankel traveling to Buenos Aires", then:
 - Examples: Use Argentine pesos, empanadas, distances between Buenos Aires landmarks
 - All materials reference the characters and location
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”
 ''' if request.teacher_notes else f'''
 GRADE-LEVEL STORY REQUIREMENTS:
 - Create an engaging story appropriate for {story_complexity}
@@ -423,13 +423,13 @@ REQUIREMENTS:
 - Language Mode: {request.language}
 
 {f'''
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-🎯 CRITICAL: TEACHER'S CUSTOM STORY/CONTEXT REQUEST
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”
+ðŸŽ¯ CRITICAL: TEACHER'S CUSTOM STORY/CONTEXT REQUEST
+â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”
 
 {request.teacher_notes}
 
-⚠️ MANDATORY IMPLEMENTATION REQUIREMENTS:
+âš ï¸ MANDATORY IMPLEMENTATION REQUIREMENTS:
 1. CREATE A STORY/CONTEXT that matches the teacher's request above
 2. Write the story at {story_complexity} (age-appropriate for grade {request.grade_level})
 3. INTEGRATE this story throughout ALL sections:
@@ -442,7 +442,7 @@ REQUIREMENTS:
 5. Character names, locations, and situations from the story should appear in EVERY section
 6. Make the story engaging, culturally relevant, and age-appropriate
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”
 ''' if request.teacher_notes else f'''
 GRADE-LEVEL STORY REQUIREMENTS:
 - Create an engaging story appropriate for {story_complexity}
