@@ -273,6 +273,21 @@ CRITICAL BILINGUAL FORMATTING RULES:
     # Science and Social Studies: Basic lesson plan only
     is_full_lesson = request.subject.lower() in ['mathematics', 'english language arts']
     
+    # Determine grade-appropriate story complexity
+    grade_levels = {
+        'K': 'kindergarten level (very simple sentences, 3-5 words per sentence, basic vocabulary)',
+        '1': '1st grade level (simple sentences, 5-8 words per sentence, basic sight words)',
+        '2': '2nd grade level (simple to moderate sentences, 8-12 words per sentence)',
+        '3': '3rd grade level (moderate complexity, 10-15 words per sentence, expanding vocabulary)',
+        '4': '4th grade level (moderate complexity with some complex sentences, varied vocabulary)',
+        '5': '5th grade level (varied sentence complexity, academic vocabulary)',
+        '6': '6th grade level (complex sentences, academic and subject-specific vocabulary)',
+        '7': '7th grade level (sophisticated vocabulary, varied sentence structures)',
+        '8': '8th grade level (advanced vocabulary, complex sentence structures)'
+    }
+    
+    story_complexity = grade_levels.get(request.grade_level, '4th grade level')
+    
     if is_full_lesson:
         prompt = f"""You are an expert K-8 educator specializing in Texas curriculum design with expertise in bilingual education. Generate a comprehensive, standards-aligned lesson plan.
 
@@ -287,11 +302,39 @@ REQUIREMENTS:
 - Language Mode: {request.language}
 
 {f'''
-TEACHER'S CUSTOM INSTRUCTIONS (IMPORTANT - Must be incorporated):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🎯 CRITICAL: TEACHER'S CUSTOM STORY/CONTEXT REQUEST
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 {request.teacher_notes}
 
-Please carefully incorporate these teacher instructions into the lesson plan. Adjust activities, examples, and content to align with these specific requests.
-''' if request.teacher_notes else ''}
+⚠️ MANDATORY IMPLEMENTATION REQUIREMENTS:
+1. CREATE A STORY/CONTEXT that matches the teacher's request above
+2. Write the story at {story_complexity} (age-appropriate for grade {request.grade_level})
+3. INTEGRATE this story throughout the ENTIRE lesson plan:
+   - Use it in the Anticipatory Set (hook students with the story)
+   - Reference it in Direct Instruction (teach concepts through the story)
+   - Apply it in Guided Practice (practice problems using story elements)
+   - Continue it in Independent Practice (students work with story context)
+   - Maintain it in Learning Stations (stations relate to story theme)
+
+4. ALL math problems, examples, and activities MUST use elements from this story
+5. Character names, locations, and situations from the story should appear in EVERY section
+6. Make the story engaging, culturally relevant, and age-appropriate
+
+Example: If teacher requests "Jorge and Yankel traveling to Buenos Aires", then:
+- Math problems: "Jorge bought 3/4 kg of dulce de leche, Yankel bought 1/4 kg..."
+- Activities: "Calculate distances Jorge and Yankel travel in Buenos Aires..."
+- Examples: Use Argentine pesos, empanadas, distances between Buenos Aires landmarks
+- All materials reference the characters and location
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+''' if request.teacher_notes else f'''
+GRADE-LEVEL STORY REQUIREMENTS:
+- Create an engaging story appropriate for {story_complexity}
+- Use age-appropriate vocabulary and sentence structure
+- Include relatable characters and situations for grade {request.grade_level} students
+'''}
 
 Generate a complete lesson plan with ALL sections in JSON format:
 
@@ -380,11 +423,32 @@ REQUIREMENTS:
 - Language Mode: {request.language}
 
 {f'''
-TEACHER'S CUSTOM INSTRUCTIONS (IMPORTANT - Must be incorporated):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🎯 CRITICAL: TEACHER'S CUSTOM STORY/CONTEXT REQUEST
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 {request.teacher_notes}
 
-Please carefully incorporate these teacher instructions into the lesson plan. Adjust activities, examples, and content to align with these specific requests.
-''' if request.teacher_notes else ''}
+⚠️ MANDATORY IMPLEMENTATION REQUIREMENTS:
+1. CREATE A STORY/CONTEXT that matches the teacher's request above
+2. Write the story at {story_complexity} (age-appropriate for grade {request.grade_level})
+3. INTEGRATE this story throughout ALL sections:
+   - Use it in the Anticipatory Set (hook students with the story)
+   - Reference it in Direct Instruction (teach concepts through the story)
+   - Apply it in Guided Practice (practice activities using story elements)
+   - Continue it in Independent Practice (students work with story context)
+
+4. ALL examples and activities MUST use elements from this story
+5. Character names, locations, and situations from the story should appear in EVERY section
+6. Make the story engaging, culturally relevant, and age-appropriate
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+''' if request.teacher_notes else f'''
+GRADE-LEVEL STORY REQUIREMENTS:
+- Create an engaging story appropriate for {story_complexity}
+- Use age-appropriate vocabulary and sentence structure
+- Include relatable characters and situations for grade {request.grade_level} students
+'''}
 
 Generate a lesson plan with the following sections in JSON format (NO Learning Stations, Small Group, or Tier interventions for {request.subject}):
 
