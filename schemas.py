@@ -87,6 +87,7 @@ class LessonPlanRequest(BaseModel):
     learning_objective: str
     duration: int = 45
     language: str = "bilingual"  # english, spanish, bilingual
+    teacher_notes: Optional[str] = None  # Optional custom instructions from teacher
 
 
 class LessonPlanBase(BaseModel):

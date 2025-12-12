@@ -24,6 +24,9 @@ from auth import (
     get_current_active_user
 )
 
+# Import TEKS router
+from modules.teks import router as teks_router
+
 # Load environment variables
 load_dotenv()
 
@@ -48,6 +51,9 @@ app.add_middleware(
 
 # Configure OpenAI
 openai.api_key = os.getenv("OPENAI_API_KEY")
+
+# Include TEKS router
+app.include_router(teks_router)
 
 # OAuth2 scheme
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
@@ -278,6 +284,13 @@ REQUIREMENTS:
 - Duration: {request.duration} minutes
 - Language Mode: {request.language}
 
+{f'''
+TEACHER'S CUSTOM INSTRUCTIONS (IMPORTANT - Must be incorporated):
+{request.teacher_notes}
+
+Please carefully incorporate these teacher instructions into the lesson plan. Adjust activities, examples, and content to align with these specific requests.
+''' if request.teacher_notes else ''}
+
 Generate a complete lesson plan with ALL sections in JSON format:
 
 {{
@@ -363,6 +376,13 @@ REQUIREMENTS:
 - Learning Objective: {request.learning_objective}
 - Duration: {request.duration} minutes
 - Language Mode: {request.language}
+
+{f'''
+TEACHER'S CUSTOM INSTRUCTIONS (IMPORTANT - Must be incorporated):
+{request.teacher_notes}
+
+Please carefully incorporate these teacher instructions into the lesson plan. Adjust activities, examples, and content to align with these specific requests.
+''' if request.teacher_notes else ''}
 
 Generate a lesson plan with the following sections in JSON format (NO Learning Stations, Small Group, or Tier interventions for {request.subject}):
 
