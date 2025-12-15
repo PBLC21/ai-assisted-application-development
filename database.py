@@ -12,12 +12,20 @@ import os
 # Format: postgresql://username:password@host:port/database
 DATABASE_URL = os.getenv(
     "DATABASE_URL",
-    "postgresql://postgres:postgres@localhost:5432/edusmartai"
+    "postgresql://postgres:postgres@localhost:5432/edusmartai?client_encoding=utf8"
 )
 
 # Fix for Railway.app PostgreSQL URLs (they use postgres:// instead of postgresql://)
 if DATABASE_URL.startswith("postgres://"):
     DATABASE_URL = DATABASE_URL.replace("postgres://", "postgresql://", 1)
+
+# Ensure UTF-8 encoding parameter is present
+if "client_encoding" not in DATABASE_URL:
+    # Add UTF-8 encoding parameter
+    if "?" in DATABASE_URL:
+        DATABASE_URL += "&client_encoding=utf8"
+    else:
+        DATABASE_URL += "?client_encoding=utf8"
 
 # Create engine
 engine = create_engine(DATABASE_URL)

@@ -25,7 +25,6 @@ from auth import (
 )
 
 # Import TEKS router
-
 from modules.teks import router as teks_router
 
 # Load environment variables
@@ -41,6 +40,25 @@ app = FastAPI(
     version="1.0.0"
 )
 
+# ==================== UTF-8 JSON RESPONSE CLASS ====================
+from fastapi.responses import JSONResponse
+import json
+
+class UTF8JSONResponse(JSONResponse):
+    """Custom JSON response ensuring UTF-8 encoding"""
+    def render(self, content) -> bytes:
+        return json.dumps(
+            content,
+            ensure_ascii=False,  # CRITICAL: allows Spanish characters
+            allow_nan=False,
+            indent=None,
+            separators=(",", ":"),
+        ).encode("utf-8")
+
+# Set as default response class for all routes
+app.router.default_response_class = UTF8JSONResponse
+# ====================================================================
+
 # Configure CORS
 app.add_middleware(
     CORSMiddleware,
@@ -50,20 +68,32 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# ==================== UTF-8 ENCODING MIDDLEWARE ====================
 @app.middleware("http")
-async def add_utf8_headers(request, call_next):
+async def enforce_utf8_encoding(request, call_next):
+    """
+    Ensures all HTTP responses use UTF-8 encoding.
+    Fixes Spanish character display issues.
+    """
     response = await call_next(request)
-    # Force UTF-8 encoding in all responses
+    
+    # Force UTF-8 encoding for ALL content types
     if "content-type" in response.headers:
         content_type = response.headers["content-type"]
-        if "application/json" in content_type and "charset" not in content_type:
-            response.headers["content-type"] = "application/json; charset=utf-8"
+        # Remove existing charset before adding UTF-8
+        if "charset" in content_type:
+            content_type = content_type.split(";")[0].strip()
+        response.headers["content-type"] = f"{content_type}; charset=utf-8"
+    else:
+        response.headers["content-type"] = "application/json; charset=utf-8"
+    
     return response
+# ====================================================================
+
 # Configure OpenAI
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 # Include TEKS router
-
 app.include_router(teks_router)
 
 # OAuth2 scheme
@@ -311,63 +341,149 @@ REQUIREMENTS:
 - Language Mode: {request.language}
 
 {f'''
-â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”
-ðŸŽ¯ CRITICAL: TEACHER'S CUSTOM STORY/CONTEXT REQUEST
-â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”
+══════════════════════════════════════════════════════════════════════════════
+🎯 CRITICAL: TEACHER'S CUSTOM STORY REQUEST - READ CAREFULLY
+══════════════════════════════════════════════════════════════════════════════
 
+TEACHER'S REQUEST:
 {request.teacher_notes}
 
-⚠️ CRITICAL STORY REQUIREMENTS - FOLLOW ALL STEPS:
+══════════════════════════════════════════════════════════════════════════════
+⚠️ MANDATORY STORY WRITING REQUIREMENTS - YOU MUST FOLLOW THESE EXACTLY ⚠️
+══════════════════════════════════════════════════════════════════════════════
 
-STEP 1: WRITE COMPLETE NARRATIVE STORY (400-600 words)
-Write a FULL narrative story based on the teacher's request above.
-- Length: 400-600 words MINIMUM (this is a complete story, not a summary)
-- Level: {story_complexity} for grade {request.grade_level}
-- Include: Character descriptions, setting, plot (beginning/middle/end), dialogue, emotions
-- Quality: Engaging, culturally relevant, age-appropriate
-- PLACEMENT: This complete story goes in "anticipatorySet" section
+🚨 CRITICAL INSTRUCTION #1: WRITE THE COMPLETE STORY NOW 🚨
 
-STEP 2: USE STORY CHARACTERS IN EVERY PROBLEM
-After writing your story, integrate it throughout ALL sections:
-- Guided Practice: EVERY problem uses story character names (e.g., "Norma and Yesika")
-- Independent Practice: ALL activities continue story context
-- Direct Instruction: Reference story when teaching
-- Learning Stations: Connect each station to story elements
-- Closure: Refer back to story characters and situations
+You must write a COMPLETE, FULL-LENGTH NARRATIVE STORY of 400-600 words in the "anticipatorySet" field.
 
-STEP 3: ENFORCE CONSISTENCY
-- Use EXACT names from teacher request in EVERY section
-- Use EXACT locations from teacher request consistently
-- NO generic problems - ALL must feature your story
-- Check: Every math problem includes character names
+DO NOT:
+❌ Write "[Insert story here]" 
+❌ Write "(Narrative of 400-600 words)"
+❌ Write "The story of [characters]..." (this is just a summary)
+❌ Write a 2-3 sentence summary
+❌ Reference that a story should exist
+❌ Tell me to insert a story later
 
-EXAMPLE - CORRECT STORY INTEGRATION:
+DO:
+✅ Write the ACTUAL complete 400-600 word story RIGHT NOW
+✅ Include full narrative with beginning, middle, and end
+✅ Include character dialogue in quotation marks
+✅ Include sensory details and emotions
+✅ Write at {story_complexity} (age-appropriate for grade {request.grade_level})
 
-If teacher requests: "Norma and Yesika traveling from Honduras to Mexico City"
+🚨 CRITICAL INSTRUCTION #2: STORY FORMAT & STRUCTURE 🚨
 
-Anticipatory Set must include complete story like this:
-"Norma adjusted her purple backpack as she stood with her sister Yesika at the San Pedro Sula bus terminal. The morning sun was just rising over Honduras as the two sisters prepared for their three-day journey to Mexico City.
+Your story MUST include ALL of these elements:
 
-'Are you nervous?' Yesika asked, her voice barely audible over the rumble of bus engines.
+**Opening (100-150 words):**
+- Introduce characters with names, descriptions, and relationships
+- Establish the setting with sensory details (sights, sounds, smells)
+- Set up the situation or goal
 
-Norma smiled and pulled out the envelope their mother had given them. 'A little,' she admitted. 'But Abuela is waiting for us, and we have everything we need.'
+**Middle (200-300 words):**
+- Show characters taking action
+- Include dialogue between characters (use "quotation marks")
+- Describe events with specific details
+- Show character emotions and reactions
+- Build towards a climax or important moment
 
-Inside the envelope were 500 lempiras for food and emergencies. Norma had already calculated that if they spent carefully, they could buy meals at each stop and still have money left over.
+**Ending (100-150 words):**
+- Resolve the situation
+- Show what characters learned or how they changed
+- Provide satisfying conclusion
+- Connect to lesson objective if possible
 
-'Look,' Yesika said, pointing to the large blue bus with 'México' written on its side. 'That's ours!'
+🚨 CRITICAL INSTRUCTION #3: WRITING QUALITY REQUIREMENTS 🚨
 
-As they climbed aboard, Norma noticed the bus driver checking his map. The route would take them through Guatemala, across the Mexican border, and finally to their grandmother's neighborhood in Mexico City - a journey of 2,400 kilometers over three days.
+**Dialogue Requirements:**
+- Include at least 4-6 lines of character dialogue
+- Use proper quotation marks: "I'm excited!" Norma said.
+- Show character personalities through their speech
+- Natural conversations between characters
 
-[CONTINUE with 400-600 word complete narrative about their journey, experiences, challenges, discoveries]"
+**Descriptive Details:**
+- Use specific names (El Cardenal restaurant, NOT "a restaurant")
+- Include sensory details: colors, sounds, smells, textures
+- Show, don't tell: "Norma's hands trembled" NOT "Norma was nervous"
+- Use vivid adjectives appropriate for grade level
 
-Then Guided Practice problems:
-"Problem 1: Norma and Yesika have 500 lempiras for their 3-day trip. If they spend the same amount each day, how much can they spend per day?"
-"Problem 2: On day 1, the sisters' bus travels 800 km. On day 2, it travels 950 km. How many kilometers must they travel on day 3 to reach Mexico City if the total distance is 2,400 km?"
+**Cultural Authenticity:**
+- Use authentic cultural details when relevant
+- Respect cultural context in the teacher's request
+- Include appropriate Spanish words if culturally relevant
+- Make characters feel real and relatable
 
-WRONG - Do NOT do:
-❌ "Students solve word problems" (too generic)
-❌ "Two girls go on a trip" (must use exact names: Norma and Yesika)
-❌ "Calculate travel costs" (must say "Norma and Yesika's travel costs")
+🚨 CRITICAL INSTRUCTION #4: WORD COUNT ENFORCEMENT 🚨
+
+Your story in "anticipatorySet" MUST be 400-600 words of ACTUAL narrative text.
+
+To verify word count:
+- Count every word in your story
+- DO NOT count section headers
+- DO NOT count "Anticipatory Set" label
+- The story text itself must be 400-600 words
+
+If your story is less than 400 words → MAKE IT LONGER
+If your story is more than 600 words → EDIT IT DOWN
+
+🚨 CRITICAL INSTRUCTION #5: INTEGRATION THROUGHOUT LESSON 🚨
+
+After writing your complete story, YOU MUST:
+
+1. **Use character names in EVERY practice problem**
+   - ✅ "Norma and Yesika need to solve..."
+   - ❌ "Two students need to solve..."
+
+2. **Reference story events in examples**
+   - ✅ "Remember when Norma bought tickets? Let's calculate..."
+   - ❌ "Let's calculate ticket prices..."
+
+3. **Maintain story context in all sections:**
+   - Guided Practice: Use story characters and situations
+   - Independent Practice: Continue story scenarios
+   - Learning Stations: Connect activities to story
+   - All interventions: Reference story for engagement
+
+══════════════════════════════════════════════════════════════════════════════
+📝 STORY WRITING EXAMPLE FOR YOUR REFERENCE
+══════════════════════════════════════════════════════════════════════════════
+
+Here is an example of what a COMPLETE story looks like (THIS IS THE FORMAT YOU MUST FOLLOW):
+
+"Norma adjusted her purple backpack as she stood beside her best friend Yesika at the bustling San Pedro Sula bus terminal. The morning sun cast long shadows across the concrete platform, and the air smelled of diesel fuel and fresh tortillas from a nearby vendor.
+
+'Are you ready for this adventure?' Yesika asked, her dark eyes sparkling with excitement. She clutched a small notebook where she'd written down all the places they wanted to visit in Mexico City.
+
+Norma smiled, feeling a mixture of nervousness and anticipation. 'I've never been away from home for three whole days,' she admitted. 'But I can't wait to see the city and eat at El Cardenal. My aunt says it's the best restaurant in all of Mexico!'
+
+The two friends had saved their money for months, earning it by helping their families and neighbors. Now, at last, they were about to board the bus that would take them on a grand adventure to Mexico City.
+
+[...continue with 250 more words showing their journey, arrival, experiences, the restaurant visit with specific details about food and atmosphere, conversations, challenges overcome, and what they learned...]
+
+As the sun set over Mexico City on their last evening, Norma and Yesika sat in their small hotel room, exhausted but happy. They had shared an unforgettable experience that had taught them about friendship, courage, and the joy of exploring new places together."
+
+THIS is a complete story. THIS is what you must write. Not a summary. Not a reference. The ACTUAL COMPLETE STORY.
+
+══════════════════════════════════════════════════════════════════════════════
+✅ FINAL CHECKLIST - VERIFY BEFORE SENDING YOUR RESPONSE
+══════════════════════════════════════════════════════════════════════════════
+
+Before you complete this lesson plan, CHECK:
+
+□ Did I write a complete 400-600 word story in "anticipatorySet"?
+□ Does my story have dialogue with quotation marks?
+□ Does my story have beginning, middle, and end?
+□ Did I use the exact character names from teacher's request?
+□ Did I include the specific locations from teacher's request?
+□ Is my story written at {story_complexity}?
+□ Did I use these characters in guided practice problems?
+□ Did I use these characters in independent practice?
+□ Did I reference the story throughout all sections?
+□ Is my story culturally authentic and respectful?
+
+If you answered NO to any of these → GO BACK AND FIX IT
+
+══════════════════════════════════════════════════════════════════════════════
 
 ''' if request.teacher_notes else f'''
 GRADE-LEVEL STORY REQUIREMENTS:
@@ -463,26 +579,149 @@ REQUIREMENTS:
 - Language Mode: {request.language}
 
 {f'''
-â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”
-ðŸŽ¯ CRITICAL: TEACHER'S CUSTOM STORY/CONTEXT REQUEST
-â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”
+══════════════════════════════════════════════════════════════════════════════
+🎯 CRITICAL: TEACHER'S CUSTOM STORY REQUEST - READ CAREFULLY
+══════════════════════════════════════════════════════════════════════════════
 
+TEACHER'S REQUEST:
 {request.teacher_notes}
 
-âš ï¸ MANDATORY IMPLEMENTATION REQUIREMENTS:
-1. CREATE A STORY/CONTEXT that matches the teacher's request above
-2. Write the story at {story_complexity} (age-appropriate for grade {request.grade_level})
-3. INTEGRATE this story throughout ALL sections:
-   - Use it in the Anticipatory Set (hook students with the story)
-   - Reference it in Direct Instruction (teach concepts through the story)
-   - Apply it in Guided Practice (practice activities using story elements)
-   - Continue it in Independent Practice (students work with story context)
+══════════════════════════════════════════════════════════════════════════════
+⚠️ MANDATORY STORY WRITING REQUIREMENTS - YOU MUST FOLLOW THESE EXACTLY ⚠️
+══════════════════════════════════════════════════════════════════════════════
 
-4. ALL examples and activities MUST use elements from this story
-5. Character names, locations, and situations from the story should appear in EVERY section
-6. Make the story engaging, culturally relevant, and age-appropriate
+🚨 CRITICAL INSTRUCTION #1: WRITE THE COMPLETE STORY NOW 🚨
 
-â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”
+You must write a COMPLETE, FULL-LENGTH NARRATIVE STORY of 400-600 words in the "anticipatorySet" field.
+
+DO NOT:
+❌ Write "[Insert story here]" 
+❌ Write "(Narrative of 400-600 words)"
+❌ Write "The story of [characters]..." (this is just a summary)
+❌ Write a 2-3 sentence summary
+❌ Reference that a story should exist
+❌ Tell me to insert a story later
+
+DO:
+✅ Write the ACTUAL complete 400-600 word story RIGHT NOW
+✅ Include full narrative with beginning, middle, and end
+✅ Include character dialogue in quotation marks
+✅ Include sensory details and emotions
+✅ Write at {story_complexity} (age-appropriate for grade {request.grade_level})
+
+🚨 CRITICAL INSTRUCTION #2: STORY FORMAT & STRUCTURE 🚨
+
+Your story MUST include ALL of these elements:
+
+**Opening (100-150 words):**
+- Introduce characters with names, descriptions, and relationships
+- Establish the setting with sensory details (sights, sounds, smells)
+- Set up the situation or goal
+
+**Middle (200-300 words):**
+- Show characters taking action
+- Include dialogue between characters (use "quotation marks")
+- Describe events with specific details
+- Show character emotions and reactions
+- Build towards a climax or important moment
+
+**Ending (100-150 words):**
+- Resolve the situation
+- Show what characters learned or how they changed
+- Provide satisfying conclusion
+- Connect to lesson objective if possible
+
+🚨 CRITICAL INSTRUCTION #3: WRITING QUALITY REQUIREMENTS 🚨
+
+**Dialogue Requirements:**
+- Include at least 4-6 lines of character dialogue
+- Use proper quotation marks: "I'm excited!" Norma said.
+- Show character personalities through their speech
+- Natural conversations between characters
+
+**Descriptive Details:**
+- Use specific names (El Cardenal restaurant, NOT "a restaurant")
+- Include sensory details: colors, sounds, smells, textures
+- Show, don't tell: "Norma's hands trembled" NOT "Norma was nervous"
+- Use vivid adjectives appropriate for grade level
+
+**Cultural Authenticity:**
+- Use authentic cultural details when relevant
+- Respect cultural context in the teacher's request
+- Include appropriate Spanish words if culturally relevant
+- Make characters feel real and relatable
+
+🚨 CRITICAL INSTRUCTION #4: WORD COUNT ENFORCEMENT 🚨
+
+Your story in "anticipatorySet" MUST be 400-600 words of ACTUAL narrative text.
+
+To verify word count:
+- Count every word in your story
+- DO NOT count section headers
+- DO NOT count "Anticipatory Set" label
+- The story text itself must be 400-600 words
+
+If your story is less than 400 words → MAKE IT LONGER
+If your story is more than 600 words → EDIT IT DOWN
+
+🚨 CRITICAL INSTRUCTION #5: INTEGRATION THROUGHOUT LESSON 🚨
+
+After writing your complete story, YOU MUST:
+
+1. **Use character names in EVERY practice problem**
+   - ✅ "Norma and Yesika need to solve..."
+   - ❌ "Two students need to solve..."
+
+2. **Reference story events in examples**
+   - ✅ "Remember when Norma bought tickets? Let's calculate..."
+   - ❌ "Let's calculate ticket prices..."
+
+3. **Maintain story context in all sections:**
+   - Guided Practice: Use story characters and situations
+   - Independent Practice: Continue story scenarios
+   - All sections: Reference story for engagement
+
+══════════════════════════════════════════════════════════════════════════════
+📝 STORY WRITING EXAMPLE FOR YOUR REFERENCE
+══════════════════════════════════════════════════════════════════════════════
+
+Here is an example of what a COMPLETE story looks like (THIS IS THE FORMAT YOU MUST FOLLOW):
+
+"Norma adjusted her purple backpack as she stood beside her best friend Yesika at the bustling San Pedro Sula bus terminal. The morning sun cast long shadows across the concrete platform, and the air smelled of diesel fuel and fresh tortillas from a nearby vendor.
+
+'Are you ready for this adventure?' Yesika asked, her dark eyes sparkling with excitement. She clutched a small notebook where she'd written down all the places they wanted to visit in Mexico City.
+
+Norma smiled, feeling a mixture of nervousness and anticipation. 'I've never been away from home for three whole days,' she admitted. 'But I can't wait to see the city and eat at El Cardenal. My aunt says it's the best restaurant in all of Mexico!'
+
+The two friends had saved their money for months, earning it by helping their families and neighbors. Now, at last, they were about to board the bus that would take them on a grand adventure to Mexico City.
+
+[...continue with 250 more words showing their journey, arrival, experiences, the restaurant visit with specific details about food and atmosphere, conversations, challenges overcome, and what they learned...]
+
+As the sun set over Mexico City on their last evening, Norma and Yesika sat in their small hotel room, exhausted but happy. They had shared an unforgettable experience that had taught them about friendship, courage, and the joy of exploring new places together."
+
+THIS is a complete story. THIS is what you must write. Not a summary. Not a reference. The ACTUAL COMPLETE STORY.
+
+══════════════════════════════════════════════════════════════════════════════
+✅ FINAL CHECKLIST - VERIFY BEFORE SENDING YOUR RESPONSE
+══════════════════════════════════════════════════════════════════════════════
+
+Before you complete this lesson plan, CHECK:
+
+□ Did I write a complete 400-600 word story in "anticipatorySet"?
+□ Does my story have dialogue with quotation marks?
+□ Does my story have beginning, middle, and end?
+□ Did I use the exact character names from teacher's request?
+□ Did I include the specific locations from teacher's request?
+□ Is my story written at {story_complexity}?
+□ Did I use these characters in guided practice problems?
+□ Did I use these characters in independent practice?
+□ Did I reference the story throughout all sections?
+□ Is my story culturally authentic and respectful?
+
+If you answered NO to any of these → GO BACK AND FIX IT
+
+══════════════════════════════════════════════════════════════════════════════
+
 ''' if request.teacher_notes else f'''
 GRADE-LEVEL STORY REQUIREMENTS:
 - Create an engaging story appropriate for {story_complexity}
@@ -540,7 +779,6 @@ Make the content practical, engaging, and directly applicable to {request.grade_
         content = content.replace("```json\n", "").replace("```\n", "").replace("```", "").strip()
         
         # Parse JSON
-        import json
         lesson_content = json.loads(content)
         
         # Save to database
