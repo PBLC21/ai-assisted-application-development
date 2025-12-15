@@ -50,6 +50,15 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.middleware("http")
+async def add_utf8_headers(request, call_next):
+    response = await call_next(request)
+    # Force UTF-8 encoding in all responses
+    if "content-type" in response.headers:
+        content_type = response.headers["content-type"]
+        if "application/json" in content_type and "charset" not in content_type:
+            response.headers["content-type"] = "application/json; charset=utf-8"
+    return response
 # Configure OpenAI
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
@@ -308,27 +317,58 @@ REQUIREMENTS:
 
 {request.teacher_notes}
 
-âš ï¸ MANDATORY IMPLEMENTATION REQUIREMENTS:
-1. CREATE A STORY/CONTEXT that matches the teacher's request above
-2. Write the story at {story_complexity} (age-appropriate for grade {request.grade_level})
-3. INTEGRATE this story throughout the ENTIRE lesson plan:
-   - Use it in the Anticipatory Set (hook students with the story)
-   - Reference it in Direct Instruction (teach concepts through the story)
-   - Apply it in Guided Practice (practice problems using story elements)
-   - Continue it in Independent Practice (students work with story context)
-   - Maintain it in Learning Stations (stations relate to story theme)
+⚠️ CRITICAL STORY REQUIREMENTS - FOLLOW ALL STEPS:
 
-4. ALL math problems, examples, and activities MUST use elements from this story
-5. Character names, locations, and situations from the story should appear in EVERY section
-6. Make the story engaging, culturally relevant, and age-appropriate
+STEP 1: WRITE COMPLETE NARRATIVE STORY (400-600 words)
+Write a FULL narrative story based on the teacher's request above.
+- Length: 400-600 words MINIMUM (this is a complete story, not a summary)
+- Level: {story_complexity} for grade {request.grade_level}
+- Include: Character descriptions, setting, plot (beginning/middle/end), dialogue, emotions
+- Quality: Engaging, culturally relevant, age-appropriate
+- PLACEMENT: This complete story goes in "anticipatorySet" section
 
-Example: If teacher requests "Jorge and Yankel traveling to Buenos Aires", then:
-- Math problems: "Jorge bought 3/4 kg of dulce de leche, Yankel bought 1/4 kg..."
-- Activities: "Calculate distances Jorge and Yankel travel in Buenos Aires..."
-- Examples: Use Argentine pesos, empanadas, distances between Buenos Aires landmarks
-- All materials reference the characters and location
+STEP 2: USE STORY CHARACTERS IN EVERY PROBLEM
+After writing your story, integrate it throughout ALL sections:
+- Guided Practice: EVERY problem uses story character names (e.g., "Norma and Yesika")
+- Independent Practice: ALL activities continue story context
+- Direct Instruction: Reference story when teaching
+- Learning Stations: Connect each station to story elements
+- Closure: Refer back to story characters and situations
 
-â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”
+STEP 3: ENFORCE CONSISTENCY
+- Use EXACT names from teacher request in EVERY section
+- Use EXACT locations from teacher request consistently
+- NO generic problems - ALL must feature your story
+- Check: Every math problem includes character names
+
+EXAMPLE - CORRECT STORY INTEGRATION:
+
+If teacher requests: "Norma and Yesika traveling from Honduras to Mexico City"
+
+Anticipatory Set must include complete story like this:
+"Norma adjusted her purple backpack as she stood with her sister Yesika at the San Pedro Sula bus terminal. The morning sun was just rising over Honduras as the two sisters prepared for their three-day journey to Mexico City.
+
+'Are you nervous?' Yesika asked, her voice barely audible over the rumble of bus engines.
+
+Norma smiled and pulled out the envelope their mother had given them. 'A little,' she admitted. 'But Abuela is waiting for us, and we have everything we need.'
+
+Inside the envelope were 500 lempiras for food and emergencies. Norma had already calculated that if they spent carefully, they could buy meals at each stop and still have money left over.
+
+'Look,' Yesika said, pointing to the large blue bus with 'México' written on its side. 'That's ours!'
+
+As they climbed aboard, Norma noticed the bus driver checking his map. The route would take them through Guatemala, across the Mexican border, and finally to their grandmother's neighborhood in Mexico City - a journey of 2,400 kilometers over three days.
+
+[CONTINUE with 400-600 word complete narrative about their journey, experiences, challenges, discoveries]"
+
+Then Guided Practice problems:
+"Problem 1: Norma and Yesika have 500 lempiras for their 3-day trip. If they spend the same amount each day, how much can they spend per day?"
+"Problem 2: On day 1, the sisters' bus travels 800 km. On day 2, it travels 950 km. How many kilometers must they travel on day 3 to reach Mexico City if the total distance is 2,400 km?"
+
+WRONG - Do NOT do:
+❌ "Students solve word problems" (too generic)
+❌ "Two girls go on a trip" (must use exact names: Norma and Yesika)
+❌ "Calculate travel costs" (must say "Norma and Yesika's travel costs")
+
 ''' if request.teacher_notes else f'''
 GRADE-LEVEL STORY REQUIREMENTS:
 - Create an engaging story appropriate for {story_complexity}
