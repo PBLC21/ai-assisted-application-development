@@ -4,7 +4,7 @@ Request and response models for API validation
 """
 
 from pydantic import BaseModel, EmailStr
-from typing import Optional, Dict, Any
+from typing import Optional, Dict, Any, List
 from datetime import datetime
 
 
@@ -83,11 +83,20 @@ class OrganizationUsage(BaseModel):
 class LessonPlanRequest(BaseModel):
     grade_level: str
     subject: str
-    teks_standard: Optional[str] = None
+    teks_standard: str  # Now REQUIRED (not Optional)
     learning_objective: str
     duration: int = 45
     language: str = "bilingual"  # english, spanish, bilingual
     teacher_notes: Optional[str] = None  # Optional custom instructions from teacher
+    
+    # NEW: Section selection (teacher can choose which sections to generate)
+    include_main_lesson: bool = True
+    include_guided_practice: bool = True
+    include_independent_practice: bool = True
+    include_learning_stations: bool = False  # Optional for Math/ELA only
+    include_small_group: bool = False  # Optional for Math/ELA only
+    include_tier2: bool = False  # Optional for Math/ELA only
+    include_tier3: bool = False  # Optional for Math/ELA only
 
 
 class LessonPlanBase(BaseModel):

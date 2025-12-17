@@ -1,6 +1,7 @@
 """
 Edu-SmartAI Lesson Plan Generator - Backend API
 FastAPI server with secure OpenAI integration and multi-tenant support
+VERSION 2.0 - GPT-4 Turbo with Dynamic Section Selection
 """
 
 from fastapi import FastAPI, Depends, HTTPException, status
@@ -37,7 +38,7 @@ models.Base.metadata.create_all(bind=engine)
 app = FastAPI(
     title="Edu-SmartAI API",
     description="AI-Powered Lesson Plan Generator for K-12 Education",
-    version="1.0.0"
+    version="2.0.0"
 )
 
 # ==================== UTF-8 JSON RESPONSE CLASS ====================
@@ -250,7 +251,31 @@ async def generate_lesson_plan(
     db: Session = Depends(get_db),
     current_user: models.User = Depends(get_current_active_user)
 ):
-    """Generate a new lesson plan using OpenAI"""
+    """Generate a new lesson plan using OpenAI GPT-4 Turbo"""
+    
+    # ==================== NEW: VALIDATION ====================
+    # Validate TEKS standard is provided (now required)
+    if not request.teks_standard or request.teks_standard.strip() == "":
+        raise HTTPException(
+            status_code=400,
+            detail="TEKS standard is required. Please select a TEKS standard."
+        )
+    
+    # Validate at least one section is selected
+    if not any([
+        request.include_main_lesson,
+        request.include_guided_practice,
+        request.include_independent_practice,
+        request.include_learning_stations,
+        request.include_small_group,
+        request.include_tier2,
+        request.include_tier3
+    ]):
+        raise HTTPException(
+            status_code=400,
+            detail="At least one lesson plan section must be selected."
+        )
+    # =========================================================
     
     # Validate grade level (K-8 only)
     valid_grades = ['K', '1', '2', '3', '4', '5', '6', '7', '8']
@@ -307,11 +332,6 @@ CRITICAL BILINGUAL FORMATTING RULES:
     
     language_instruction = language_instructions.get(request.language, language_instructions["bilingual"])
     
-    # Determine which sections to include based on subject
-    # Math and Language Arts: Full lesson plan with all interventions
-    # Science and Social Studies: Basic lesson plan only
-    is_full_lesson = request.subject.lower() in ['mathematics', 'english language arts']
-    
     # Determine grade-appropriate story complexity
     grade_levels = {
         'K': 'kindergarten level (very simple sentences, 3-5 words per sentence, basic vocabulary)',
@@ -327,232 +347,91 @@ CRITICAL BILINGUAL FORMATTING RULES:
     
     story_complexity = grade_levels.get(request.grade_level, '4th grade level')
     
-    if is_full_lesson:
-        prompt = f"""You are an expert K-8 educator specializing in Texas curriculum design with expertise in bilingual education. Generate a comprehensive, standards-aligned lesson plan.
-
-LANGUAGE REQUIREMENT: {language_instruction}
-
-REQUIREMENTS:
-- Grade Level: {request.grade_level}
-- Subject: {request.subject}
-- TEKS Standard: {request.teks_standard}
-- Learning Objective: {request.learning_objective}
-- Duration: {request.duration} minutes
-- Language Mode: {request.language}
-
-{f'''
-══════════════════════════════════════════════════════════════════════════════
-🎯 CRITICAL: TEACHER'S CUSTOM STORY REQUEST - READ CAREFULLY
-══════════════════════════════════════════════════════════════════════════════
-
-TEACHER'S REQUEST:
-{request.teacher_notes}
-
-══════════════════════════════════════════════════════════════════════════════
-⚠️ MANDATORY STORY WRITING REQUIREMENTS - YOU MUST FOLLOW THESE EXACTLY ⚠️
-══════════════════════════════════════════════════════════════════════════════
-
-🚨 CRITICAL INSTRUCTION #1: WRITE THE COMPLETE STORY NOW 🚨
-
-You must write a COMPLETE, FULL-LENGTH NARRATIVE STORY of 400-600 words in the "anticipatorySet" field.
-
-DO NOT:
-❌ Write "[Insert story here]" 
-❌ Write "(Narrative of 400-600 words)"
-❌ Write "The story of [characters]..." (this is just a summary)
-❌ Write a 2-3 sentence summary
-❌ Reference that a story should exist
-❌ Tell me to insert a story later
-
-DO:
-✅ Write the ACTUAL complete 400-600 word story RIGHT NOW
-✅ Include full narrative with beginning, middle, and end
-✅ Include character dialogue in quotation marks
-✅ Include sensory details and emotions
-✅ Write at {story_complexity} (age-appropriate for grade {request.grade_level})
-
-🚨 CRITICAL INSTRUCTION #2: STORY FORMAT & STRUCTURE 🚨
-
-Your story MUST include ALL of these elements:
-
-**Opening (100-150 words):**
-- Introduce characters with names, descriptions, and relationships
-- Establish the setting with sensory details (sights, sounds, smells)
-- Set up the situation or goal
-
-**Middle (200-300 words):**
-- Show characters taking action
-- Include dialogue between characters (use "quotation marks")
-- Describe events with specific details
-- Show character emotions and reactions
-- Build towards a climax or important moment
-
-**Ending (100-150 words):**
-- Resolve the situation
-- Show what characters learned or how they changed
-- Provide satisfying conclusion
-- Connect to lesson objective if possible
-
-🚨 CRITICAL INSTRUCTION #3: WRITING QUALITY REQUIREMENTS 🚨
-
-**Dialogue Requirements:**
-- Include at least 4-6 lines of character dialogue
-- Use proper quotation marks: "I'm excited!" Norma said.
-- Show character personalities through their speech
-- Natural conversations between characters
-
-**Descriptive Details:**
-- Use specific names (El Cardenal restaurant, NOT "a restaurant")
-- Include sensory details: colors, sounds, smells, textures
-- Show, don't tell: "Norma's hands trembled" NOT "Norma was nervous"
-- Use vivid adjectives appropriate for grade level
-
-**Cultural Authenticity:**
-- Use authentic cultural details when relevant
-- Respect cultural context in the teacher's request
-- Include appropriate Spanish words if culturally relevant
-- Make characters feel real and relatable
-
-🚨 CRITICAL INSTRUCTION #4: WORD COUNT ENFORCEMENT 🚨
-
-Your story in "anticipatorySet" MUST be 400-600 words of ACTUAL narrative text.
-
-To verify word count:
-- Count every word in your story
-- DO NOT count section headers
-- DO NOT count "Anticipatory Set" label
-- The story text itself must be 400-600 words
-
-If your story is less than 400 words → MAKE IT LONGER
-If your story is more than 600 words → EDIT IT DOWN
-
-🚨 CRITICAL INSTRUCTION #5: INTEGRATION THROUGHOUT LESSON 🚨
-
-After writing your complete story, YOU MUST:
-
-1. **Use character names in EVERY practice problem**
-   - ✅ "Norma and Yesika need to solve..."
-   - ❌ "Two students need to solve..."
-
-2. **Reference story events in examples**
-   - ✅ "Remember when Norma bought tickets? Let's calculate..."
-   - ❌ "Let's calculate ticket prices..."
-
-3. **Maintain story context in all sections:**
-   - Guided Practice: Use story characters and situations
-   - Independent Practice: Continue story scenarios
-   - Learning Stations: Connect activities to story
-   - All interventions: Reference story for engagement
-
-══════════════════════════════════════════════════════════════════════════════
-📝 STORY WRITING EXAMPLE FOR YOUR REFERENCE
-══════════════════════════════════════════════════════════════════════════════
-
-Here is an example of what a COMPLETE story looks like (THIS IS THE FORMAT YOU MUST FOLLOW):
-
-"Norma adjusted her purple backpack as she stood beside her best friend Yesika at the bustling San Pedro Sula bus terminal. The morning sun cast long shadows across the concrete platform, and the air smelled of diesel fuel and fresh tortillas from a nearby vendor.
-
-'Are you ready for this adventure?' Yesika asked, her dark eyes sparkling with excitement. She clutched a small notebook where she'd written down all the places they wanted to visit in Mexico City.
-
-Norma smiled, feeling a mixture of nervousness and anticipation. 'I've never been away from home for three whole days,' she admitted. 'But I can't wait to see the city and eat at El Cardenal. My aunt says it's the best restaurant in all of Mexico!'
-
-The two friends had saved their money for months, earning it by helping their families and neighbors. Now, at last, they were about to board the bus that would take them on a grand adventure to Mexico City.
-
-[...continue with 250 more words showing their journey, arrival, experiences, the restaurant visit with specific details about food and atmosphere, conversations, challenges overcome, and what they learned...]
-
-As the sun set over Mexico City on their last evening, Norma and Yesika sat in their small hotel room, exhausted but happy. They had shared an unforgettable experience that had taught them about friendship, courage, and the joy of exploring new places together."
-
-THIS is a complete story. THIS is what you must write. Not a summary. Not a reference. The ACTUAL COMPLETE STORY.
-
-══════════════════════════════════════════════════════════════════════════════
-✅ FINAL CHECKLIST - VERIFY BEFORE SENDING YOUR RESPONSE
-══════════════════════════════════════════════════════════════════════════════
-
-Before you complete this lesson plan, CHECK:
-
-□ Did I write a complete 400-600 word story in "anticipatorySet"?
-□ Does my story have dialogue with quotation marks?
-□ Does my story have beginning, middle, and end?
-□ Did I use the exact character names from teacher's request?
-□ Did I include the specific locations from teacher's request?
-□ Is my story written at {story_complexity}?
-□ Did I use these characters in guided practice problems?
-□ Did I use these characters in independent practice?
-□ Did I reference the story throughout all sections?
-□ Is my story culturally authentic and respectful?
-
-If you answered NO to any of these → GO BACK AND FIX IT
-
-══════════════════════════════════════════════════════════════════════════════
-
-''' if request.teacher_notes else f'''
-GRADE-LEVEL STORY REQUIREMENTS:
-- Create an engaging story appropriate for {story_complexity}
-- Use age-appropriate vocabulary and sentence structure
-- Include relatable characters and situations for grade {request.grade_level} students
-'''}
-
-Generate a complete lesson plan with ALL sections in JSON format:
-
-{{
-  "lessonTitle": "Engaging title for the lesson (bilingual if applicable)",
-  "mainLessonPlan": {{
+    # ==================== NEW: DYNAMIC SECTION BUILDING ====================
+    def build_lesson_structure():
+        """Build JSON structure string based on teacher's section selections"""
+        structure = []
+        
+        # Always include lesson title
+        structure.append('  "lessonTitle": "Engaging title for the lesson (bilingual if applicable)"')
+        
+        # Main Lesson Plan
+        if request.include_main_lesson:
+            structure.append('''  "mainLessonPlan": {
     "objective": "Clear, measurable learning objective aligned to TEKS (in requested language)",
     "materials": ["List of required materials (bilingual format if applicable)"],
     "anticipatorySet": "Hook/engagement activity (5 min)",
     "directInstruction": "Step-by-step teaching procedure with teacher actions",
     "modelingAndChecking": "How to model the concept and check for understanding",
     "closure": "Summary and reflection activity"
-  }},
-  "guidedPractice": {{
+  }''')
+        
+        # Guided Practice
+        if request.include_guided_practice:
+            structure.append('''  "guidedPractice": {
     "description": "Detailed guided practice activities where teacher provides support",
     "activities": ["3-4 structured practice activities with teacher guidance"],
     "differentiationStrategies": ["Support strategies for diverse learners"]
-  }},
-  "independentPractice": {{
+  }''')
+        
+        # Independent Practice
+        if request.include_independent_practice:
+            structure.append('''  "independentPractice": {
     "description": "Activities students complete with minimal assistance",
     "activities": ["3-4 independent practice tasks"],
     "assessmentCriteria": ["How to assess student work"]
-  }},
-  "learningStations": [
-    {{
+  }''')
+        
+        # Learning Stations
+        if request.include_learning_stations:
+            structure.append('''  "learningStations": [
+    {
       "stationName": "Station 1 name",
       "description": "What students do at this station",
       "materials": ["Required materials"],
       "instructions": "Step-by-step student instructions",
       "duration": "Recommended time"
-    }},
-    {{
+    },
+    {
       "stationName": "Station 2 name",
       "description": "Technology or hands-on activity",
       "materials": ["Required materials"],
       "instructions": "Clear directions",
       "duration": "Time allocation"
-    }},
-    {{
+    },
+    {
       "stationName": "Station 3 name",
       "description": "Application or extension activity",
       "materials": ["Materials needed"],
       "instructions": "Detailed steps",
       "duration": "Time needed"
-    }}
-  ],
-  "smallGroupInstruction": {{
+    }
+  ]''')
+        
+        # Small Group Instruction
+        if request.include_small_group:
+            structure.append('''  "smallGroupInstruction": {
     "groupingStrategy": "How to group students (by skill level, etc.)",
     "focusArea": "Specific skill or concept to target",
     "activities": ["2-3 targeted small group activities"],
     "assessmentMethod": "How to monitor progress",
     "duration": "Recommended time per group"
-  }},
-  "tier2Intervention": {{
+  }''')
+        
+        # Tier 2 Intervention
+        if request.include_tier2:
+            structure.append('''  "tier2Intervention": {
     "targetPopulation": "Which students need Tier 2 support",
     "interventionGoal": "Specific skill to address",
     "strategies": ["3-4 evidence-based intervention strategies"],
     "frequency": "How often to implement (e.g., 3x per week, 20 min)",
     "progressMonitoring": "How to track improvement",
     "resources": ["Materials and tools needed"]
-  }},
-  "tier3Intervention": {{
+  }''')
+        
+        # Tier 3 Intervention
+        if request.include_tier3:
+            structure.append('''  "tier3Intervention": {
     "targetPopulation": "Students requiring intensive support",
     "interventionGoal": "Highly specific, measurable goal",
     "intensiveStrategies": ["3-4 intensive, individualized strategies"],
@@ -560,13 +439,17 @@ Generate a complete lesson plan with ALL sections in JSON format:
     "dataCollection": "Detailed progress monitoring plan",
     "collaborationPlan": "Who to involve (specialists, parents, etc.)",
     "resources": ["Specialized materials and supports"]
-  }}
-}}
+  }''')
+        
+        # Join all sections with commas
+        return "{\n" + ",\n".join(structure) + "\n}"
+    
+    # Get the dynamic structure
+    lesson_structure = build_lesson_structure()
+    # =======================================================================
 
-Make the content practical, engaging, and directly applicable to {request.grade_level} grade {request.subject}."""
-    else:
-        # Science and Social Studies - Basic lesson plan only
-        prompt = f"""You are an expert K-8 educator specializing in Texas curriculum design with expertise in bilingual education. Generate a comprehensive, standards-aligned lesson plan.
+    # Build the prompt with dynamic structure
+    prompt = f"""You are an expert K-8 educator specializing in Texas curriculum design with expertise in bilingual education. Generate a comprehensive, standards-aligned lesson plan.
 
 LANGUAGE REQUIREMENT: {language_instruction}
 
@@ -579,16 +462,16 @@ REQUIREMENTS:
 - Language Mode: {request.language}
 
 {f'''
-══════════════════════════════════════════════════════════════════════════════
+═══════════════════════════════════════════════════════════════════════════════
 🎯 CRITICAL: TEACHER'S CUSTOM STORY REQUEST - READ CAREFULLY
-══════════════════════════════════════════════════════════════════════════════
+═══════════════════════════════════════════════════════════════════════════════
 
 TEACHER'S REQUEST:
 {request.teacher_notes}
 
-══════════════════════════════════════════════════════════════════════════════
+═══════════════════════════════════════════════════════════════════════════════
 ⚠️ MANDATORY STORY WRITING REQUIREMENTS - YOU MUST FOLLOW THESE EXACTLY ⚠️
-══════════════════════════════════════════════════════════════════════════════
+═══════════════════════════════════════════════════════════════════════════════
 
 🚨 CRITICAL INSTRUCTION #1: WRITE THE COMPLETE STORY NOW 🚨
 
@@ -681,9 +564,9 @@ After writing your complete story, YOU MUST:
    - Independent Practice: Continue story scenarios
    - All sections: Reference story for engagement
 
-══════════════════════════════════════════════════════════════════════════════
+═══════════════════════════════════════════════════════════════════════════════
 📝 STORY WRITING EXAMPLE FOR YOUR REFERENCE
-══════════════════════════════════════════════════════════════════════════════
+═══════════════════════════════════════════════════════════════════════════════
 
 Here is an example of what a COMPLETE story looks like (THIS IS THE FORMAT YOU MUST FOLLOW):
 
@@ -701,9 +584,9 @@ As the sun set over Mexico City on their last evening, Norma and Yesika sat in t
 
 THIS is a complete story. THIS is what you must write. Not a summary. Not a reference. The ACTUAL COMPLETE STORY.
 
-══════════════════════════════════════════════════════════════════════════════
+═══════════════════════════════════════════════════════════════════════════════
 ✅ FINAL CHECKLIST - VERIFY BEFORE SENDING YOUR RESPONSE
-══════════════════════════════════════════════════════════════════════════════
+═══════════════════════════════════════════════════════════════════════════════
 
 Before you complete this lesson plan, CHECK:
 
@@ -720,7 +603,7 @@ Before you complete this lesson plan, CHECK:
 
 If you answered NO to any of these → GO BACK AND FIX IT
 
-══════════════════════════════════════════════════════════════════════════════
+═══════════════════════════════════════════════════════════════════════════════
 
 ''' if request.teacher_notes else f'''
 GRADE-LEVEL STORY REQUIREMENTS:
@@ -729,36 +612,17 @@ GRADE-LEVEL STORY REQUIREMENTS:
 - Include relatable characters and situations for grade {request.grade_level} students
 '''}
 
-Generate a lesson plan with the following sections in JSON format (NO Learning Stations, Small Group, or Tier interventions for {request.subject}):
+Generate a lesson plan with the following sections in JSON format:
 
-{{
-  "lessonTitle": "Engaging title for the lesson (bilingual if applicable)",
-  "mainLessonPlan": {{
-    "objective": "Clear, measurable learning objective aligned to TEKS (in requested language)",
-    "materials": ["List of required materials (bilingual format if applicable)"],
-    "anticipatorySet": "Hook/engagement activity (5 min)",
-    "directInstruction": "Step-by-step teaching procedure with teacher actions",
-    "modelingAndChecking": "How to model the concept and check for understanding",
-    "closure": "Summary and reflection activity"
-  }},
-  "guidedPractice": {{
-    "description": "Detailed guided practice activities where teacher provides support",
-    "activities": ["3-4 structured practice activities with teacher guidance"],
-    "differentiationStrategies": ["Support strategies for diverse learners"]
-  }},
-  "independentPractice": {{
-    "description": "Activities students complete with minimal assistance",
-    "activities": ["3-4 independent practice tasks"],
-    "assessmentCriteria": ["How to assess student work"]
-  }}
-}}
+{lesson_structure}
 
 Make the content practical, engaging, and directly applicable to {request.grade_level} grade {request.subject}."""
 
     try:
-        # Call OpenAI API
+        # ==================== UPDATED: GPT-4 TURBO ====================
+        # Call OpenAI API with GPT-4 Turbo
         response = openai.chat.completions.create(
-            model="gpt-4",
+            model="gpt-4-turbo",  # CHANGED FROM gpt-4
             messages=[
                 {
                     "role": "system",
@@ -772,6 +636,7 @@ Make the content practical, engaging, and directly applicable to {request.grade_
             temperature=0.7,
             max_tokens=4000
         )
+        # =============================================================
         
         # Extract and parse the response
         content = response.choices[0].message.content.strip()
@@ -792,7 +657,7 @@ Make the content practical, engaging, and directly applicable to {request.grade_
             duration=request.duration,
             language=request.language,
             lesson_content=lesson_content,
-            api_cost=0.25  # Approximate cost per generation
+            api_cost=0.15  # UPDATED: GPT-4 Turbo cost
         )
         db.add(db_lesson)
         
@@ -919,7 +784,7 @@ async def root():
     return {
         "status": "healthy",
         "service": "Edu-SmartAI API",
-        "version": "1.0.0"
+        "version": "2.0.0"
     }
 
 
