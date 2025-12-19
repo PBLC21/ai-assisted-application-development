@@ -4,42 +4,42 @@
       {
         "code": "K.2(A)",
         "description_en": "Count forward and backward to at least 20 with and without objects",
-        "description_es": "Contar hacia adelante y hacia atrás hasta al menos 20 con y sin objetos",
+        "description_es": "Contar hacia adelante y hacia atrÃ¡s hasta al menos 20 con y sin objetos",
         "strand": "Number and Operations",
         "readiness": true
       },
       {
         "code": "K.2(B)",
         "description_en": "Read, write, and represent whole numbers from 0 to at least 20 with and without objects or pictures",
-        "description_es": "Leer, escribir y representar números enteros del 0 al menos 20 con y sin objetos o imágenes",
+        "description_es": "Leer, escribir y representar nÃºmeros enteros del 0 al menos 20 con y sin objetos o imÃ¡genes",
         "strand": "Number and Operations",
         "readiness": true
       },
       {
         "code": "K.2(C)",
         "description_en": "Count a set of objects up to at least 20 and demonstrate that the last number said tells the number of objects in the set regardless of their arrangement or order",
-        "description_es": "Contar un conjunto de objetos hasta al menos 20 y demostrar que el último número dicho indica la cantidad de objetos en el conjunto independientemente de su disposición u orden",
+        "description_es": "Contar un conjunto de objetos hasta al menos 20 y demostrar que el Ãºltimo nÃºmero dicho indica la cantidad de objetos en el conjunto independientemente de su disposiciÃ³n u orden",
         "strand": "Number and Operations",
         "readiness": true
       },
       {
         "code": "K.2(D)",
         "description_en": "Recognize instantly the quantity of a small group of objects in organized and random arrangements",
-        "description_es": "Reconocer instantáneamente la cantidad de un pequeño grupo de objetos en arreglos organizados y aleatorios",
+        "description_es": "Reconocer instantÃ¡neamente la cantidad de un pequeÃ±o grupo de objetos en arreglos organizados y aleatorios",
         "strand": "Number and Operations",
         "readiness": false
       },
       {
         "code": "K.2(E)",
         "description_en": "Generate a set using concrete and pictorial models that represents a number that is more than, less than, and equal to a given number up to 20",
-        "description_es": "Generar un conjunto usando modelos concretos y pictóricos que representen un número que sea mayor que, menor que e igual a un número dado hasta 20",
+        "description_es": "Generar un conjunto usando modelos concretos y pictÃ³ricos que representen un nÃºmero que sea mayor que, menor que e igual a un nÃºmero dado hasta 20",
         "strand": "Number and Operations",
         "readiness": false
       },
       {
         "code": "K.2(F)",
         "description_en": "Generate a number that is one more than or one less than another number up to at least 20",
-        "description_es": "Generar un número que sea uno más o uno menos que otro número hasta al menos 20",
+        "description_es": "Generar un nÃºmero que sea uno mÃ¡s o uno menos que otro nÃºmero hasta al menos 20",
         "strand": "Number and Operations",
         "readiness": false
       },
@@ -53,14 +53,14 @@
       {
         "code": "K.2(H)",
         "description_en": "Use comparative language to describe two numbers up to 20 presented as written numerals",
-        "description_es": "Usar lenguaje comparativo para describir dos números hasta 20 presentados como numerales escritos",
+        "description_es": "Usar lenguaje comparativo para describir dos nÃºmeros hasta 20 presentados como numerales escritos",
         "strand": "Number and Operations",
         "readiness": false
       },
       {
         "code": "K.3(A)",
         "description_en": "Model the action of joining to represent addition and the action of separating to represent subtraction",
-        "description_es": "Modelar la acción de unir para representar la suma y la acción de separar para representar la resta",
+        "description_es": "Modelar la acciÃ³n de unir para representar la suma y la acciÃ³n de separar para representar la resta",
         "strand": "Number and Operations",
         "readiness": true
       },
@@ -74,28 +74,28 @@
       {
         "code": "K.3(C)",
         "description_en": "Compose and decompose numbers up to 10 with objects and pictures",
-        "description_es": "Componer y descomponer números hasta 10 con objetos e imágenes",
+        "description_es": "Componer y descomponer nÃºmeros hasta 10 con objetos e imÃ¡genes",
         "strand": "Number and Operations",
         "readiness": false
       },
       {
         "code": "K.6(A)",
         "description_en": "Identify two-dimensional shapes, including circles, triangles, rectangles, and squares as special rectangles",
-        "description_es": "Identificar figuras bidimensionales, incluyendo círculos, triángulos, rectángulos y cuadrados como rectángulos especiales",
+        "description_es": "Identificar figuras bidimensionales, incluyendo cÃ­rculos, triÃ¡ngulos, rectÃ¡ngulos y cuadrados como rectÃ¡ngulos especiales",
         "strand": "Geometry and Measurement",
         "readiness": false
       },
       {
         "code": "K.6(B)",
         "description_en": "Identify three-dimensional solids, including spheres, cones, cylinders, and cubes, in the real world",
-        "description_es": "Identificar sólidos tridimensionales, incluyendo esferas, conos, cilindros y cubos, en el mundo real",
+        "description_es": "Identificar sÃ³lidos tridimensionales, incluyendo esferas, conos, cilindros y cubos, en el mundo real",
         "strand": "Geometry and Measurement",
         "readiness": false
       },
       {
         "code": "K.6(D)",
         "description_en": "Identify attributes of two-dimensional shapes using informal and formal geometric language interchangeably",
-        "description_es": "Identificar atributos de figuras bidimensionales usando lenguaje geométrico informal y formal indistintamente",
+        "description_es": "Identificar atributos de figuras bidimensionales usando lenguaje geomÃ©trico informal y formal indistintamente",
         "strand": "Geometry and Measurement",
         "readiness": false
       },
@@ -109,7 +109,7 @@
       {
         "code": "K.7(B)",
         "description_en": "Compare two objects with a common measurable attribute to see which object has more of/less of the attribute and describe the difference",
-        "description_es": "Comparar dos objetos con un atributo medible común para ver qué objeto tiene más/menos del atributo y describir la diferencia",
+        "description_es": "Comparar dos objetos con un atributo medible comÃºn para ver quÃ© objeto tiene mÃ¡s/menos del atributo y describir la diferencia",
         "strand": "Geometry and Measurement",
         "readiness": false
       }
@@ -118,91 +118,91 @@
       {
         "code": "K.1(A)",
         "description_en": "Recognize that spoken words are represented in written English by specific sequences of letters",
-        "description_es": "Reconocer que las palabras habladas están representadas en inglés escrito por secuencias específicas de letras",
+        "description_es": "Reconocer que las palabras habladas estÃ¡n representadas en inglÃ©s escrito por secuencias especÃ­ficas de letras",
         "strand": "Foundational Skills",
         "readiness": true
       },
       {
         "code": "K.1(B)",
         "description_en": "Recognize the distinguishing features of a sentence (e.g., capitalization of first word, ending punctuation)",
-        "description_es": "Reconocer las características distintivas de una oración (por ejemplo, mayúscula en la primera palabra, puntuación final)",
+        "description_es": "Reconocer las caracterÃ­sticas distintivas de una oraciÃ³n (por ejemplo, mayÃºscula en la primera palabra, puntuaciÃ³n final)",
         "strand": "Foundational Skills",
         "readiness": true
       },
       {
         "code": "K.2(A)(i)",
         "description_en": "Demonstrate phonological awareness by identifying and producing rhyming words",
-        "description_es": "Demostrar conciencia fonológica identificando y produciendo palabras que riman",
+        "description_es": "Demostrar conciencia fonolÃ³gica identificando y produciendo palabras que riman",
         "strand": "Foundational Skills",
         "readiness": true
       },
       {
         "code": "K.2(A)(ii)",
         "description_en": "Demonstrate phonological awareness by recognizing spoken alliteration or groups of words that begin with the same simple syllable or initial sound",
-        "description_es": "Demostrar conciencia fonológica reconociendo aliteración hablada o grupos de palabras que comienzan con la misma sílaba simple o sonido inicial",
+        "description_es": "Demostrar conciencia fonolÃ³gica reconociendo aliteraciÃ³n hablada o grupos de palabras que comienzan con la misma sÃ­laba simple o sonido inicial",
         "strand": "Foundational Skills",
         "readiness": false
       },
       {
         "code": "K.2(B)(i)",
         "description_en": "Demonstrate and apply phonetic knowledge by identifying and matching the common sounds that letters represent",
-        "description_es": "Demostrar y aplicar conocimiento fonético identificando y emparejando los sonidos comunes que las letras representan",
+        "description_es": "Demostrar y aplicar conocimiento fonÃ©tico identificando y emparejando los sonidos comunes que las letras representan",
         "strand": "Foundational Skills",
         "readiness": true
       },
       {
         "code": "K.2(B)(ii)",
         "description_en": "Demonstrate and apply phonetic knowledge by using letter-sound relationships to decode consonant-vowel-consonant (CVC) words",
-        "description_es": "Demostrar y aplicar conocimiento fonético usando relaciones letra-sonido para decodificar palabras consonante-vocal-consonante (CVC)",
+        "description_es": "Demostrar y aplicar conocimiento fonÃ©tico usando relaciones letra-sonido para decodificar palabras consonante-vocal-consonante (CVC)",
         "strand": "Foundational Skills",
         "readiness": true
       },
       {
         "code": "K.6(A)",
         "description_en": "Establish purpose for reading assigned and self-selected texts with adult assistance",
-        "description_es": "Establecer el propósito para leer textos asignados y autoseleccionados con ayuda de un adulto",
+        "description_es": "Establecer el propÃ³sito para leer textos asignados y autoseleccionados con ayuda de un adulto",
         "strand": "Comprehension",
         "readiness": false
       },
       {
         "code": "K.6(B)",
         "description_en": "Generate questions about text before, during, and after reading to deepen understanding and gain information with adult assistance",
-        "description_es": "Generar preguntas sobre el texto antes, durante y después de leer para profundizar la comprensión y obtener información con ayuda de un adulto",
+        "description_es": "Generar preguntas sobre el texto antes, durante y despuÃ©s de leer para profundizar la comprensiÃ³n y obtener informaciÃ³n con ayuda de un adulto",
         "strand": "Comprehension",
         "readiness": false
       },
       {
         "code": "K.6(C)",
         "description_en": "Make and confirm predictions using text features and structures with adult assistance",
-        "description_es": "Hacer y confirmar predicciones usando características y estructuras del texto con ayuda de un adulto",
+        "description_es": "Hacer y confirmar predicciones usando caracterÃ­sticas y estructuras del texto con ayuda de un adulto",
         "strand": "Comprehension",
         "readiness": false
       },
       {
         "code": "K.7(A)",
         "description_en": "Discuss topics and determine the basic theme using text evidence with adult assistance",
-        "description_es": "Discutir temas y determinar el tema básico usando evidencia del texto con ayuda de un adulto",
+        "description_es": "Discutir temas y determinar el tema bÃ¡sico usando evidencia del texto con ayuda de un adulto",
         "strand": "Response",
         "readiness": false
       },
       {
         "code": "K.7(B)",
         "description_en": "Describe the main character(s) and the reason(s) for their actions",
-        "description_es": "Describir el/los personaje(s) principal(es) y la(s) razón(es) de sus acciones",
+        "description_es": "Describir el/los personaje(s) principal(es) y la(s) razÃ³n(es) de sus acciones",
         "strand": "Response",
         "readiness": true
       },
       {
         "code": "K.7(C)",
         "description_en": "Describe plot elements, including the main events, the problem, and the resolution, for texts read aloud with adult assistance",
-        "description_es": "Describir elementos de la trama, incluyendo los eventos principales, el problema y la resolución, para textos leídos en voz alta con ayuda de un adulto",
+        "description_es": "Describir elementos de la trama, incluyendo los eventos principales, el problema y la resoluciÃ³n, para textos leÃ­dos en voz alta con ayuda de un adulto",
         "strand": "Response",
         "readiness": false
       },
       {
         "code": "K.7(D)",
         "description_en": "Discuss with adult assistance how the use of text structure contributes to the author's purpose",
-        "description_es": "Discutir con ayuda de un adulto cómo el uso de la estructura del texto contribuye al propósito del autor",
+        "description_es": "Discutir con ayuda de un adulto cÃ³mo el uso de la estructura del texto contribuye al propÃ³sito del autor",
         "strand": "Response",
         "readiness": false
       }
@@ -232,21 +232,21 @@
       {
         "code": "K.4(A)",
         "description_en": "Observe and record properties of objects, including relative size and mass, such as bigger or smaller and heavier or lighter",
-        "description_es": "Observar y registrar propiedades de objetos, incluyendo tamaño y masa relativos, como más grande o más pequeño y más pesado o más liviano",
+        "description_es": "Observar y registrar propiedades de objetos, incluyendo tamaÃ±o y masa relativos, como mÃ¡s grande o mÃ¡s pequeÃ±o y mÃ¡s pesado o mÃ¡s liviano",
         "strand": "Matter and Energy",
         "readiness": false
       },
       {
         "code": "K.4(B)",
         "description_en": "Observe, record, and discuss how materials can be changed by heating or cooling",
-        "description_es": "Observar, registrar y discutir cómo los materiales pueden cambiar al calentarse o enfriarse",
+        "description_es": "Observar, registrar y discutir cÃ³mo los materiales pueden cambiar al calentarse o enfriarse",
         "strand": "Matter and Energy",
         "readiness": false
       },
       {
         "code": "K.5(A)",
         "description_en": "Observe and record the properties of objects, including relative size and mass, shape, color, and texture",
-        "description_es": "Observar y registrar las propiedades de los objetos, incluyendo tamaño y masa relativos, forma, color y textura",
+        "description_es": "Observar y registrar las propiedades de los objetos, incluyendo tamaÃ±o y masa relativos, forma, color y textura",
         "strand": "Force, Motion, and Energy",
         "readiness": false
       },
@@ -267,14 +267,14 @@
       {
         "code": "K.7(A)",
         "description_en": "Observe and describe weather changes from day to day and over seasons",
-        "description_es": "Observar y describir cambios del clima de día a día y durante las estaciones",
+        "description_es": "Observar y describir cambios del clima de dÃ­a a dÃ­a y durante las estaciones",
         "strand": "Earth and Space",
         "readiness": false
       },
       {
         "code": "K.7(B)",
         "description_en": "Identify events that have repeating patterns, including seasons and day and night",
-        "description_es": "Identificar eventos que tienen patrones repetitivos, incluyendo estaciones y día y noche",
+        "description_es": "Identificar eventos que tienen patrones repetitivos, incluyendo estaciones y dÃ­a y noche",
         "strand": "Earth and Space",
         "readiness": false
       }
@@ -311,7 +311,7 @@
       {
         "code": "K.4(A)",
         "description_en": "Identify physical characteristics of places such as landforms, bodies of water, natural resources, and weather",
-        "description_es": "Identificar características físicas de lugares como accidentes geográficos, cuerpos de agua, recursos naturales y clima",
+        "description_es": "Identificar caracterÃ­sticas fÃ­sicas de lugares como accidentes geogrÃ¡ficos, cuerpos de agua, recursos naturales y clima",
         "strand": "Geography",
         "readiness": false
       },
@@ -325,14 +325,14 @@
       {
         "code": "K.6(A)",
         "description_en": "Identify why people have jobs",
-        "description_es": "Identificar por qué las personas tienen trabajos",
+        "description_es": "Identificar por quÃ© las personas tienen trabajos",
         "strand": "Economics",
         "readiness": false
       },
       {
         "code": "K.7(A)",
         "description_en": "Describe ways that people depend on and impact the physical environment in daily life",
-        "description_es": "Describir formas en que las personas dependen e impactan el medio ambiente físico en la vida diaria",
+        "description_es": "Describir formas en que las personas dependen e impactan el medio ambiente fÃ­sico en la vida diaria",
         "strand": "Geography",
         "readiness": false
       }
@@ -343,84 +343,84 @@
       {
         "code": "1.2(B)",
         "description_en": "Use concrete and pictorial models to compose and decompose numbers up to 120 in more than one way",
-        "description_es": "Usar modelos concretos y pictóricos para componer y descomponer números hasta 120 de más de una manera",
+        "description_es": "Usar modelos concretos y pictÃ³ricos para componer y descomponer nÃºmeros hasta 120 de mÃ¡s de una manera",
         "strand": "Number and Operations",
         "readiness": false
       },
       {
         "code": "1.3(A)",
         "description_en": "Use concrete and pictorial models to determine the sum of a multiple of 10 and a one-digit number",
-        "description_es": "Usar modelos concretos y pictóricos para determinar la suma de un múltiplo de 10 y un número de un dígito",
+        "description_es": "Usar modelos concretos y pictÃ³ricos para determinar la suma de un mÃºltiplo de 10 y un nÃºmero de un dÃ­gito",
         "strand": "Number and Operations",
         "readiness": true
       },
       {
         "code": "1.3(B)",
         "description_en": "Use objects and pictorial models to solve word problems involving joining, separating, and comparing sets within 20",
-        "description_es": "Usar objetos y modelos pictóricos para resolver problemas escritos que involucran unir, separar y comparar conjuntos dentro de 20",
+        "description_es": "Usar objetos y modelos pictÃ³ricos para resolver problemas escritos que involucran unir, separar y comparar conjuntos dentro de 20",
         "strand": "Number and Operations",
         "readiness": true
       },
       {
         "code": "1.3(C)",
         "description_en": "Compose 10 with two or more addends with and without concrete objects",
-        "description_es": "Componer 10 con dos o más sumandos con y sin objetos concretos",
+        "description_es": "Componer 10 con dos o mÃ¡s sumandos con y sin objetos concretos",
         "strand": "Number and Operations",
         "readiness": false
       },
       {
         "code": "1.3(D)",
         "description_en": "Apply basic fact strategies to add and subtract within 20, including making 10 and decomposing a number leading to a 10",
-        "description_es": "Aplicar estrategias de operaciones básicas para sumar y restar dentro de 20, incluyendo hacer 10 y descomponer un número que lleva a 10",
+        "description_es": "Aplicar estrategias de operaciones bÃ¡sicas para sumar y restar dentro de 20, incluyendo hacer 10 y descomponer un nÃºmero que lleva a 10",
         "strand": "Number and Operations",
         "readiness": true
       },
       {
         "code": "1.3(E)",
         "description_en": "Explain strategies used to solve addition and subtraction problems up to 20 using spoken words, objects, pictorial models, and number sentences",
-        "description_es": "Explicar estrategias usadas para resolver problemas de suma y resta hasta 20 usando palabras habladas, objetos, modelos pictóricos y oraciones numéricas",
+        "description_es": "Explicar estrategias usadas para resolver problemas de suma y resta hasta 20 usando palabras habladas, objetos, modelos pictÃ³ricos y oraciones numÃ©ricas",
         "strand": "Number and Operations",
         "readiness": false
       },
       {
         "code": "1.5(A)",
         "description_en": "Classify and sort regular and irregular two-dimensional shapes based on attributes",
-        "description_es": "Clasificar y ordenar figuras bidimensionales regulares e irregulares basándose en atributos",
+        "description_es": "Clasificar y ordenar figuras bidimensionales regulares e irregulares basÃ¡ndose en atributos",
         "strand": "Geometry and Measurement",
         "readiness": false
       },
       {
         "code": "1.6(D)",
         "description_en": "Describe a change in location of an object such as left, right, above, or below",
-        "description_es": "Describir un cambio en la ubicación de un objeto como izquierda, derecha, arriba o abajo",
+        "description_es": "Describir un cambio en la ubicaciÃ³n de un objeto como izquierda, derecha, arriba o abajo",
         "strand": "Geometry and Measurement",
         "readiness": false
       },
       {
         "code": "1.7(A)",
         "description_en": "Use measuring tools to measure the length of objects to reinforce the continuous nature of linear measurement",
-        "description_es": "Usar herramientas de medición para medir la longitud de objetos para reforzar la naturaleza continua de la medición lineal",
+        "description_es": "Usar herramientas de mediciÃ³n para medir la longitud de objetos para reforzar la naturaleza continua de la mediciÃ³n lineal",
         "strand": "Geometry and Measurement",
         "readiness": false
       },
       {
         "code": "1.7(B)",
         "description_en": "Illustrate that the length of an object is the number of same-size units of length that span it with no gaps or overlaps",
-        "description_es": "Ilustrar que la longitud de un objeto es el número de unidades de longitud del mismo tamaño que lo abarcan sin espacios ni superposiciones",
+        "description_es": "Ilustrar que la longitud de un objeto es el nÃºmero de unidades de longitud del mismo tamaÃ±o que lo abarcan sin espacios ni superposiciones",
         "strand": "Geometry and Measurement",
         "readiness": false
       },
       {
         "code": "1.7(C)",
         "description_en": "Measure the same object or distance with same-size units using informal units",
-        "description_es": "Medir el mismo objeto o distancia con unidades del mismo tamaño usando unidades informales",
+        "description_es": "Medir el mismo objeto o distancia con unidades del mismo tamaÃ±o usando unidades informales",
         "strand": "Geometry and Measurement",
         "readiness": false
       },
       {
         "code": "1.7(D)",
         "description_en": "Describe a length to the nearest whole unit using a number and a unit",
-        "description_es": "Describir una longitud a la unidad entera más cercana usando un número y una unidad",
+        "description_es": "Describir una longitud a la unidad entera mÃ¡s cercana usando un nÃºmero y una unidad",
         "strand": "Geometry and Measurement",
         "readiness": false
       }
@@ -429,42 +429,42 @@
       {
         "code": "1.2(A)(i)",
         "description_en": "Demonstrate phonological awareness by producing a series of rhyming words",
-        "description_es": "Demostrar conciencia fonológica produciendo una serie de palabras que riman",
+        "description_es": "Demostrar conciencia fonolÃ³gica produciendo una serie de palabras que riman",
         "strand": "Foundational Skills",
         "readiness": true
       },
       {
         "code": "1.2(A)(ii)",
         "description_en": "Demonstrate phonological awareness by recognizing spoken alliteration or groups of words that begin with the same simple or complex syllable",
-        "description_es": "Demostrar conciencia fonológica reconociendo aliteración hablada o grupos de palabras que comienzan con la misma sílaba simple o compleja",
+        "description_es": "Demostrar conciencia fonolÃ³gica reconociendo aliteraciÃ³n hablada o grupos de palabras que comienzan con la misma sÃ­laba simple o compleja",
         "strand": "Foundational Skills",
         "readiness": false
       },
       {
         "code": "1.2(A)(iii)",
         "description_en": "Demonstrate phonological awareness by distinguishing between long and short vowel sounds in one-syllable words",
-        "description_es": "Demostrar conciencia fonológica distinguiendo entre sonidos vocales largos y cortos en palabras de una sílaba",
+        "description_es": "Demostrar conciencia fonolÃ³gica distinguiendo entre sonidos vocales largos y cortos en palabras de una sÃ­laba",
         "strand": "Foundational Skills",
         "readiness": true
       },
       {
         "code": "1.2(B)(i)",
         "description_en": "Demonstrate and apply phonetic knowledge by decoding words in isolation and in context by applying common letter sound correspondences",
-        "description_es": "Demostrar y aplicar conocimiento fonético decodificando palabras en aislamiento y en contexto aplicando correspondencias comunes de sonido de letras",
+        "description_es": "Demostrar y aplicar conocimiento fonÃ©tico decodificando palabras en aislamiento y en contexto aplicando correspondencias comunes de sonido de letras",
         "strand": "Foundational Skills",
         "readiness": true
       },
       {
         "code": "1.2(B)(ii)",
         "description_en": "Demonstrate and apply phonetic knowledge by decoding words with initial and final consonant blends, digraphs, and trigraphs",
-        "description_es": "Demostrar y aplicar conocimiento fonético decodificando palabras con combinaciones consonánticas iniciales y finales, dígrafos y trígrafos",
+        "description_es": "Demostrar y aplicar conocimiento fonÃ©tico decodificando palabras con combinaciones consonÃ¡nticas iniciales y finales, dÃ­grafos y trÃ­grafos",
         "strand": "Foundational Skills",
         "readiness": true
       },
       {
         "code": "1.2(B)(iii)",
         "description_en": "Demonstrate and apply phonetic knowledge by decoding words with closed syllables, open syllables, VCe syllables, and vowel teams",
-        "description_es": "Demostrar y aplicar conocimiento fonético decodificando palabras con sílabas cerradas, sílabas abiertas, sílabas VCe y equipos vocálicos",
+        "description_es": "Demostrar y aplicar conocimiento fonÃ©tico decodificando palabras con sÃ­labas cerradas, sÃ­labas abiertas, sÃ­labas VCe y equipos vocÃ¡licos",
         "strand": "Foundational Skills",
         "readiness": true
       },
@@ -478,14 +478,14 @@
       {
         "code": "1.7(B)",
         "description_en": "Describe and understand plot elements, including the main events, the conflict, and the resolution, for texts read aloud and independently",
-        "description_es": "Describir y comprender elementos de la trama, incluyendo los eventos principales, el conflicto y la resolución, para textos leídos en voz alta e independientemente",
+        "description_es": "Describir y comprender elementos de la trama, incluyendo los eventos principales, el conflicto y la resoluciÃ³n, para textos leÃ­dos en voz alta e independientemente",
         "strand": "Response",
         "readiness": true
       },
       {
         "code": "1.7(C)",
         "description_en": "Describe the main character(s) and the reason(s) for their actions and feelings",
-        "description_es": "Describir el/los personaje(s) principal(es) y la(s) razón(es) de sus acciones y sentimientos",
+        "description_es": "Describir el/los personaje(s) principal(es) y la(s) razÃ³n(es) de sus acciones y sentimientos",
         "strand": "Response",
         "readiness": true
       },
@@ -499,14 +499,14 @@
       {
         "code": "1.8(D)(i)",
         "description_en": "Recognize characteristics of persuasive text, including stating what the author is trying to persuade the reader to think or do",
-        "description_es": "Reconocer características del texto persuasivo, incluyendo declarar lo que el autor está tratando de persuadir al lector a pensar o hacer",
+        "description_es": "Reconocer caracterÃ­sticas del texto persuasivo, incluyendo declarar lo que el autor estÃ¡ tratando de persuadir al lector a pensar o hacer",
         "strand": "Response",
         "readiness": false
       },
       {
         "code": "1.9(A)",
         "description_en": "Discuss and identify the author's purpose for writing text",
-        "description_es": "Discutir e identificar el propósito del autor para escribir el texto",
+        "description_es": "Discutir e identificar el propÃ³sito del autor para escribir el texto",
         "strand": "Author's Purpose and Craft",
         "readiness": false
       }
@@ -529,7 +529,7 @@
       {
         "code": "1.4(A)",
         "description_en": "Sort and classify nonliving materials by physical properties including color, shape, size, texture, and material for a purpose",
-        "description_es": "Ordenar y clasificar materiales no vivos por propiedades físicas incluyendo color, forma, tamaño, textura y material con un propósito",
+        "description_es": "Ordenar y clasificar materiales no vivos por propiedades fÃ­sicas incluyendo color, forma, tamaÃ±o, textura y material con un propÃ³sito",
         "strand": "Matter and Energy",
         "readiness": false
       },
@@ -543,28 +543,28 @@
       {
         "code": "1.6(A)",
         "description_en": "Identify the external structures of different animals and describe how those structures help the animal live, grow, and survive in its environment",
-        "description_es": "Identificar las estructuras externas de diferentes animales y describir cómo esas estructuras ayudan al animal a vivir, crecer y sobrevivir en su ambiente",
+        "description_es": "Identificar las estructuras externas de diferentes animales y describir cÃ³mo esas estructuras ayudan al animal a vivir, crecer y sobrevivir en su ambiente",
         "strand": "Organisms and Environments",
         "readiness": false
       },
       {
         "code": "1.6(B)",
         "description_en": "Identify the external structures of different plants and describe how those structures help the plant grow and survive in its environment",
-        "description_es": "Identificar las estructuras externas de diferentes plantas y describir cómo esas estructuras ayudan a la planta a crecer y sobrevivir en su ambiente",
+        "description_es": "Identificar las estructuras externas de diferentes plantas y describir cÃ³mo esas estructuras ayudan a la planta a crecer y sobrevivir en su ambiente",
         "strand": "Organisms and Environments",
         "readiness": false
       },
       {
         "code": "1.7(A)",
         "description_en": "Record and analyze weather information, including temperature and precipitation",
-        "description_es": "Registrar y analizar información del clima, incluyendo temperatura y precipitación",
+        "description_es": "Registrar y analizar informaciÃ³n del clima, incluyendo temperatura y precipitaciÃ³n",
         "strand": "Earth and Space",
         "readiness": false
       },
       {
         "code": "1.7(B)",
         "description_en": "Identify and describe patterns including seasons, day and night, and weather",
-        "description_es": "Identificar y describir patrones incluyendo estaciones, día y noche, y clima",
+        "description_es": "Identificar y describir patrones incluyendo estaciones, dÃ­a y noche, y clima",
         "strand": "Earth and Space",
         "readiness": false
       },
@@ -580,7 +580,7 @@
       {
         "code": "1.1(A)",
         "description_en": "Describe the roles of public officials including mayor, governor, and president",
-        "description_es": "Describir los roles de funcionarios públicos incluyendo alcalde, gobernador y presidente",
+        "description_es": "Describir los roles de funcionarios pÃºblicos incluyendo alcalde, gobernador y presidente",
         "strand": "Government",
         "readiness": false
       },
@@ -593,15 +593,15 @@
       },
       {
         "code": "1.2(A)",
-        "description_en": "Identify contributions of historical figures including Stephen F. Austin, George Washington, and José Antonio Navarro",
-        "description_es": "Identificar contribuciones de figuras históricas incluyendo Stephen F. Austin, George Washington y José Antonio Navarro",
+        "description_en": "Identify contributions of historical figures including Stephen F. Austin, George Washington, and JosÃ© Antonio Navarro",
+        "description_es": "Identificar contribuciones de figuras histÃ³ricas incluyendo Stephen F. Austin, George Washington y JosÃ© Antonio Navarro",
         "strand": "History",
         "readiness": false
       },
       {
         "code": "1.3(A)",
         "description_en": "Describe ways that families meet basic human needs",
-        "description_es": "Describir formas en que las familias satisfacen las necesidades humanas básicas",
+        "description_es": "Describir formas en que las familias satisfacen las necesidades humanas bÃ¡sicas",
         "strand": "Culture",
         "readiness": false
       },
@@ -615,21 +615,21 @@
       {
         "code": "1.5(A)",
         "description_en": "Create and use simple maps to identify the location of places in the home, school, and community",
-        "description_es": "Crear y usar mapas simples para identificar la ubicación de lugares en el hogar, la escuela y la comunidad",
+        "description_es": "Crear y usar mapas simples para identificar la ubicaciÃ³n de lugares en el hogar, la escuela y la comunidad",
         "strand": "Geography",
         "readiness": false
       },
       {
         "code": "1.6(A)",
         "description_en": "Identify how the human characteristics of place such as shelter, clothing, food, and activities are based upon geographic location",
-        "description_es": "Identificar cómo las características humanas del lugar como refugio, ropa, comida y actividades se basan en la ubicación geográfica",
+        "description_es": "Identificar cÃ³mo las caracterÃ­sticas humanas del lugar como refugio, ropa, comida y actividades se basan en la ubicaciÃ³n geogrÃ¡fica",
         "strand": "Geography",
         "readiness": false
       },
       {
         "code": "1.7(A)",
         "description_en": "Describe ways that families meet basic human needs of food, clothing, and shelter",
-        "description_es": "Describir formas en que las familias satisfacen las necesidades humanas básicas de comida, ropa y refugio",
+        "description_es": "Describir formas en que las familias satisfacen las necesidades humanas bÃ¡sicas de comida, ropa y refugio",
         "strand": "Economics",
         "readiness": false
       }
@@ -640,42 +640,42 @@
       {
         "code": "2.2(A)",
         "description_en": "Use concrete and pictorial models to compose and decompose numbers up to 1,200 in more than one way",
-        "description_es": "Usar modelos concretos y pictóricos para componer y descomponer números hasta 1,200 de más de una manera",
+        "description_es": "Usar modelos concretos y pictÃ³ricos para componer y descomponer nÃºmeros hasta 1,200 de mÃ¡s de una manera",
         "strand": "Number and Operations",
         "readiness": false
       },
       {
         "code": "2.2(B)",
         "description_en": "Use standard, word, and expanded forms to represent numbers up to 1,200",
-        "description_es": "Usar formas estándar, escrita y expandida para representar números hasta 1,200",
+        "description_es": "Usar formas estÃ¡ndar, escrita y expandida para representar nÃºmeros hasta 1,200",
         "strand": "Number and Operations",
         "readiness": true
       },
       {
         "code": "2.2(C)",
         "description_en": "Generate a number that is greater than or less than a given whole number up to 1,200",
-        "description_es": "Generar un número que sea mayor o menor que un número entero dado hasta 1,200",
+        "description_es": "Generar un nÃºmero que sea mayor o menor que un nÃºmero entero dado hasta 1,200",
         "strand": "Number and Operations",
         "readiness": false
       },
       {
         "code": "2.2(D)",
         "description_en": "Use place value to compare and order whole numbers up to 1,200 using comparative language and symbols",
-        "description_es": "Usar valor posicional para comparar y ordenar números enteros hasta 1,200 usando lenguaje comparativo y símbolos",
+        "description_es": "Usar valor posicional para comparar y ordenar nÃºmeros enteros hasta 1,200 usando lenguaje comparativo y sÃ­mbolos",
         "strand": "Number and Operations",
         "readiness": true
       },
       {
         "code": "2.4(A)",
         "description_en": "Recall basic facts to add and subtract within 20 with automaticity",
-        "description_es": "Recordar operaciones básicas para sumar y restar dentro de 20 con automaticidad",
+        "description_es": "Recordar operaciones bÃ¡sicas para sumar y restar dentro de 20 con automaticidad",
         "strand": "Number and Operations",
         "readiness": true
       },
       {
         "code": "2.4(B)",
         "description_en": "Add up to four two-digit numbers and subtract two-digit numbers using mental strategies and algorithms based on place value",
-        "description_es": "Sumar hasta cuatro números de dos dígitos y restar números de dos dígitos usando estrategias mentales y algoritmos basados en valor posicional",
+        "description_es": "Sumar hasta cuatro nÃºmeros de dos dÃ­gitos y restar nÃºmeros de dos dÃ­gitos usando estrategias mentales y algoritmos basados en valor posicional",
         "strand": "Number and Operations",
         "readiness": true
       },
@@ -696,21 +696,21 @@
       {
         "code": "2.6(B)",
         "description_en": "Explain that the more fractional parts used to make a whole, the smaller the part",
-        "description_es": "Explicar que entre más partes fraccionarias se usen para hacer un entero, más pequeña es la parte",
+        "description_es": "Explicar que entre mÃ¡s partes fraccionarias se usen para hacer un entero, mÃ¡s pequeÃ±a es la parte",
         "strand": "Number and Operations",
         "readiness": false
       },
       {
         "code": "2.8(A)",
         "description_en": "Create two-dimensional shapes based on given attributes including number of sides and vertices",
-        "description_es": "Crear figuras bidimensionales basadas en atributos dados incluyendo número de lados y vértices",
+        "description_es": "Crear figuras bidimensionales basadas en atributos dados incluyendo nÃºmero de lados y vÃ©rtices",
         "strand": "Geometry and Measurement",
         "readiness": false
       },
       {
         "code": "2.8(C)",
         "description_en": "Classify and sort polygons with 12 or fewer sides according to attributes including sides and vertices",
-        "description_es": "Clasificar y ordenar polígonos con 12 o menos lados según atributos incluyendo lados y vértices",
+        "description_es": "Clasificar y ordenar polÃ­gonos con 12 o menos lados segÃºn atributos incluyendo lados y vÃ©rtices",
         "strand": "Geometry and Measurement",
         "readiness": false
       }
@@ -719,28 +719,28 @@
       {
         "code": "2.2(A)(i)",
         "description_en": "Demonstrate phonological awareness by identifying and producing a series of rhyming words",
-        "description_es": "Demostrar conciencia fonológica identificando y produciendo una serie de palabras que riman",
+        "description_es": "Demostrar conciencia fonolÃ³gica identificando y produciendo una serie de palabras que riman",
         "strand": "Foundational Skills",
         "readiness": false
       },
       {
         "code": "2.2(B)(i)",
         "description_en": "Demonstrate and apply phonetic knowledge by decoding words with short, long, or variant vowels, trigraphs, and blends",
-        "description_es": "Demostrar y aplicar conocimiento fonético decodificando palabras con vocales cortas, largas o variantes, trígrafos y combinaciones",
+        "description_es": "Demostrar y aplicar conocimiento fonÃ©tico decodificando palabras con vocales cortas, largas o variantes, trÃ­grafos y combinaciones",
         "strand": "Foundational Skills",
         "readiness": true
       },
       {
         "code": "2.2(B)(ii)",
         "description_en": "Demonstrate and apply phonetic knowledge by decoding words with silent letters such as knife and gnat",
-        "description_es": "Demostrar y aplicar conocimiento fonético decodificando palabras con letras silenciosas como knife y gnat",
+        "description_es": "Demostrar y aplicar conocimiento fonÃ©tico decodificando palabras con letras silenciosas como knife y gnat",
         "strand": "Foundational Skills",
         "readiness": false
       },
       {
         "code": "2.2(B)(iii)",
         "description_en": "Demonstrate and apply phonetic knowledge by decoding multisyllabic words with multiple sound-spelling patterns",
-        "description_es": "Demostrar y aplicar conocimiento fonético decodificando palabras multisilábicas con múltiples patrones de sonido-ortografía",
+        "description_es": "Demostrar y aplicar conocimiento fonÃ©tico decodificando palabras multisilÃ¡bicas con mÃºltiples patrones de sonido-ortografÃ­a",
         "strand": "Foundational Skills",
         "readiness": true
       },
@@ -754,14 +754,14 @@
       {
         "code": "2.6(F)",
         "description_en": "Make inferences and use evidence to support understanding",
-        "description_es": "Hacer inferencias y usar evidencia para apoyar la comprensión",
+        "description_es": "Hacer inferencias y usar evidencia para apoyar la comprensiÃ³n",
         "strand": "Comprehension",
         "readiness": true
       },
       {
         "code": "2.7(B)",
         "description_en": "Describe plot elements including main events, the conflict, and the resolution for texts read aloud and independently",
-        "description_es": "Describir elementos de la trama incluyendo eventos principales, el conflicto y la resolución para textos leídos en voz alta e independientemente",
+        "description_es": "Describir elementos de la trama incluyendo eventos principales, el conflicto y la resoluciÃ³n para textos leÃ­dos en voz alta e independientemente",
         "strand": "Response",
         "readiness": true
       },
@@ -782,14 +782,14 @@
       {
         "code": "2.8(D)(i)",
         "description_en": "Recognize characteristics of persuasive text including stating what the author is trying to persuade the reader to think or do",
-        "description_es": "Reconocer características del texto persuasivo incluyendo declarar lo que el autor está tratando de persuadir al lector a pensar o hacer",
+        "description_es": "Reconocer caracterÃ­sticas del texto persuasivo incluyendo declarar lo que el autor estÃ¡ tratando de persuadir al lector a pensar o hacer",
         "strand": "Response",
         "readiness": false
       },
       {
         "code": "2.9(A)",
         "description_en": "Discuss the author's purpose for writing text",
-        "description_es": "Discutir el propósito del autor para escribir el texto",
+        "description_es": "Discutir el propÃ³sito del autor para escribir el texto",
         "strand": "Author's Purpose and Craft",
         "readiness": false
       }
@@ -812,21 +812,21 @@
       {
         "code": "2.4(A)",
         "description_en": "Describe and classify matter based on physical properties, including shape, relative mass, relative temperature, texture, and flexibility",
-        "description_es": "Describir y clasificar materia basada en propiedades físicas, incluyendo forma, masa relativa, temperatura relativa, textura y flexibilidad",
+        "description_es": "Describir y clasificar materia basada en propiedades fÃ­sicas, incluyendo forma, masa relativa, temperatura relativa, textura y flexibilidad",
         "strand": "Matter and Energy",
         "readiness": false
       },
       {
         "code": "2.5(A)",
         "description_en": "Demonstrate and explain how position and motion can be described by direction and speed",
-        "description_es": "Demostrar y explicar cómo la posición y el movimiento pueden describirse por dirección y velocidad",
+        "description_es": "Demostrar y explicar cÃ³mo la posiciÃ³n y el movimiento pueden describirse por direcciÃ³n y velocidad",
         "strand": "Force, Motion, and Energy",
         "readiness": false
       },
       {
         "code": "2.6(A)",
         "description_en": "Identify the basic needs of plants and animals",
-        "description_es": "Identificar las necesidades básicas de plantas y animales",
+        "description_es": "Identificar las necesidades bÃ¡sicas de plantas y animales",
         "strand": "Organisms and Environments",
         "readiness": false
       },
@@ -847,7 +847,7 @@
       {
         "code": "2.8(A)",
         "description_en": "Identify and describe a variety of natural sources of water including streams, lakes, and oceans",
-        "description_es": "Identificar y describir una variedad de fuentes naturales de agua incluyendo arroyos, lagos y océanos",
+        "description_es": "Identificar y describir una variedad de fuentes naturales de agua incluyendo arroyos, lagos y ocÃ©anos",
         "strand": "Earth and Space",
         "readiness": false
       }
@@ -863,7 +863,7 @@
       {
         "code": "2.2(A)",
         "description_en": "Identify contributions of historical figures including Thurgood Marshall, Irma Rangel, and Theodore Roosevelt",
-        "description_es": "Identificar contribuciones de figuras históricas incluyendo Thurgood Marshall, Irma Rangel y Theodore Roosevelt",
+        "description_es": "Identificar contribuciones de figuras histÃ³ricas incluyendo Thurgood Marshall, Irma Rangel y Theodore Roosevelt",
         "strand": "History",
         "readiness": false
       },
@@ -884,7 +884,7 @@
       {
         "code": "2.5(A)",
         "description_en": "Identify and describe the physical characteristics of place including landforms, bodies of water, natural resources, and weather",
-        "description_es": "Identificar y describir las características físicas del lugar incluyendo accidentes geográficos, cuerpos de agua, recursos naturales y clima",
+        "description_es": "Identificar y describir las caracterÃ­sticas fÃ­sicas del lugar incluyendo accidentes geogrÃ¡ficos, cuerpos de agua, recursos naturales y clima",
         "strand": "Geography",
         "readiness": false
       },
@@ -909,28 +909,28 @@
       {
         "code": "3.2(A)",
         "description_en": "Compose and decompose numbers up to 100,000 as a sum of so many ten thousands, so many thousands, so many hundreds, so many tens, and so many ones",
-        "description_es": "Componer y descomponer números hasta 100,000 como una suma de tantos diez miles, tantos miles, tantos cientos, tantas decenas y tantas unidades",
+        "description_es": "Componer y descomponer nÃºmeros hasta 100,000 como una suma de tantos diez miles, tantos miles, tantos cientos, tantas decenas y tantas unidades",
         "strand": "Number and Operations",
         "readiness": true
       },
       {
         "code": "3.2(B)",
         "description_en": "Describe the mathematical relationships found in place value",
-        "description_es": "Describir las relaciones matemáticas encontradas en el valor posicional",
+        "description_es": "Describir las relaciones matemÃ¡ticas encontradas en el valor posicional",
         "strand": "Number and Operations",
         "readiness": false
       },
       {
         "code": "3.2(C)",
         "description_en": "Represent a number on a number line as being between two consecutive multiples of 10; 100; 1,000; or 10,000",
-        "description_es": "Representar un número en una recta numérica como estando entre dos múltiplos consecutivos de 10; 100; 1,000; o 10,000",
+        "description_es": "Representar un nÃºmero en una recta numÃ©rica como estando entre dos mÃºltiplos consecutivos de 10; 100; 1,000; o 10,000",
         "strand": "Number and Operations",
         "readiness": false
       },
       {
         "code": "3.2(D)",
         "description_en": "Compare and order whole numbers up to 100,000 and represent comparisons using symbols",
-        "description_es": "Comparar y ordenar números enteros hasta 100,000 y representar comparaciones usando símbolos",
+        "description_es": "Comparar y ordenar nÃºmeros enteros hasta 100,000 y representar comparaciones usando sÃ­mbolos",
         "strand": "Number and Operations",
         "readiness": true
       },
@@ -944,14 +944,14 @@
       {
         "code": "3.4(B)",
         "description_en": "Round to the nearest 10 or 100 or use compatible numbers to estimate solutions to addition and subtraction problems",
-        "description_es": "Redondear a las 10 o 100 más cercanas o usar números compatibles para estimar soluciones a problemas de suma y resta",
+        "description_es": "Redondear a las 10 o 100 mÃ¡s cercanas o usar nÃºmeros compatibles para estimar soluciones a problemas de suma y resta",
         "strand": "Number and Operations",
         "readiness": false
       },
       {
         "code": "3.4(E)",
         "description_en": "Represent multiplication facts by using a variety of approaches",
-        "description_es": "Representar operaciones de multiplicación usando una variedad de enfoques",
+        "description_es": "Representar operaciones de multiplicaciÃ³n usando una variedad de enfoques",
         "strand": "Number and Operations",
         "readiness": false
       },
@@ -965,35 +965,35 @@
       {
         "code": "3.4(G)",
         "description_en": "Use strategies and algorithms including the standard algorithm to multiply a two-digit number by a one-digit number",
-        "description_es": "Usar estrategias y algoritmos incluyendo el algoritmo estándar para multiplicar un número de dos dígitos por un número de un dígito",
+        "description_es": "Usar estrategias y algoritmos incluyendo el algoritmo estÃ¡ndar para multiplicar un nÃºmero de dos dÃ­gitos por un nÃºmero de un dÃ­gito",
         "strand": "Number and Operations",
         "readiness": true
       },
       {
         "code": "3.4(H)",
         "description_en": "Determine the number of objects in each group when a set is partitioned into equal shares",
-        "description_es": "Determinar el número de objetos en cada grupo cuando un conjunto se divide en partes iguales",
+        "description_es": "Determinar el nÃºmero de objetos en cada grupo cuando un conjunto se divide en partes iguales",
         "strand": "Number and Operations",
         "readiness": false
       },
       {
         "code": "3.4(I)",
         "description_en": "Use strategies to divide up to a four-digit dividend by a one-digit divisor",
-        "description_es": "Usar estrategias para dividir hasta un dividendo de cuatro dígitos por un divisor de un dígito",
+        "description_es": "Usar estrategias para dividir hasta un dividendo de cuatro dÃ­gitos por un divisor de un dÃ­gito",
         "strand": "Number and Operations",
         "readiness": false
       },
       {
         "code": "3.4(J)",
         "description_en": "Determine a quotient using the relationship between multiplication and division",
-        "description_es": "Determinar un cociente usando la relación entre multiplicación y división",
+        "description_es": "Determinar un cociente usando la relaciÃ³n entre multiplicaciÃ³n y divisiÃ³n",
         "strand": "Number and Operations",
         "readiness": false
       },
       {
         "code": "3.4(K)",
         "description_en": "Solve one-step and two-step problems involving multiplication and division within 100 using strategies",
-        "description_es": "Resolver problemas de uno y dos pasos que involucran multiplicación y división dentro de 100 usando estrategias",
+        "description_es": "Resolver problemas de uno y dos pasos que involucran multiplicaciÃ³n y divisiÃ³n dentro de 100 usando estrategias",
         "strand": "Number and Operations",
         "readiness": true
       }
@@ -1002,21 +1002,21 @@
       {
         "code": "3.2(A)(i)",
         "description_en": "Demonstrate and apply phonetic knowledge by decoding words with specific orthographic patterns and rules",
-        "description_es": "Demostrar y aplicar conocimiento fonético decodificando palabras con patrones y reglas ortográficas específicas",
+        "description_es": "Demostrar y aplicar conocimiento fonÃ©tico decodificando palabras con patrones y reglas ortogrÃ¡ficas especÃ­ficas",
         "strand": "Foundational Skills",
         "readiness": true
       },
       {
         "code": "3.2(A)(ii)",
         "description_en": "Demonstrate and apply phonetic knowledge by decoding multisyllabic words with closed syllables; open syllables; VCe syllables; vowel teams",
-        "description_es": "Demostrar y aplicar conocimiento fonético decodificando palabras multisilábicas con sílabas cerradas; sílabas abiertas; sílabas VCe; equipos vocálicos",
+        "description_es": "Demostrar y aplicar conocimiento fonÃ©tico decodificando palabras multisilÃ¡bicas con sÃ­labas cerradas; sÃ­labas abiertas; sÃ­labas VCe; equipos vocÃ¡licos",
         "strand": "Foundational Skills",
         "readiness": true
       },
       {
         "code": "3.2(A)(iii)",
         "description_en": "Demonstrate and apply phonetic knowledge by decoding words using knowledge of syllable division patterns",
-        "description_es": "Demostrar y aplicar conocimiento fonético decodificando palabras usando conocimiento de patrones de división silábica",
+        "description_es": "Demostrar y aplicar conocimiento fonÃ©tico decodificando palabras usando conocimiento de patrones de divisiÃ³n silÃ¡bica",
         "strand": "Foundational Skills",
         "readiness": true
       },
@@ -1030,42 +1030,42 @@
       {
         "code": "3.6(F)",
         "description_en": "Make inferences and use evidence to support understanding",
-        "description_es": "Hacer inferencias y usar evidencia para apoyar la comprensión",
+        "description_es": "Hacer inferencias y usar evidencia para apoyar la comprensiÃ³n",
         "strand": "Comprehension",
         "readiness": true
       },
       {
         "code": "3.6(G)",
         "description_en": "Evaluate details read to determine key ideas",
-        "description_es": "Evaluar detalles leídos para determinar ideas clave",
+        "description_es": "Evaluar detalles leÃ­dos para determinar ideas clave",
         "strand": "Comprehension",
         "readiness": true
       },
       {
         "code": "3.7(B)",
         "description_en": "Describe and analyze plot elements including main events, the conflict, and the resolution",
-        "description_es": "Describir y analizar elementos de la trama incluyendo eventos principales, el conflicto y la resolución",
+        "description_es": "Describir y analizar elementos de la trama incluyendo eventos principales, el conflicto y la resoluciÃ³n",
         "strand": "Response",
         "readiness": true
       },
       {
         "code": "3.7(C)",
         "description_en": "Analyze plot elements including the sequence of events, the conflict, and the resolution",
-        "description_es": "Analizar elementos de la trama incluyendo la secuencia de eventos, el conflicto y la resolución",
+        "description_es": "Analizar elementos de la trama incluyendo la secuencia de eventos, el conflicto y la resoluciÃ³n",
         "strand": "Response",
         "readiness": true
       },
       {
         "code": "3.8(C)",
         "description_en": "Analyze the use of print and graphic features of a variety of texts to locate information and gain meaning",
-        "description_es": "Analizar el uso de características impresas y gráficas de una variedad de textos para ubicar información y obtener significado",
+        "description_es": "Analizar el uso de caracterÃ­sticas impresas y grÃ¡ficas de una variedad de textos para ubicar informaciÃ³n y obtener significado",
         "strand": "Response",
         "readiness": false
       },
       {
         "code": "3.9(A)",
         "description_en": "Demonstrate knowledge of distinguishing characteristics of well-known children's literature",
-        "description_es": "Demostrar conocimiento de características distintivas de literatura infantil bien conocida",
+        "description_es": "Demostrar conocimiento de caracterÃ­sticas distintivas de literatura infantil bien conocida",
         "strand": "Multiple Genres",
         "readiness": false
       }
@@ -1074,7 +1074,7 @@
       {
         "code": "3.2(A)",
         "description_en": "Plan and implement descriptive investigations including asking well defined questions, formulating testable hypotheses, and selecting and using equipment and technology",
-        "description_es": "Planear e implementar investigaciones descriptivas incluyendo hacer preguntas bien definidas, formular hipótesis comprobables y seleccionar y usar equipo y tecnología",
+        "description_es": "Planear e implementar investigaciones descriptivas incluyendo hacer preguntas bien definidas, formular hipÃ³tesis comprobables y seleccionar y usar equipo y tecnologÃ­a",
         "strand": "Scientific Investigation and Reasoning",
         "readiness": false
       },
@@ -1088,21 +1088,21 @@
       {
         "code": "3.5(A)",
         "description_en": "Measure, test, and record physical properties of matter including temperature, mass, magnetism, and the ability to sink or float",
-        "description_es": "Medir, probar y registrar propiedades físicas de la materia incluyendo temperatura, masa, magnetismo y la capacidad de hundirse o flotar",
+        "description_es": "Medir, probar y registrar propiedades fÃ­sicas de la materia incluyendo temperatura, masa, magnetismo y la capacidad de hundirse o flotar",
         "strand": "Matter and Energy",
         "readiness": false
       },
       {
         "code": "3.6(A)",
         "description_en": "Explore different forms of energy including mechanical, light, sound, and heat/thermal in everyday life",
-        "description_es": "Explorar diferentes formas de energía incluyendo mecánica, luz, sonido y calor/térmica en la vida cotidiana",
+        "description_es": "Explorar diferentes formas de energÃ­a incluyendo mecÃ¡nica, luz, sonido y calor/tÃ©rmica en la vida cotidiana",
         "strand": "Force, Motion, and Energy",
         "readiness": false
       },
       {
         "code": "3.7(A)",
         "description_en": "Explore the characteristics of natural resources that make them useful in products and materials",
-        "description_es": "Explorar las características de los recursos naturales que los hacen útiles en productos y materiales",
+        "description_es": "Explorar las caracterÃ­sticas de los recursos naturales que los hacen Ãºtiles en productos y materiales",
         "strand": "Earth and Space",
         "readiness": false
       },
@@ -1116,7 +1116,7 @@
       {
         "code": "3.9(A)",
         "description_en": "Observe and describe the physical characteristics of environments and how they support populations and communities of plants and animals",
-        "description_es": "Observar y describir las características físicas de ambientes y cómo apoyan poblaciones y comunidades de plantas y animales",
+        "description_es": "Observar y describir las caracterÃ­sticas fÃ­sicas de ambientes y cÃ³mo apoyan poblaciones y comunidades de plantas y animales",
         "strand": "Organisms and Environments",
         "readiness": false
       }
@@ -1125,7 +1125,7 @@
       {
         "code": "3.1(A)",
         "description_en": "Describe how individuals, events, and ideas have changed communities, past and present",
-        "description_es": "Describir cómo individuos, eventos e ideas han cambiado comunidades, pasadas y presentes",
+        "description_es": "Describir cÃ³mo individuos, eventos e ideas han cambiado comunidades, pasadas y presentes",
         "strand": "History",
         "readiness": false
       },
@@ -1139,21 +1139,21 @@
       {
         "code": "3.3(A)",
         "description_en": "Identify individuals who have exhibited good citizenship",
-        "description_es": "Identificar individuos que han exhibido buena ciudadanía",
+        "description_es": "Identificar individuos que han exhibido buena ciudadanÃ­a",
         "strand": "Government",
         "readiness": false
       },
       {
         "code": "3.4(A)",
         "description_en": "Locate places of importance in the community, state, and nation",
-        "description_es": "Ubicar lugares de importancia en la comunidad, el estado y la nación",
+        "description_es": "Ubicar lugares de importancia en la comunidad, el estado y la naciÃ³n",
         "strand": "Geography",
         "readiness": false
       },
       {
         "code": "3.4(B)",
         "description_en": "Identify and explain the geographic factors that influence patterns of settlement and the distribution of population in Texas",
-        "description_es": "Identificar y explicar los factores geográficos que influyen en patrones de asentamiento y la distribución de población en Texas",
+        "description_es": "Identificar y explicar los factores geogrÃ¡ficos que influyen en patrones de asentamiento y la distribuciÃ³n de poblaciÃ³n en Texas",
         "strand": "Geography",
         "readiness": false
       },
@@ -1171,77 +1171,77 @@
       {
         "code": "4.2(A)",
         "description_en": "Interpret the value of each place-value position as 10 times the position to the right and as one-tenth of the value of the place to its left",
-        "description_es": "Interpretar el valor de cada posición de valor posicional como 10 veces la posición a la derecha y como un décimo del valor del lugar a su izquierda",
+        "description_es": "Interpretar el valor de cada posiciÃ³n de valor posicional como 10 veces la posiciÃ³n a la derecha y como un dÃ©cimo del valor del lugar a su izquierda",
         "strand": "Number and Operations",
         "readiness": true
       },
       {
         "code": "4.2(B)",
         "description_en": "Represent the value of the digit in whole numbers through 1,000,000,000 and decimals to the hundredths using expanded notation and numerals",
-        "description_es": "Representar el valor del dígito en números enteros hasta 1,000,000,000 y decimales a las centésimas usando notación expandida y numerales",
+        "description_es": "Representar el valor del dÃ­gito en nÃºmeros enteros hasta 1,000,000,000 y decimales a las centÃ©simas usando notaciÃ³n expandida y numerales",
         "strand": "Number and Operations",
         "readiness": true
       },
       {
         "code": "4.2(C)",
         "description_en": "Compare and order whole numbers to 1,000,000,000 and represent comparisons using symbols",
-        "description_es": "Comparar y ordenar números enteros hasta 1,000,000,000 y representar comparaciones usando símbolos",
+        "description_es": "Comparar y ordenar nÃºmeros enteros hasta 1,000,000,000 y representar comparaciones usando sÃ­mbolos",
         "strand": "Number and Operations",
         "readiness": false
       },
       {
         "code": "4.2(D)",
         "description_en": "Round whole numbers to a given place value through the hundred thousands place",
-        "description_es": "Redondear números enteros a un valor posicional dado hasta el lugar de las cien miles",
+        "description_es": "Redondear nÃºmeros enteros a un valor posicional dado hasta el lugar de las cien miles",
         "strand": "Number and Operations",
         "readiness": false
       },
       {
         "code": "4.4(A)",
         "description_en": "Add and subtract whole numbers and decimals to the hundredths place using the standard algorithm",
-        "description_es": "Sumar y restar números enteros y decimales hasta el lugar de las centésimas usando el algoritmo estándar",
+        "description_es": "Sumar y restar nÃºmeros enteros y decimales hasta el lugar de las centÃ©simas usando el algoritmo estÃ¡ndar",
         "strand": "Number and Operations",
         "readiness": true
       },
       {
         "code": "4.4(B)",
         "description_en": "Determine products of a number and 10 or 100 using properties of operations and place value understandings",
-        "description_es": "Determinar productos de un número y 10 o 100 usando propiedades de operaciones y comprensiones de valor posicional",
+        "description_es": "Determinar productos de un nÃºmero y 10 o 100 usando propiedades de operaciones y comprensiones de valor posicional",
         "strand": "Number and Operations",
         "readiness": false
       },
       {
         "code": "4.4(C)",
         "description_en": "Represent the product of 2 two-digit numbers using arrays, area models, or equations",
-        "description_es": "Representar el producto de 2 números de dos dígitos usando matrices, modelos de área o ecuaciones",
+        "description_es": "Representar el producto de 2 nÃºmeros de dos dÃ­gitos usando matrices, modelos de Ã¡rea o ecuaciones",
         "strand": "Number and Operations",
         "readiness": false
       },
       {
         "code": "4.4(D)",
         "description_en": "Use strategies and algorithms including the standard algorithm to multiply up to a four-digit number by a one-digit number",
-        "description_es": "Usar estrategias y algoritmos incluyendo el algoritmo estándar para multiplicar hasta un número de cuatro dígitos por un número de un dígito",
+        "description_es": "Usar estrategias y algoritmos incluyendo el algoritmo estÃ¡ndar para multiplicar hasta un nÃºmero de cuatro dÃ­gitos por un nÃºmero de un dÃ­gito",
         "strand": "Number and Operations",
         "readiness": true
       },
       {
         "code": "4.4(F)",
         "description_en": "Use strategies and algorithms including the standard algorithm to divide up to a four-digit dividend by a one-digit divisor",
-        "description_es": "Usar estrategias y algoritmos incluyendo el algoritmo estándar para dividir hasta un dividendo de cuatro dígitos por un divisor de un dígito",
+        "description_es": "Usar estrategias y algoritmos incluyendo el algoritmo estÃ¡ndar para dividir hasta un dividendo de cuatro dÃ­gitos por un divisor de un dÃ­gito",
         "strand": "Number and Operations",
         "readiness": true
       },
       {
         "code": "4.4(G)",
         "description_en": "Round to the nearest 10, 100, or 1,000 or use compatible numbers to estimate solutions involving whole numbers",
-        "description_es": "Redondear a las 10, 100 o 1,000 más cercanas o usar números compatibles para estimar soluciones que involucran números enteros",
+        "description_es": "Redondear a las 10, 100 o 1,000 mÃ¡s cercanas o usar nÃºmeros compatibles para estimar soluciones que involucran nÃºmeros enteros",
         "strand": "Number and Operations",
         "readiness": false
       },
       {
         "code": "4.4(H)",
         "description_en": "Solve with fluency one- and two-step problems involving multiplication and division",
-        "description_es": "Resolver con fluidez problemas de uno y dos pasos que involucran multiplicación y división",
+        "description_es": "Resolver con fluidez problemas de uno y dos pasos que involucran multiplicaciÃ³n y divisiÃ³n",
         "strand": "Number and Operations",
         "readiness": true
       }
@@ -1250,21 +1250,21 @@
       {
         "code": "4.2(A)(i)",
         "description_en": "Demonstrate and apply phonetic knowledge by decoding words with specific orthographic patterns and rules",
-        "description_es": "Demostrar y aplicar conocimiento fonético decodificando palabras con patrones y reglas ortográficas específicas",
+        "description_es": "Demostrar y aplicar conocimiento fonÃ©tico decodificando palabras con patrones y reglas ortogrÃ¡ficas especÃ­ficas",
         "strand": "Foundational Skills",
         "readiness": true
       },
       {
         "code": "4.2(A)(ii)",
         "description_en": "Demonstrate and apply phonetic knowledge by decoding multisyllabic words with multiple sound-spelling patterns",
-        "description_es": "Demostrar y aplicar conocimiento fonético decodificando palabras multisilábicas con múltiples patrones de sonido-ortografía",
+        "description_es": "Demostrar y aplicar conocimiento fonÃ©tico decodificando palabras multisilÃ¡bicas con mÃºltiples patrones de sonido-ortografÃ­a",
         "strand": "Foundational Skills",
         "readiness": true
       },
       {
         "code": "4.2(A)(iii)",
         "description_en": "Demonstrate and apply phonetic knowledge by decoding words using knowledge of syllable division patterns",
-        "description_es": "Demostrar y aplicar conocimiento fonético decodificando palabras usando conocimiento de patrones de división silábica",
+        "description_es": "Demostrar y aplicar conocimiento fonÃ©tico decodificando palabras usando conocimiento de patrones de divisiÃ³n silÃ¡bica",
         "strand": "Foundational Skills",
         "readiness": true
       },
@@ -1278,21 +1278,21 @@
       {
         "code": "4.6(F)",
         "description_en": "Make inferences and use evidence to support understanding",
-        "description_es": "Hacer inferencias y usar evidencia para apoyar la comprensión",
+        "description_es": "Hacer inferencias y usar evidencia para apoyar la comprensiÃ³n",
         "strand": "Comprehension",
         "readiness": true
       },
       {
         "code": "4.6(G)",
         "description_en": "Evaluate details read to determine key ideas",
-        "description_es": "Evaluar detalles leídos para determinar ideas clave",
+        "description_es": "Evaluar detalles leÃ­dos para determinar ideas clave",
         "strand": "Comprehension",
         "readiness": true
       },
       {
         "code": "4.7(B)",
         "description_en": "Write responses that demonstrate understanding of texts including comparing and contrasting ideas across a variety of sources",
-        "description_es": "Escribir respuestas que demuestren comprensión de textos incluyendo comparar y contrastar ideas a través de una variedad de fuentes",
+        "description_es": "Escribir respuestas que demuestren comprensiÃ³n de textos incluyendo comparar y contrastar ideas a travÃ©s de una variedad de fuentes",
         "strand": "Response",
         "readiness": false
       },
@@ -1306,14 +1306,14 @@
       {
         "code": "4.7(D)",
         "description_en": "Retell, paraphrase, or summarize texts in ways that maintain meaning and logical order",
-        "description_es": "Volver a contar, parafrasear o resumir textos de manera que se mantenga el significado y el orden lógico",
+        "description_es": "Volver a contar, parafrasear o resumir textos de manera que se mantenga el significado y el orden lÃ³gico",
         "strand": "Response",
         "readiness": true
       },
       {
         "code": "4.8(A)",
         "description_en": "Infer basic themes supported by text evidence",
-        "description_es": "Inferir temas básicos apoyados por evidencia del texto",
+        "description_es": "Inferir temas bÃ¡sicos apoyados por evidencia del texto",
         "strand": "Multiple Genres",
         "readiness": true
       },
@@ -1327,7 +1327,7 @@
       {
         "code": "4.8(C)",
         "description_en": "Analyze plot elements including rising action, climax, falling action, and resolution",
-        "description_es": "Analizar elementos de la trama incluyendo acción ascendente, clímax, acción descendente y resolución",
+        "description_es": "Analizar elementos de la trama incluyendo acciÃ³n ascendente, clÃ­max, acciÃ³n descendente y resoluciÃ³n",
         "strand": "Multiple Genres",
         "readiness": false
       }
@@ -1336,28 +1336,28 @@
       {
         "code": "4.2(A)",
         "description_en": "Plan and implement descriptive investigations including asking well defined questions, making inferences, and selecting appropriate equipment or technology",
-        "description_es": "Planear e implementar investigaciones descriptivas incluyendo hacer preguntas bien definidas, hacer inferencias y seleccionar equipo o tecnología apropiada",
+        "description_es": "Planear e implementar investigaciones descriptivas incluyendo hacer preguntas bien definidas, hacer inferencias y seleccionar equipo o tecnologÃ­a apropiada",
         "strand": "Scientific Investigation and Reasoning",
         "readiness": false
       },
       {
         "code": "4.2(B)",
         "description_en": "Collect and record data by observing and measuring using the metric system and recognize differences between observed and measured data",
-        "description_es": "Recolectar y registrar datos observando y midiendo usando el sistema métrico y reconocer diferencias entre datos observados y medidos",
+        "description_es": "Recolectar y registrar datos observando y midiendo usando el sistema mÃ©trico y reconocer diferencias entre datos observados y medidos",
         "strand": "Scientific Investigation and Reasoning",
         "readiness": false
       },
       {
         "code": "4.5(A)",
         "description_en": "Measure, compare, and contrast physical properties of matter including size, mass, volume, states, temperature, magnetism, and the ability to sink or float",
-        "description_es": "Medir, comparar y contrastar propiedades físicas de la materia incluyendo tamaño, masa, volumen, estados, temperatura, magnetismo y la capacidad de hundirse o flotar",
+        "description_es": "Medir, comparar y contrastar propiedades fÃ­sicas de la materia incluyendo tamaÃ±o, masa, volumen, estados, temperatura, magnetismo y la capacidad de hundirse o flotar",
         "strand": "Matter and Energy",
         "readiness": false
       },
       {
         "code": "4.6(A)",
         "description_en": "Differentiate among forms of energy including mechanical, sound, electrical, light, and heat/thermal",
-        "description_es": "Diferenciar entre formas de energía incluyendo mecánica, sonido, eléctrica, luz y calor/térmica",
+        "description_es": "Diferenciar entre formas de energÃ­a incluyendo mecÃ¡nica, sonido, elÃ©ctrica, luz y calor/tÃ©rmica",
         "strand": "Force, Motion, and Energy",
         "readiness": false
       },
@@ -1371,14 +1371,14 @@
       {
         "code": "4.8(A)",
         "description_en": "Measure and record changes in weather and make predictions using weather maps, weather symbols, and a map key",
-        "description_es": "Medir y registrar cambios en el clima y hacer predicciones usando mapas del clima, símbolos del clima y una clave del mapa",
+        "description_es": "Medir y registrar cambios en el clima y hacer predicciones usando mapas del clima, sÃ­mbolos del clima y una clave del mapa",
         "strand": "Earth and Space",
         "readiness": false
       },
       {
         "code": "4.9(A)",
         "description_en": "Investigate that most producers need sunlight, water, and carbon dioxide to make their own food",
-        "description_es": "Investigar que la mayoría de los productores necesitan luz solar, agua y dióxido de carbono para hacer su propia comida",
+        "description_es": "Investigar que la mayorÃ­a de los productores necesitan luz solar, agua y diÃ³xido de carbono para hacer su propia comida",
         "strand": "Organisms and Environments",
         "readiness": false
       }
@@ -1387,56 +1387,56 @@
       {
         "code": "4.1(A)",
         "description_en": "Explain the possible origins of American Indian groups in Texas",
-        "description_es": "Explicar los posibles orígenes de grupos indígenas americanos en Texas",
+        "description_es": "Explicar los posibles orÃ­genes de grupos indÃ­genas americanos en Texas",
         "strand": "History",
         "readiness": false
       },
       {
         "code": "4.2(A)",
         "description_en": "Summarize reasons for European exploration and settlement of Texas",
-        "description_es": "Resumir razones para la exploración y el asentamiento europeo de Texas",
+        "description_es": "Resumir razones para la exploraciÃ³n y el asentamiento europeo de Texas",
         "strand": "History",
         "readiness": false
       },
       {
         "code": "4.3(A)",
         "description_en": "Analyze the causes, major events, and effects of the Texas Revolution",
-        "description_es": "Analizar las causas, eventos principales y efectos de la Revolución de Texas",
+        "description_es": "Analizar las causas, eventos principales y efectos de la RevoluciÃ³n de Texas",
         "strand": "History",
         "readiness": false
       },
       {
         "code": "4.4(A)",
         "description_en": "Identify leaders important to the founding of Texas and explain their contributions",
-        "description_es": "Identificar líderes importantes para la fundación de Texas y explicar sus contribuciones",
+        "description_es": "Identificar lÃ­deres importantes para la fundaciÃ³n de Texas y explicar sus contribuciones",
         "strand": "History",
         "readiness": false
       },
       {
         "code": "4.5(A)",
         "description_en": "Explain the reasons for the growth of representative government and institutions during the colonial period",
-        "description_es": "Explicar las razones para el crecimiento del gobierno representativo e instituciones durante el período colonial",
+        "description_es": "Explicar las razones para el crecimiento del gobierno representativo e instituciones durante el perÃ­odo colonial",
         "strand": "Government",
         "readiness": false
       },
       {
         "code": "4.6(A)",
         "description_en": "Apply geographic tools including maps and globes to construct and interpret maps",
-        "description_es": "Aplicar herramientas geográficas incluyendo mapas y globos para construir e interpretar mapas",
+        "description_es": "Aplicar herramientas geogrÃ¡ficas incluyendo mapas y globos para construir e interpretar mapas",
         "strand": "Geography",
         "readiness": false
       },
       {
         "code": "4.8(A)",
         "description_en": "Identify ways American Indians adapted to and used the resources in the environment",
-        "description_es": "Identificar formas en que los indígenas americanos se adaptaron y usaron los recursos en el ambiente",
+        "description_es": "Identificar formas en que los indÃ­genas americanos se adaptaron y usaron los recursos en el ambiente",
         "strand": "Geography",
         "readiness": false
       },
       {
         "code": "4.10(A)",
         "description_en": "Explain the economic activities of early settlers in Texas",
-        "description_es": "Explicar las actividades económicas de los primeros colonos en Texas",
+        "description_es": "Explicar las actividades econÃ³micas de los primeros colonos en Texas",
         "strand": "Economics",
         "readiness": false
       }
@@ -1447,77 +1447,77 @@
       {
         "code": "5.2(A)",
         "description_en": "Represent the value of the digit in decimals through the thousandths using expanded notation and numerals",
-        "description_es": "Representar el valor del dígito en decimales hasta los milésimos usando notación expandida y numerales",
+        "description_es": "Representar el valor del dÃ­gito en decimales hasta los milÃ©simos usando notaciÃ³n expandida y numerales",
         "strand": "Number and Operations",
         "readiness": true
       },
       {
         "code": "5.2(B)",
         "description_en": "Compare and order two decimals to thousandths and represent comparisons using the symbols >, <, or =",
-        "description_es": "Comparar y ordenar dos decimales a los milésimos y representar comparaciones usando los símbolos >, <, o =",
+        "description_es": "Comparar y ordenar dos decimales a los milÃ©simos y representar comparaciones usando los sÃ­mbolos >, <, o =",
         "strand": "Number and Operations",
         "readiness": true
       },
       {
         "code": "5.3(A)",
         "description_en": "Estimate to determine solutions to mathematical and real-world problems involving addition, subtraction, multiplication, or division",
-        "description_es": "Estimar para determinar soluciones a problemas matemáticos y del mundo real que involucran suma, resta, multiplicación o división",
+        "description_es": "Estimar para determinar soluciones a problemas matemÃ¡ticos y del mundo real que involucran suma, resta, multiplicaciÃ³n o divisiÃ³n",
         "strand": "Number and Operations",
         "readiness": false
       },
       {
         "code": "5.3(B)",
         "description_en": "Multiply with fluency a three-digit number by a two-digit number using the standard algorithm",
-        "description_es": "Multiplicar con fluidez un número de tres dígitos por un número de dos dígitos usando el algoritmo estándar",
+        "description_es": "Multiplicar con fluidez un nÃºmero de tres dÃ­gitos por un nÃºmero de dos dÃ­gitos usando el algoritmo estÃ¡ndar",
         "strand": "Number and Operations",
         "readiness": true
       },
       {
         "code": "5.3(C)",
         "description_en": "Solve with proficiency for quotients of up to a four-digit dividend by a two-digit divisor using strategies and the standard algorithm",
-        "description_es": "Resolver con competencia cocientes de hasta un dividendo de cuatro dígitos por un divisor de dos dígitos usando estrategias y el algoritmo estándar",
+        "description_es": "Resolver con competencia cocientes de hasta un dividendo de cuatro dÃ­gitos por un divisor de dos dÃ­gitos usando estrategias y el algoritmo estÃ¡ndar",
         "strand": "Number and Operations",
         "readiness": true
       },
       {
         "code": "5.3(D)",
         "description_en": "Represent multiplication of decimals with products to the hundredths using objects and pictorial models",
-        "description_es": "Representar multiplicación de decimales con productos a las centésimas usando objetos y modelos pictóricos",
+        "description_es": "Representar multiplicaciÃ³n de decimales con productos a las centÃ©simas usando objetos y modelos pictÃ³ricos",
         "strand": "Number and Operations",
         "readiness": false
       },
       {
         "code": "5.3(E)",
         "description_en": "Solve for products of decimals to the hundredths including situations involving money",
-        "description_es": "Resolver productos de decimales a las centésimas incluyendo situaciones que involucran dinero",
+        "description_es": "Resolver productos de decimales a las centÃ©simas incluyendo situaciones que involucran dinero",
         "strand": "Number and Operations",
         "readiness": true
       },
       {
         "code": "5.3(F)",
         "description_en": "Represent quotients of decimals to the hundredths up to four-digit dividends and two-digit whole number divisors using objects and pictorial models",
-        "description_es": "Representar cocientes de decimales a las centésimas hasta dividendos de cuatro dígitos y divisores de números enteros de dos dígitos usando objetos y modelos pictóricos",
+        "description_es": "Representar cocientes de decimales a las centÃ©simas hasta dividendos de cuatro dÃ­gitos y divisores de nÃºmeros enteros de dos dÃ­gitos usando objetos y modelos pictÃ³ricos",
         "strand": "Number and Operations",
         "readiness": false
       },
       {
         "code": "5.3(H)",
         "description_en": "Represent and solve addition and subtraction of fractions with unequal denominators using objects and pictorial models",
-        "description_es": "Representar y resolver suma y resta de fracciones con denominadores desiguales usando objetos y modelos pictóricos",
+        "description_es": "Representar y resolver suma y resta de fracciones con denominadores desiguales usando objetos y modelos pictÃ³ricos",
         "strand": "Number and Operations",
         "readiness": false
       },
       {
         "code": "5.3(I)",
         "description_en": "Represent and solve multiplication of a whole number and a fraction using objects and pictorial models",
-        "description_es": "Representar y resolver multiplicación de un número entero y una fracción usando objetos y modelos pictóricos",
+        "description_es": "Representar y resolver multiplicaciÃ³n de un nÃºmero entero y una fracciÃ³n usando objetos y modelos pictÃ³ricos",
         "strand": "Number and Operations",
         "readiness": false
       },
       {
         "code": "5.3(K)",
         "description_en": "Add and subtract positive rational numbers fluently",
-        "description_es": "Sumar y restar números racionales positivos con fluidez",
+        "description_es": "Sumar y restar nÃºmeros racionales positivos con fluidez",
         "strand": "Number and Operations",
         "readiness": true
       }
@@ -1526,49 +1526,49 @@
       {
         "code": "5.2(A)(i)",
         "description_en": "Demonstrate and apply phonetic knowledge by decoding words with consonant changes",
-        "description_es": "Demostrar y aplicar conocimiento fonético decodificando palabras con cambios consonánticos",
+        "description_es": "Demostrar y aplicar conocimiento fonÃ©tico decodificando palabras con cambios consonÃ¡nticos",
         "strand": "Foundational Skills",
         "readiness": false
       },
       {
         "code": "5.2(A)(ii)",
         "description_en": "Demonstrate and apply phonetic knowledge by decoding multisyllabic words with multiple sound-spelling patterns",
-        "description_es": "Demostrar y aplicar conocimiento fonético decodificando palabras multisilábicas con múltiples patrones de sonido-ortografía",
+        "description_es": "Demostrar y aplicar conocimiento fonÃ©tico decodificando palabras multisilÃ¡bicas con mÃºltiples patrones de sonido-ortografÃ­a",
         "strand": "Foundational Skills",
         "readiness": true
       },
       {
         "code": "5.2(A)(iii)",
         "description_en": "Demonstrate and apply phonetic knowledge by decoding words using knowledge of prefixes",
-        "description_es": "Demostrar y aplicar conocimiento fonético decodificando palabras usando conocimiento de prefijos",
+        "description_es": "Demostrar y aplicar conocimiento fonÃ©tico decodificando palabras usando conocimiento de prefijos",
         "strand": "Foundational Skills",
         "readiness": false
       },
       {
         "code": "5.2(A)(iv)",
         "description_en": "Demonstrate and apply phonetic knowledge by decoding words using knowledge of suffixes including how they can change base words",
-        "description_es": "Demostrar y aplicar conocimiento fonético decodificando palabras usando conocimiento de sufijos incluyendo cómo pueden cambiar palabras base",
+        "description_es": "Demostrar y aplicar conocimiento fonÃ©tico decodificando palabras usando conocimiento de sufijos incluyendo cÃ³mo pueden cambiar palabras base",
         "strand": "Foundational Skills",
         "readiness": false
       },
       {
         "code": "5.6(F)",
         "description_en": "Make inferences and use evidence to support understanding",
-        "description_es": "Hacer inferencias y usar evidencia para apoyar la comprensión",
+        "description_es": "Hacer inferencias y usar evidencia para apoyar la comprensiÃ³n",
         "strand": "Comprehension",
         "readiness": true
       },
       {
         "code": "5.6(G)",
         "description_en": "Evaluate details read to determine key ideas",
-        "description_es": "Evaluar detalles leídos para determinar ideas clave",
+        "description_es": "Evaluar detalles leÃ­dos para determinar ideas clave",
         "strand": "Comprehension",
         "readiness": true
       },
       {
         "code": "5.6(H)",
         "description_en": "Synthesize information to create new understanding",
-        "description_es": "Sintetizar información para crear nueva comprensión",
+        "description_es": "Sintetizar informaciÃ³n para crear nueva comprensiÃ³n",
         "strand": "Comprehension",
         "readiness": false
       },
@@ -1582,28 +1582,28 @@
       {
         "code": "5.7(D)",
         "description_en": "Retell, paraphrase, or summarize texts in ways that maintain meaning and logical order",
-        "description_es": "Volver a contar, parafrasear o resumir textos de manera que se mantenga el significado y el orden lógico",
+        "description_es": "Volver a contar, parafrasear o resumir textos de manera que se mantenga el significado y el orden lÃ³gico",
         "strand": "Response",
         "readiness": true
       },
       {
         "code": "5.8(A)",
         "description_en": "Infer multiple themes within and across texts using text evidence",
-        "description_es": "Inferir múltiples temas dentro y a través de textos usando evidencia del texto",
+        "description_es": "Inferir mÃºltiples temas dentro y a travÃ©s de textos usando evidencia del texto",
         "strand": "Multiple Genres",
         "readiness": true
       },
       {
         "code": "5.8(B)",
         "description_en": "Analyze how the characters' internal and external responses develop the plot",
-        "description_es": "Analizar cómo las respuestas internas y externas de los personajes desarrollan la trama",
+        "description_es": "Analizar cÃ³mo las respuestas internas y externas de los personajes desarrollan la trama",
         "strand": "Multiple Genres",
         "readiness": false
       },
       {
         "code": "5.8(C)",
         "description_en": "Analyze plot elements including rising action, climax, falling action, resolution, and non-linear elements",
-        "description_es": "Analizar elementos de la trama incluyendo acción ascendente, clímax, acción descendente, resolución y elementos no lineales",
+        "description_es": "Analizar elementos de la trama incluyendo acciÃ³n ascendente, clÃ­max, acciÃ³n descendente, resoluciÃ³n y elementos no lineales",
         "strand": "Multiple Genres",
         "readiness": false
       }
@@ -1619,28 +1619,28 @@
       {
         "code": "5.2(B)",
         "description_en": "Ask well defined questions, formulate testable hypotheses, and select and use appropriate equipment and technology",
-        "description_es": "Hacer preguntas bien definidas, formular hipótesis comprobables y seleccionar y usar equipo y tecnología apropiados",
+        "description_es": "Hacer preguntas bien definidas, formular hipÃ³tesis comprobables y seleccionar y usar equipo y tecnologÃ­a apropiados",
         "strand": "Scientific Investigation and Reasoning",
         "readiness": false
       },
       {
         "code": "5.5(A)",
         "description_en": "Classify matter based on measurable, testable, and observable physical properties including mass, magnetism, physical state, relative density, solubility in water, and ability to conduct or insulate thermal or electric energy",
-        "description_es": "Clasificar materia basada en propiedades físicas medibles, comprobables y observables incluyendo masa, magnetismo, estado físico, densidad relativa, solubilidad en agua y habilidad para conducir o aislar energía térmica o eléctrica",
+        "description_es": "Clasificar materia basada en propiedades fÃ­sicas medibles, comprobables y observables incluyendo masa, magnetismo, estado fÃ­sico, densidad relativa, solubilidad en agua y habilidad para conducir o aislar energÃ­a tÃ©rmica o elÃ©ctrica",
         "strand": "Matter and Energy",
         "readiness": false
       },
       {
         "code": "5.6(A)",
         "description_en": "Explore the uses of energy including mechanical, light, thermal, electrical, and sound energy",
-        "description_es": "Explorar los usos de energía incluyendo energía mecánica, luz, térmica, eléctrica y sonido",
+        "description_es": "Explorar los usos de energÃ­a incluyendo energÃ­a mecÃ¡nica, luz, tÃ©rmica, elÃ©ctrica y sonido",
         "strand": "Force, Motion, and Energy",
         "readiness": false
       },
       {
         "code": "5.7(A)",
         "description_en": "Explore the processes that led to the formation of sedimentary rocks and fossil fuels",
-        "description_es": "Explorar los procesos que llevaron a la formación de rocas sedimentarias y combustibles fósiles",
+        "description_es": "Explorar los procesos que llevaron a la formaciÃ³n de rocas sedimentarias y combustibles fÃ³siles",
         "strand": "Earth and Space",
         "readiness": false
       },
@@ -1663,28 +1663,28 @@
       {
         "code": "5.1(A)",
         "description_en": "Explain when, where, and why groups of people explored, colonized, and settled in the United States",
-        "description_es": "Explicar cuándo, dónde y por qué grupos de personas exploraron, colonizaron y se establecieron en los Estados Unidos",
+        "description_es": "Explicar cuÃ¡ndo, dÃ³nde y por quÃ© grupos de personas exploraron, colonizaron y se establecieron en los Estados Unidos",
         "strand": "History",
         "readiness": false
       },
       {
         "code": "5.2(A)",
         "description_en": "Identify and analyze the causes and effects of events prior to and during the American Revolution",
-        "description_es": "Identificar y analizar las causas y efectos de eventos antes y durante la Revolución Americana",
+        "description_es": "Identificar y analizar las causas y efectos de eventos antes y durante la RevoluciÃ³n Americana",
         "strand": "History",
         "readiness": false
       },
       {
         "code": "5.3(A)",
         "description_en": "Analyze the reasons for the growth of representative government and institutions during the colonial period",
-        "description_es": "Analizar las razones para el crecimiento del gobierno representativo e instituciones durante el período colonial",
+        "description_es": "Analizar las razones para el crecimiento del gobierno representativo e instituciones durante el perÃ­odo colonial",
         "strand": "History",
         "readiness": false
       },
       {
         "code": "5.4(A)",
         "description_en": "Describe the purposes, key elements, and importance of the Declaration of Independence and the U.S. Constitution",
-        "description_es": "Describir los propósitos, elementos clave e importancia de la Declaración de Independencia y la Constitución de los Estados Unidos",
+        "description_es": "Describir los propÃ³sitos, elementos clave e importancia de la DeclaraciÃ³n de Independencia y la ConstituciÃ³n de los Estados Unidos",
         "strand": "Government",
         "readiness": false
       },
@@ -1698,14 +1698,14 @@
       {
         "code": "5.6(A)",
         "description_en": "Apply geographic tools including grids, legends, and symbols to construct and interpret maps",
-        "description_es": "Aplicar herramientas geográficas incluyendo cuadrículas, leyendas y símbolos para construir e interpretar mapas",
+        "description_es": "Aplicar herramientas geogrÃ¡ficas incluyendo cuadrÃ­culas, leyendas y sÃ­mbolos para construir e interpretar mapas",
         "strand": "Geography",
         "readiness": false
       },
       {
         "code": "5.10(A)",
         "description_en": "Explain the economic activities of early settlers in the United States",
-        "description_es": "Explicar las actividades económicas de los primeros colonos en los Estados Unidos",
+        "description_es": "Explicar las actividades econÃ³micas de los primeros colonos en los Estados Unidos",
         "strand": "Economics",
         "readiness": false
       }
@@ -1716,35 +1716,35 @@
       {
         "code": "6.2(A)",
         "description_en": "Classify whole numbers, integers, and rational numbers using a visual representation",
-        "description_es": "Clasificar números enteros, enteros y números racionales usando una representación visual",
+        "description_es": "Clasificar nÃºmeros enteros, enteros y nÃºmeros racionales usando una representaciÃ³n visual",
         "strand": "Number and Operations",
         "readiness": false
       },
       {
         "code": "6.2(B)",
         "description_en": "Identify a number, its opposite, and its absolute value",
-        "description_es": "Identificar un número, su opuesto y su valor absoluto",
+        "description_es": "Identificar un nÃºmero, su opuesto y su valor absoluto",
         "strand": "Number and Operations",
         "readiness": false
       },
       {
         "code": "6.2(C)",
         "description_en": "Locate, compare, and order integers and rational numbers using a number line",
-        "description_es": "Ubicar, comparar y ordenar enteros y números racionales usando una recta numérica",
+        "description_es": "Ubicar, comparar y ordenar enteros y nÃºmeros racionales usando una recta numÃ©rica",
         "strand": "Number and Operations",
         "readiness": true
       },
       {
         "code": "6.2(D)",
         "description_en": "Order a set of rational numbers arising from mathematical and real-world contexts",
-        "description_es": "Ordenar un conjunto de números racionales que surgen de contextos matemáticos y del mundo real",
+        "description_es": "Ordenar un conjunto de nÃºmeros racionales que surgen de contextos matemÃ¡ticos y del mundo real",
         "strand": "Number and Operations",
         "readiness": true
       },
       {
         "code": "6.3(B)",
         "description_en": "Determine, with and without computation, whether a quantity is increased or decreased when multiplied by a fraction",
-        "description_es": "Determinar, con y sin cálculo, si una cantidad aumenta o disminuye cuando se multiplica por una fracción",
+        "description_es": "Determinar, con y sin cÃ¡lculo, si una cantidad aumenta o disminuye cuando se multiplica por una fracciÃ³n",
         "strand": "Number and Operations",
         "readiness": false
       },
@@ -1765,21 +1765,21 @@
       {
         "code": "6.3(E)",
         "description_en": "Multiply and divide positive rational numbers fluently",
-        "description_es": "Multiplicar y dividir números racionales positivos con fluidez",
+        "description_es": "Multiplicar y dividir nÃºmeros racionales positivos con fluidez",
         "strand": "Number and Operations",
         "readiness": true
       },
       {
         "code": "6.4(A)",
         "description_en": "Compare two rules verbally, numerically, graphically, and symbolically in the form of y = ax or y = x + a",
-        "description_es": "Comparar dos reglas verbalmente, numéricamente, gráficamente y simbólicamente en la forma de y = ax o y = x + a",
+        "description_es": "Comparar dos reglas verbalmente, numÃ©ricamente, grÃ¡ficamente y simbÃ³licamente en la forma de y = ax o y = x + a",
         "strand": "Proportionality",
         "readiness": false
       },
       {
         "code": "6.4(B)",
         "description_en": "Apply qualitative and quantitative reasoning to solve prediction and comparison of real-world problems involving ratios and rates",
-        "description_es": "Aplicar razonamiento cualitativo y cuantitativo para resolver predicción y comparación de problemas del mundo real que involucran razones y tasas",
+        "description_es": "Aplicar razonamiento cualitativo y cuantitativo para resolver predicciÃ³n y comparaciÃ³n de problemas del mundo real que involucran razones y tasas",
         "strand": "Proportionality",
         "readiness": true
       },
@@ -1793,14 +1793,14 @@
       {
         "code": "6.4(D)",
         "description_en": "Give examples of rates as the comparison by division of two quantities having different attributes",
-        "description_es": "Dar ejemplos de tasas como la comparación por división de dos cantidades que tienen atributos diferentes",
+        "description_es": "Dar ejemplos de tasas como la comparaciÃ³n por divisiÃ³n de dos cantidades que tienen atributos diferentes",
         "strand": "Proportionality",
         "readiness": false
       },
       {
         "code": "6.5(A)",
         "description_en": "Represent mathematical and real-world problems involving ratios and rates using scale factors, tables, graphs, and proportions",
-        "description_es": "Representar problemas matemáticos y del mundo real que involucran razones y tasas usando factores de escala, tablas, gráficas y proporciones",
+        "description_es": "Representar problemas matemÃ¡ticos y del mundo real que involucran razones y tasas usando factores de escala, tablas, grÃ¡ficas y proporciones",
         "strand": "Proportionality",
         "readiness": true
       }
@@ -1809,42 +1809,42 @@
       {
         "code": "6.2(A)(i)",
         "description_en": "Demonstrate and apply spelling knowledge by spelling multisyllabic words with closed syllables; open syllables; VCe syllables",
-        "description_es": "Demostrar y aplicar conocimiento de ortografía deletreando palabras multisilábicas con sílabas cerradas; sílabas abiertas; sílabas VCe",
+        "description_es": "Demostrar y aplicar conocimiento de ortografÃ­a deletreando palabras multisilÃ¡bicas con sÃ­labas cerradas; sÃ­labas abiertas; sÃ­labas VCe",
         "strand": "Foundational Skills",
         "readiness": false
       },
       {
         "code": "6.2(A)(ii)",
         "description_en": "Demonstrate and apply spelling knowledge by spelling homophones",
-        "description_es": "Demostrar y aplicar conocimiento de ortografía deletreando homófonos",
+        "description_es": "Demostrar y aplicar conocimiento de ortografÃ­a deletreando homÃ³fonos",
         "strand": "Foundational Skills",
         "readiness": false
       },
       {
         "code": "6.2(A)(iii)",
         "description_en": "Demonstrate and apply spelling knowledge by spelling words using advanced knowledge of syllable division patterns",
-        "description_es": "Demostrar y aplicar conocimiento de ortografía deletreando palabras usando conocimiento avanzado de patrones de división silábica",
+        "description_es": "Demostrar y aplicar conocimiento de ortografÃ­a deletreando palabras usando conocimiento avanzado de patrones de divisiÃ³n silÃ¡bica",
         "strand": "Foundational Skills",
         "readiness": false
       },
       {
         "code": "6.5(F)",
         "description_en": "Make inferences and use evidence to support understanding",
-        "description_es": "Hacer inferencias y usar evidencia para apoyar la comprensión",
+        "description_es": "Hacer inferencias y usar evidencia para apoyar la comprensiÃ³n",
         "strand": "Comprehension",
         "readiness": true
       },
       {
         "code": "6.5(G)",
         "description_en": "Evaluate details read to determine key ideas",
-        "description_es": "Evaluar detalles leídos para determinar ideas clave",
+        "description_es": "Evaluar detalles leÃ­dos para determinar ideas clave",
         "strand": "Comprehension",
         "readiness": true
       },
       {
         "code": "6.5(H)",
         "description_en": "Synthesize information to create new understanding",
-        "description_es": "Sintetizar información para crear nueva comprensión",
+        "description_es": "Sintetizar informaciÃ³n para crear nueva comprensiÃ³n",
         "strand": "Comprehension",
         "readiness": false
       },
@@ -1858,28 +1858,28 @@
       {
         "code": "6.7(A)",
         "description_en": "Infer multiple themes within and across texts using text evidence",
-        "description_es": "Inferir múltiples temas dentro y a través de textos usando evidencia del texto",
+        "description_es": "Inferir mÃºltiples temas dentro y a travÃ©s de textos usando evidencia del texto",
         "strand": "Multiple Genres",
         "readiness": true
       },
       {
         "code": "6.7(B)",
         "description_en": "Analyze how the characters' internal and external responses develop the plot",
-        "description_es": "Analizar cómo las respuestas internas y externas de los personajes desarrollan la trama",
+        "description_es": "Analizar cÃ³mo las respuestas internas y externas de los personajes desarrollan la trama",
         "strand": "Multiple Genres",
         "readiness": false
       },
       {
         "code": "6.7(C)",
         "description_en": "Analyze plot elements including rising action, climax, falling action, resolution, and non-linear elements such as flashback",
-        "description_es": "Analizar elementos de la trama incluyendo acción ascendente, clímax, acción descendente, resolución y elementos no lineales como flashback",
+        "description_es": "Analizar elementos de la trama incluyendo acciÃ³n ascendente, clÃ­max, acciÃ³n descendente, resoluciÃ³n y elementos no lineales como flashback",
         "strand": "Multiple Genres",
         "readiness": false
       },
       {
         "code": "6.8(D)(i)",
         "description_en": "Analyze characteristics of multimodal and digital texts",
-        "description_es": "Analizar características de textos multimodales y digitales",
+        "description_es": "Analizar caracterÃ­sticas de textos multimodales y digitales",
         "strand": "Multiple Genres",
         "readiness": false
       }
@@ -1895,35 +1895,35 @@
       {
         "code": "6.2(B)",
         "description_en": "Design and implement experimental investigations by making observations, asking well-defined questions, formulating testable hypotheses, and using appropriate equipment and technology",
-        "description_es": "Diseñar e implementar investigaciones experimentales haciendo observaciones, haciendo preguntas bien definidas, formulando hipótesis comprobables y usando equipo y tecnología apropiados",
+        "description_es": "DiseÃ±ar e implementar investigaciones experimentales haciendo observaciones, haciendo preguntas bien definidas, formulando hipÃ³tesis comprobables y usando equipo y tecnologÃ­a apropiados",
         "strand": "Scientific Investigation and Reasoning",
         "readiness": false
       },
       {
         "code": "6.5(A)",
         "description_en": "Know that an element is a pure substance represented by a single symbol and that a compound is a pure substance represented by a chemical formula",
-        "description_es": "Saber que un elemento es una sustancia pura representada por un solo símbolo y que un compuesto es una sustancia pura representada por una fórmula química",
+        "description_es": "Saber que un elemento es una sustancia pura representada por un solo sÃ­mbolo y que un compuesto es una sustancia pura representada por una fÃ³rmula quÃ­mica",
         "strand": "Matter and Energy",
         "readiness": false
       },
       {
         "code": "6.6(A)",
         "description_en": "Identify that organic compounds contain carbon and other elements such as hydrogen, oxygen, phosphorus, nitrogen, or sulfur",
-        "description_es": "Identificar que los compuestos orgánicos contienen carbono y otros elementos como hidrógeno, oxígeno, fósforo, nitrógeno o azufre",
+        "description_es": "Identificar que los compuestos orgÃ¡nicos contienen carbono y otros elementos como hidrÃ³geno, oxÃ­geno, fÃ³sforo, nitrÃ³geno o azufre",
         "strand": "Matter and Energy",
         "readiness": false
       },
       {
         "code": "6.8(A)",
         "description_en": "Compare and contrast potential and kinetic energy",
-        "description_es": "Comparar y contrastar energía potencial y cinética",
+        "description_es": "Comparar y contrastar energÃ­a potencial y cinÃ©tica",
         "strand": "Force, Motion, and Energy",
         "readiness": false
       },
       {
         "code": "6.9(A)",
         "description_en": "Analyze the relationships among force, mass, and acceleration including Newton's laws of motion",
-        "description_es": "Analizar las relaciones entre fuerza, masa y aceleración incluyendo las leyes del movimiento de Newton",
+        "description_es": "Analizar las relaciones entre fuerza, masa y aceleraciÃ³n incluyendo las leyes del movimiento de Newton",
         "strand": "Force, Motion, and Energy",
         "readiness": false
       },
@@ -1937,7 +1937,7 @@
       {
         "code": "6.11(A)",
         "description_en": "Describe the structure of atoms including the masses, electrical charges, and locations of protons and neutrons in the nucleus and electrons in the electron cloud",
-        "description_es": "Describir la estructura de átomos incluyendo las masas, cargas eléctricas y ubicaciones de protones y neutrones en el núcleo y electrones en la nube de electrones",
+        "description_es": "Describir la estructura de Ã¡tomos incluyendo las masas, cargas elÃ©ctricas y ubicaciones de protones y neutrones en el nÃºcleo y electrones en la nube de electrones",
         "strand": "Matter and Energy",
         "readiness": false
       }
@@ -1951,9 +1951,30 @@
         "readiness": false
       },
       {
+        "code": "6.1(B)",
+        "description_en": "Analyze the historical background of various contemporary societies to evaluate relationships between past conflicts and current conditions",
+        "description_es": "Analizar el trasfondo histórico de varias sociedades contemporáneas para evaluar relaciones entre conflictos pasados y condiciones actuales",
+        "strand": "History",
+        "readiness": false
+      },
+      {
         "code": "6.2(A)",
-        "description_en": "Explain the significant contributions of the classical civilizations",
-        "description_es": "Explicar las contribuciones significativas de las civilizaciones clásicas",
+        "description_en": "Explain the significant contributions of the classical civilizations of Greece, Rome, India, and China",
+        "description_es": "Explicar las contribuciones significativas de las civilizaciones clásicas de Grecia, Roma, India y China",
+        "strand": "History",
+        "readiness": false
+      },
+      {
+        "code": "6.2(B)",
+        "description_en": "Identify the origin and diffusion of major ideas in mathematics, science, and technology",
+        "description_es": "Identificar el origen y difusión de ideas principales en matemáticas, ciencia y tecnología",
+        "strand": "History",
+        "readiness": false
+      },
+      {
+        "code": "6.2(C)",
+        "description_en": "Identify the major achievements of the Hebrews, Greeks, and Romans",
+        "description_es": "Identificar los logros principales de los hebreos, griegos y romanos",
         "strand": "History",
         "readiness": false
       },
@@ -1965,9 +1986,30 @@
         "readiness": false
       },
       {
+        "code": "6.3(B)",
+        "description_en": "Explain ways in which human migration influences the character of places and regions",
+        "description_es": "Explicar formas en que la migración humana influye en el carácter de lugares y regiones",
+        "strand": "Geography",
+        "readiness": false
+      },
+      {
+        "code": "6.3(C)",
+        "description_en": "Identify and locate major physical and human geographic features such as landforms, water bodies, and urban centers",
+        "description_es": "Identificar y ubicar características geográficas físicas y humanas principales como accidentes geográficos, cuerpos de agua y centros urbanos",
+        "strand": "Geography",
+        "readiness": false
+      },
+      {
         "code": "6.4(A)",
         "description_en": "Identify and explain the geographic factors responsible for the location of economic activities in places and regions",
         "description_es": "Identificar y explicar los factores geográficos responsables de la ubicación de actividades económicas en lugares y regiones",
+        "strand": "Geography",
+        "readiness": false
+      },
+      {
+        "code": "6.4(B)",
+        "description_en": "Identify geographic factors such as location, physical features, transportation corridors and barriers, and distribution of natural resources that influence a society's political relationships",
+        "description_es": "Identificar factores geográficos como ubicación, características físicas, corredores y barreras de transporte, y distribución de recursos naturales que influyen en las relaciones políticas de una sociedad",
         "strand": "Geography",
         "readiness": false
       },
@@ -1979,10 +2021,129 @@
         "readiness": false
       },
       {
+        "code": "6.5(B)",
+        "description_en": "Describe the environmental impact resulting from changes in population, natural resources, and settlement patterns",
+        "description_es": "Describir el impacto ambiental resultante de cambios en población, recursos naturales y patrones de asentamiento",
+        "strand": "Geography",
+        "readiness": false
+      },
+      {
+        "code": "6.6(A)",
+        "description_en": "Describe ways that the human-environment interaction has affected various aspects of culture",
+        "description_es": "Describir formas en que la interacción humano-ambiente ha afectado varios aspectos de la cultura",
+        "strand": "Geography",
+        "readiness": false
+      },
+      {
+        "code": "6.6(B)",
+        "description_en": "Identify and analyze ways people have adapted to the physical environment in various places and regions",
+        "description_es": "Identificar y analizar formas en que las personas se han adaptado al ambiente físico en varios lugares y regiones",
+        "strand": "Geography",
+        "readiness": false
+      },
+      {
+        "code": "6.6(C)",
+        "description_en": "Identify and analyze ways people have modified the physical environment",
+        "description_es": "Identificar y analizar formas en que las personas han modificado el ambiente físico",
+        "strand": "Geography",
+        "readiness": false
+      },
+      {
+        "code": "6.7(A)",
+        "description_en": "Compare ways in which various peoples have used and modified their environments",
+        "description_es": "Comparar formas en que varios pueblos han usado y modificado sus ambientes",
+        "strand": "Geography",
+        "readiness": false
+      },
+      {
         "code": "6.11(A)",
         "description_en": "Compare ways in which various societies organize the production and distribution of goods and services",
         "description_es": "Comparar formas en que varias sociedades organizan la producción y distribución de bienes y servicios",
         "strand": "Economics",
+        "readiness": false
+      },
+      {
+        "code": "6.11(B)",
+        "description_en": "Compare and contrast free enterprise, socialist, and communist economies in various contemporary societies",
+        "description_es": "Comparar y contrastar economías de libre empresa, socialistas y comunistas en varias sociedades contemporáneas",
+        "strand": "Economics",
+        "readiness": false
+      },
+      {
+        "code": "6.12(A)",
+        "description_en": "Identify and describe the factors that influence the location of economic activities in places and regions",
+        "description_es": "Identificar y describir los factores que influyen en la ubicación de actividades económicas en lugares y regiones",
+        "strand": "Economics",
+        "readiness": false
+      },
+      {
+        "code": "6.13(A)",
+        "description_en": "Explain the impact of relative scarcity of resources on international trade and economic interdependence among countries",
+        "description_es": "Explicar el impacto de la escasez relativa de recursos en el comercio internacional y la interdependencia económica entre países",
+        "strand": "Economics",
+        "readiness": false
+      },
+      {
+        "code": "6.14(A)",
+        "description_en": "Define and give examples of democratic values from various contemporary societies",
+        "description_es": "Definir y dar ejemplos de valores democráticos de varias sociedades contemporáneas",
+        "strand": "Government",
+        "readiness": false
+      },
+      {
+        "code": "6.14(B)",
+        "description_en": "Describe the importance of individual rights to a democratic society",
+        "description_es": "Describir la importancia de los derechos individuales para una sociedad democrática",
+        "strand": "Government",
+        "readiness": false
+      },
+      {
+        "code": "6.15(A)",
+        "description_en": "Identify and describe common traits that define various cultures",
+        "description_es": "Identificar y describir rasgos comunes que definen varias culturas",
+        "strand": "Culture",
+        "readiness": false
+      },
+      {
+        "code": "6.15(B)",
+        "description_en": "Explain how the relationship between the arts and ideals influences various contemporary societies",
+        "description_es": "Explicar cómo la relación entre las artes y los ideales influye en varias sociedades contemporáneas",
+        "strand": "Culture",
+        "readiness": false
+      },
+      {
+        "code": "6.16(A)",
+        "description_en": "Explain the relationship among religious ideas, philosophical ideas, and cultures",
+        "description_es": "Explicar la relación entre ideas religiosas, ideas filosóficas y culturas",
+        "strand": "Culture",
+        "readiness": false
+      },
+      {
+        "code": "6.16(B)",
+        "description_en": "Explain the significance of religious holidays and observances in various contemporary societies",
+        "description_es": "Explicar el significado de días festivos y observancias religiosas en varias sociedades contemporáneas",
+        "strand": "Culture",
+        "readiness": false
+      },
+      {
+        "code": "6.17(A)",
+        "description_en": "Identify and describe examples of art, music, and literature that transcend the cultures in which they were created",
+        "description_es": "Identificar y describir ejemplos de arte, música y literatura que trascienden las culturas en las que fueron creados",
+        "strand": "Culture",
+        "readiness": false
+      },
+      {
+        "code": "6.18(A)",
+        "description_en": "Explain the impact of past and present communication and transportation systems on society",
+        "description_es": "Explicar el impacto de los sistemas de comunicación y transporte pasados y presentes en la sociedad",
+        "strand": "Science, Technology, and Society",
+        "readiness": false
+      },
+      {
+        "code": "6.18(B)",
+        "description_en": "Describe how science and technology have affected cultural development throughout history",
+        "description_es": "Describir cómo la ciencia y la tecnología han afectado el desarrollo cultural a lo largo de la historia",
+        "strand": "Science, Technology, and Society",
         "readiness": false
       }
     ]
@@ -1992,56 +2153,56 @@
       {
         "code": "7.3(A)",
         "description_en": "Add, subtract, multiply, and divide rational numbers fluently",
-        "description_es": "Sumar, restar, multiplicar y dividir números racionales con fluidez",
+        "description_es": "Sumar, restar, multiplicar y dividir nÃºmeros racionales con fluidez",
         "strand": "Number and Operations",
         "readiness": true
       },
       {
         "code": "7.3(B)",
         "description_en": "Apply and extend previous understandings of operations to solve problems using addition, subtraction, multiplication, and division of rational numbers",
-        "description_es": "Aplicar y extender comprensiones previas de operaciones para resolver problemas usando suma, resta, multiplicación y división de números racionales",
+        "description_es": "Aplicar y extender comprensiones previas de operaciones para resolver problemas usando suma, resta, multiplicaciÃ³n y divisiÃ³n de nÃºmeros racionales",
         "strand": "Number and Operations",
         "readiness": true
       },
       {
         "code": "7.4(A)",
         "description_en": "Represent constant rates of change in mathematical and real-world problems given pictorial, tabular, verbal, numeric, graphical, and algebraic representations",
-        "description_es": "Representar tasas constantes de cambio en problemas matemáticos y del mundo real dados representaciones pictóricas, tabulares, verbales, numéricas, gráficas y algebraicas",
+        "description_es": "Representar tasas constantes de cambio en problemas matemÃ¡ticos y del mundo real dados representaciones pictÃ³ricas, tabulares, verbales, numÃ©ricas, grÃ¡ficas y algebraicas",
         "strand": "Proportionality",
         "readiness": true
       },
       {
         "code": "7.4(B)",
         "description_en": "Calculate unit rates from rates in mathematical and real-world problems",
-        "description_es": "Calcular tasas unitarias de tasas en problemas matemáticos y del mundo real",
+        "description_es": "Calcular tasas unitarias de tasas en problemas matemÃ¡ticos y del mundo real",
         "strand": "Proportionality",
         "readiness": false
       },
       {
         "code": "7.4(C)",
         "description_en": "Determine the constant of proportionality (k = y/x) within mathematical and real-world problems",
-        "description_es": "Determinar la constante de proporcionalidad (k = y/x) dentro de problemas matemáticos y del mundo real",
+        "description_es": "Determinar la constante de proporcionalidad (k = y/x) dentro de problemas matemÃ¡ticos y del mundo real",
         "strand": "Proportionality",
         "readiness": true
       },
       {
         "code": "7.4(D)",
         "description_en": "Solve problems involving ratios, rates, and percents including multi-step problems involving percent increase and percent decrease",
-        "description_es": "Resolver problemas que involucran razones, tasas y porcentajes incluyendo problemas de varios pasos que involucran aumento porcentual y disminución porcentual",
+        "description_es": "Resolver problemas que involucran razones, tasas y porcentajes incluyendo problemas de varios pasos que involucran aumento porcentual y disminuciÃ³n porcentual",
         "strand": "Proportionality",
         "readiness": true
       },
       {
         "code": "7.5(A)",
         "description_en": "Generalize the critical attributes of similarity including ratios within and between similar shapes",
-        "description_es": "Generalizar los atributos críticos de similitud incluyendo razones dentro y entre formas similares",
+        "description_es": "Generalizar los atributos crÃ­ticos de similitud incluyendo razones dentro y entre formas similares",
         "strand": "Proportionality",
         "readiness": false
       },
       {
         "code": "7.7(A)",
         "description_en": "Represent linear relationships using verbal descriptions, tables, graphs, and equations that simplify to the form y = mx + b",
-        "description_es": "Representar relaciones lineales usando descripciones verbales, tablas, gráficas y ecuaciones que simplifican a la forma y = mx + b",
+        "description_es": "Representar relaciones lineales usando descripciones verbales, tablas, grÃ¡ficas y ecuaciones que simplifican a la forma y = mx + b",
         "strand": "Expressions, Equations, and Relationships",
         "readiness": true
       },
@@ -2055,7 +2216,7 @@
       {
         "code": "7.10(B)",
         "description_en": "Represent solutions for one-variable, two-step equations and inequalities on number lines",
-        "description_es": "Representar soluciones para ecuaciones e inecuaciones de una variable y dos pasos en rectas numéricas",
+        "description_es": "Representar soluciones para ecuaciones e inecuaciones de una variable y dos pasos en rectas numÃ©ricas",
         "strand": "Expressions, Equations, and Relationships",
         "readiness": false
       },
@@ -2071,35 +2232,35 @@
       {
         "code": "7.2(A)(i)",
         "description_en": "Demonstrate and apply spelling knowledge by spelling multisyllabic words with multiple sound-spelling patterns",
-        "description_es": "Demostrar y aplicar conocimiento de ortografía deletreando palabras multisilábicas con múltiples patrones de sonido-ortografía",
+        "description_es": "Demostrar y aplicar conocimiento de ortografÃ­a deletreando palabras multisilÃ¡bicas con mÃºltiples patrones de sonido-ortografÃ­a",
         "strand": "Foundational Skills",
         "readiness": false
       },
       {
         "code": "7.2(A)(ii)",
         "description_en": "Demonstrate and apply spelling knowledge by spelling homophones",
-        "description_es": "Demostrar y aplicar conocimiento de ortografía deletreando homófonos",
+        "description_es": "Demostrar y aplicar conocimiento de ortografÃ­a deletreando homÃ³fonos",
         "strand": "Foundational Skills",
         "readiness": false
       },
       {
         "code": "7.5(F)",
         "description_en": "Make inferences and use evidence to support understanding",
-        "description_es": "Hacer inferencias y usar evidencia para apoyar la comprensión",
+        "description_es": "Hacer inferencias y usar evidencia para apoyar la comprensiÃ³n",
         "strand": "Comprehension",
         "readiness": true
       },
       {
         "code": "7.5(G)",
         "description_en": "Evaluate details read to determine key ideas",
-        "description_es": "Evaluar detalles leídos para determinar ideas clave",
+        "description_es": "Evaluar detalles leÃ­dos para determinar ideas clave",
         "strand": "Comprehension",
         "readiness": true
       },
       {
         "code": "7.5(H)",
         "description_en": "Synthesize information from a variety of text types to create new understanding",
-        "description_es": "Sintetizar información de una variedad de tipos de texto para crear nueva comprensión",
+        "description_es": "Sintetizar informaciÃ³n de una variedad de tipos de texto para crear nueva comprensiÃ³n",
         "strand": "Comprehension",
         "readiness": false
       },
@@ -2113,14 +2274,14 @@
       {
         "code": "7.7(A)",
         "description_en": "Infer multiple themes within and across texts using text evidence",
-        "description_es": "Inferir múltiples temas dentro y a través de textos usando evidencia del texto",
+        "description_es": "Inferir mÃºltiples temas dentro y a travÃ©s de textos usando evidencia del texto",
         "strand": "Multiple Genres",
         "readiness": true
       },
       {
         "code": "7.7(B)",
         "description_en": "Analyze how characters' behaviors and underlying motivations contribute to moral dilemmas that influence the plot and theme",
-        "description_es": "Analizar cómo los comportamientos de los personajes y las motivaciones subyacentes contribuyen a dilemas morales que influyen en la trama y el tema",
+        "description_es": "Analizar cÃ³mo los comportamientos de los personajes y las motivaciones subyacentes contribuyen a dilemas morales que influyen en la trama y el tema",
         "strand": "Multiple Genres",
         "readiness": false
       },
@@ -2134,7 +2295,7 @@
       {
         "code": "7.8(D)(i)",
         "description_en": "Analyze characteristics of multimodal and digital texts",
-        "description_es": "Analizar características de textos multimodales y digitales",
+        "description_es": "Analizar caracterÃ­sticas de textos multimodales y digitales",
         "strand": "Multiple Genres",
         "readiness": false
       }
@@ -2150,14 +2311,14 @@
       {
         "code": "7.2(B)",
         "description_en": "Design and implement experimental investigations by making observations, asking well-defined questions, formulating testable hypotheses, and using appropriate equipment and technology",
-        "description_es": "Diseñar e implementar investigaciones experimentales haciendo observaciones, haciendo preguntas bien definidas, formulando hipótesis comprobables y usando equipo y tecnología apropiados",
+        "description_es": "DiseÃ±ar e implementar investigaciones experimentales haciendo observaciones, haciendo preguntas bien definidas, formulando hipÃ³tesis comprobables y usando equipo y tecnologÃ­a apropiados",
         "strand": "Scientific Investigation and Reasoning",
         "readiness": false
       },
       {
         "code": "7.5(A)",
         "description_en": "Recognize that radiant energy from the Sun is transformed into chemical energy through the process of photosynthesis",
-        "description_es": "Reconocer que la energía radiante del Sol se transforma en energía química a través del proceso de fotosíntesis",
+        "description_es": "Reconocer que la energÃ­a radiante del Sol se transforma en energÃ­a quÃ­mica a travÃ©s del proceso de fotosÃ­ntesis",
         "strand": "Matter and Energy",
         "readiness": false
       },
@@ -2178,14 +2339,14 @@
       {
         "code": "7.8(A)",
         "description_en": "Predict and describe how different types of catastrophic events impact ecosystems",
-        "description_es": "Predecir y describir cómo diferentes tipos de eventos catastróficos impactan ecosistemas",
+        "description_es": "Predecir y describir cÃ³mo diferentes tipos de eventos catastrÃ³ficos impactan ecosistemas",
         "strand": "Earth and Space",
         "readiness": false
       },
       {
         "code": "7.10(A)",
         "description_en": "Observe and describe how different environments including microhabitats in schoolyards and biomes support different varieties of organisms",
-        "description_es": "Observar y describir cómo diferentes ambientes incluyendo microhábitats en patios escolares y biomas apoyan diferentes variedades de organismos",
+        "description_es": "Observar y describir cÃ³mo diferentes ambientes incluyendo microhÃ¡bitats en patios escolares y biomas apoyan diferentes variedades de organismos",
         "strand": "Organisms and Environments",
         "readiness": false
       }
@@ -2193,8 +2354,22 @@
     "Social Studies": [
       {
         "code": "7.1(A)",
-        "description_en": "Identify the major eras and events in Texas history described by the following periods: Natural Texas and its People, Age of Contact, Spanish Colonial, Mexican National, Revolution and Republic, Early Statehood, Texas in the Civil War and Reconstruction, Cotton, Cattle, and Railroads, Age of Oil, Texas in the Great Depression and World War II, Civil Rights, and Contemporary Texas",
-        "description_es": "Identificar las eras y eventos principales en la historia de Texas descritos por los siguientes períodos: Texas Natural y su Gente, Era del Contacto, Colonial Español, Nacional Mexicano, Revolución y República, Estadidad Temprana, Texas en la Guerra Civil y Reconstrucción, Algodón, Ganado y Ferrocarriles, Era del Petróleo, Texas en la Gran Depresión y Segunda Guerra Mundial, Derechos Civiles y Texas Contemporáneo",
+        "description_en": "Identify the major eras and events in Texas history described by the following periods: Natural Texas and its People; Age of Contact; Spanish Colonial; Mexican National; Revolution and Republic; Early Statehood; Texas in the Civil War and Reconstruction; Cotton, Cattle, and Railroads; Age of Oil; Texas in the Great Depression and World War II; Civil Rights; and Contemporary Texas",
+        "description_es": "Identificar las eras y eventos principales en la historia de Texas descritos por los siguientes períodos: Texas Natural y su Gente; Era del Contacto; Colonial Español; Nacional Mexicano; Revolución y República; Estadidad Temprana; Texas en la Guerra Civil y Reconstrucción; Algodón, Ganado y Ferrocarriles; Era del Petróleo; Texas en la Gran Depresión y Segunda Guerra Mundial; Derechos Civiles; y Texas Contemporáneo",
+        "strand": "History",
+        "readiness": false
+      },
+      {
+        "code": "7.1(B)",
+        "description_en": "Apply absolute and relative chronology through the sequencing of significant individuals, events, and time periods",
+        "description_es": "Aplicar cronología absoluta y relativa a través de la secuencia de individuos significativos, eventos y períodos de tiempo",
+        "strand": "History",
+        "readiness": false
+      },
+      {
+        "code": "7.1(C)",
+        "description_en": "Explain the significance of the following dates: 1519, 1718, 1821, 1836, 1845, 1861, and 1876",
+        "description_es": "Explicar la importancia de las siguientes fechas: 1519, 1718, 1821, 1836, 1845, 1861 y 1876",
         "strand": "History",
         "readiness": false
       },
@@ -2206,10 +2381,122 @@
         "readiness": false
       },
       {
+        "code": "7.2(B)",
+        "description_en": "Identify important individuals, events, and issues related to European exploration of Texas",
+        "description_es": "Identificar individuos, eventos y temas importantes relacionados con la exploración europea de Texas",
+        "strand": "History",
+        "readiness": false
+      },
+      {
+        "code": "7.2(C)",
+        "description_en": "Identify important individuals, events, and issues related to European colonization of Texas",
+        "description_es": "Identificar individuos, eventos y temas importantes relacionados con la colonización europea de Texas",
+        "strand": "History",
+        "readiness": false
+      },
+      {
+        "code": "7.2(D)",
+        "description_en": "Identify the individuals, issues, and events related to Mexico becoming an independent nation and its impact on Texas",
+        "description_es": "Identificar los individuos, temas y eventos relacionados con que México se convirtiera en una nación independiente y su impacto en Texas",
+        "strand": "History",
+        "readiness": false
+      },
+      {
+        "code": "7.2(E)",
+        "description_en": "Identify the contributions of significant individuals during the Spanish Colonial and Mexican National eras in Texas",
+        "description_es": "Identificar las contribuciones de individuos significativos durante las eras Colonial Española y Nacional Mexicana en Texas",
+        "strand": "History",
+        "readiness": false
+      },
+      {
         "code": "7.3(A)",
         "description_en": "Explain the reasons for the growth of representative government and institutions during the colonial period",
         "description_es": "Explicar las razones para el crecimiento del gobierno representativo e instituciones durante el período colonial",
         "strand": "Government",
+        "readiness": false
+      },
+      {
+        "code": "7.3(B)",
+        "description_en": "Identify the contributions of the Texas Revolution and the individuals who participated in important events",
+        "description_es": "Identificar las contribuciones de la Revolución de Texas y los individuos que participaron en eventos importantes",
+        "strand": "History",
+        "readiness": false
+      },
+      {
+        "code": "7.3(C)",
+        "description_en": "Explain the issues surrounding important events of the Texas Revolution",
+        "description_es": "Explicar los temas en torno a eventos importantes de la Revolución de Texas",
+        "strand": "History",
+        "readiness": false
+      },
+      {
+        "code": "7.3(D)",
+        "description_en": "Explain the importance of the Texas Rangers, the Alamo, and other battles",
+        "description_es": "Explicar la importancia de los Rangers de Texas, el Álamo y otras batallas",
+        "strand": "History",
+        "readiness": false
+      },
+      {
+        "code": "7.4(A)",
+        "description_en": "Identify individuals, events, and issues during the administrations of Republic of Texas Presidents Houston, Lamar, and Jones",
+        "description_es": "Identificar individuos, eventos y temas durante las administraciones de los Presidentes de la República de Texas Houston, Lamar y Jones",
+        "strand": "History",
+        "readiness": false
+      },
+      {
+        "code": "7.4(B)",
+        "description_en": "Identify the contributions of significant individuals during the Republic of Texas era",
+        "description_es": "Identificar las contribuciones de individuos significativos durante la era de la República de Texas",
+        "strand": "History",
+        "readiness": false
+      },
+      {
+        "code": "7.4(C)",
+        "description_en": "Explain how economic factors led to the expansion of slavery into Texas and territories west of the Louisiana Purchase",
+        "description_es": "Explicar cómo factores económicos llevaron a la expansión de la esclavitud en Texas y territorios al oeste de la Compra de Luisiana",
+        "strand": "History",
+        "readiness": false
+      },
+      {
+        "code": "7.5(A)",
+        "description_en": "Identify the impact of various issues and events on life in Texas",
+        "description_es": "Identificar el impacto de varios temas y eventos en la vida en Texas",
+        "strand": "History",
+        "readiness": false
+      },
+      {
+        "code": "7.5(B)",
+        "description_en": "Identify the causes and effects of the Texas annexation to the United States",
+        "description_es": "Identificar las causas y efectos de la anexión de Texas a los Estados Unidos",
+        "strand": "History",
+        "readiness": false
+      },
+      {
+        "code": "7.5(C)",
+        "description_en": "Explain the causes and effects of the Mexican War",
+        "description_es": "Explicar las causas y efectos de la Guerra Mexicana",
+        "strand": "History",
+        "readiness": false
+      },
+      {
+        "code": "7.6(A)",
+        "description_en": "Identify significant individuals and events concerning Texas and the Civil War",
+        "description_es": "Identificar individuos y eventos significativos concernientes a Texas y la Guerra Civil",
+        "strand": "History",
+        "readiness": false
+      },
+      {
+        "code": "7.6(B)",
+        "description_en": "Explain the causes and effects of the Civil War",
+        "description_es": "Explicar las causas y efectos de la Guerra Civil",
+        "strand": "History",
+        "readiness": false
+      },
+      {
+        "code": "7.6(C)",
+        "description_en": "Analyze the political, economic, and social effects of Reconstruction on Texas",
+        "description_es": "Analizar los efectos políticos, económicos y sociales de la Reconstrucción en Texas",
+        "strand": "History",
         "readiness": false
       },
       {
@@ -2220,6 +2507,13 @@
         "readiness": false
       },
       {
+        "code": "7.7(B)",
+        "description_en": "Identify locations and explain the geographic factors that led to the establishment of the major cities of Austin, Dallas-Fort Worth, Houston, and San Antonio",
+        "description_es": "Identificar ubicaciones y explicar los factores geográficos que llevaron al establecimiento de las ciudades principales de Austin, Dallas-Fort Worth, Houston y San Antonio",
+        "strand": "Geography",
+        "readiness": false
+      },
+      {
         "code": "7.8(A)",
         "description_en": "Locate the Mountains and Basins, Great Plains, North Central Plains, and Coastal Plains regions and places of importance in Texas during the 19th, 20th, and 21st centuries",
         "description_es": "Ubicar las regiones de Montañas y Cuencas, Grandes Llanuras, Llanuras Centro Norte y Llanuras Costeras y lugares de importancia en Texas durante los siglos 19, 20 y 21",
@@ -2227,10 +2521,122 @@
         "readiness": false
       },
       {
+        "code": "7.8(B)",
+        "description_en": "Compare places and regions in Texas in terms of physical and human characteristics",
+        "description_es": "Comparar lugares y regiones en Texas en términos de características físicas y humanas",
+        "strand": "Geography",
+        "readiness": false
+      },
+      {
+        "code": "7.9(A)",
+        "description_en": "Identify ways in which Texans have adapted to and modified the environment and explain the positive and negative consequences",
+        "description_es": "Identificar formas en que los tejanos se han adaptado y modificado el ambiente y explicar las consecuencias positivas y negativas",
+        "strand": "Geography",
+        "readiness": false
+      },
+      {
+        "code": "7.10(A)",
+        "description_en": "Explain how the railroads contributed to population growth, economic development, and urbanization in Texas",
+        "description_es": "Explicar cómo los ferrocarriles contribuyeron al crecimiento de población, desarrollo económico y urbanización en Texas",
+        "strand": "Economics",
+        "readiness": false
+      },
+      {
+        "code": "7.10(B)",
+        "description_en": "Analyze the impact of economic concepts on the historical and contemporary economies of Texas",
+        "description_es": "Analizar el impacto de conceptos económicos en las economías históricas y contemporáneas de Texas",
+        "strand": "Economics",
+        "readiness": false
+      },
+      {
+        "code": "7.11(A)",
+        "description_en": "Identify economic factors that led to early Texas settlement",
+        "description_es": "Identificar factores económicos que llevaron al asentamiento temprano de Texas",
+        "strand": "Economics",
+        "readiness": false
+      },
+      {
+        "code": "7.11(B)",
+        "description_en": "Identify major industries of 19th-century Texas",
+        "description_es": "Identificar industrias principales de Texas del siglo 19",
+        "strand": "Economics",
+        "readiness": false
+      },
+      {
+        "code": "7.12(A)",
+        "description_en": "Explain the impact of industry and technology on Texas and Texans",
+        "description_es": "Explicar el impacto de la industria y tecnología en Texas y los tejanos",
+        "strand": "Economics",
+        "readiness": false
+      },
+      {
         "code": "7.13(A)",
         "description_en": "Analyze the impact of national and international markets and events on the production of goods and services in Texas",
         "description_es": "Analizar el impacto de mercados y eventos nacionales e internacionales en la producción de bienes y servicios en Texas",
         "strand": "Economics",
+        "readiness": false
+      },
+      {
+        "code": "7.14(A)",
+        "description_en": "Identify the functions of the three branches of government as established by the Texas Constitution",
+        "description_es": "Identificar las funciones de las tres ramas del gobierno como establecidas por la Constitución de Texas",
+        "strand": "Government",
+        "readiness": false
+      },
+      {
+        "code": "7.14(B)",
+        "description_en": "Compare the principles of the Texas Constitution with the U.S. Constitution",
+        "description_es": "Comparar los principios de la Constitución de Texas con la Constitución de los EE.UU.",
+        "strand": "Government",
+        "readiness": false
+      },
+      {
+        "code": "7.15(A)",
+        "description_en": "Identify different points of view of political parties and interest groups on important Texas issues, past and present",
+        "description_es": "Identificar diferentes puntos de vista de partidos políticos y grupos de interés sobre temas importantes de Texas, pasados y presentes",
+        "strand": "Government",
+        "readiness": false
+      },
+      {
+        "code": "7.16(A)",
+        "description_en": "Identify the political, economic, and social contributions of women to Texas",
+        "description_es": "Identificar las contribuciones políticas, económicas y sociales de las mujeres a Texas",
+        "strand": "Culture",
+        "readiness": false
+      },
+      {
+        "code": "7.17(A)",
+        "description_en": "Identify the impact of various racial and ethnic groups on the cultural development of Texas",
+        "description_es": "Identificar el impacto de varios grupos raciales y étnicos en el desarrollo cultural de Texas",
+        "strand": "Culture",
+        "readiness": false
+      },
+      {
+        "code": "7.18(A)",
+        "description_en": "Explain the relationship among religious freedom, growth of religious institutions, and the social and cultural impact of religion in Texas",
+        "description_es": "Explicar la relación entre libertad religiosa, crecimiento de instituciones religiosas y el impacto social y cultural de la religión en Texas",
+        "strand": "Culture",
+        "readiness": false
+      },
+      {
+        "code": "7.19(A)",
+        "description_en": "Explain how the development of transportation and communication has influenced population growth and urbanization in Texas",
+        "description_es": "Explicar cómo el desarrollo del transporte y la comunicación ha influido en el crecimiento de población y urbanización en Texas",
+        "strand": "Science, Technology, and Society",
+        "readiness": false
+      },
+      {
+        "code": "7.20(A)",
+        "description_en": "Describe the origins and development of the cattle industry",
+        "description_es": "Describir los orígenes y desarrollo de la industria ganadera",
+        "strand": "Science, Technology, and Society",
+        "readiness": false
+      },
+      {
+        "code": "7.20(B)",
+        "description_en": "Identify the impact of oil and gas industry on Texas",
+        "description_es": "Identificar el impacto de la industria del petróleo y gas en Texas",
+        "strand": "Science, Technology, and Society",
         "readiness": false
       }
     ]
@@ -2240,70 +2646,70 @@
       {
         "code": "8.2(A)",
         "description_en": "Extend previous knowledge of sets and subsets using a visual representation to describe relationships between sets of real numbers",
-        "description_es": "Extender el conocimiento previo de conjuntos y subconjuntos usando una representación visual para describir relaciones entre conjuntos de números reales",
+        "description_es": "Extender el conocimiento previo de conjuntos y subconjuntos usando una representaciÃ³n visual para describir relaciones entre conjuntos de nÃºmeros reales",
         "strand": "Number and Operations",
         "readiness": false
       },
       {
         "code": "8.2(B)",
-        "description_en": "Approximate the value of an irrational number including π and square roots of numbers less than 225",
-        "description_es": "Aproximar el valor de un número irracional incluyendo π y raíces cuadradas de números menores que 225",
+        "description_en": "Approximate the value of an irrational number including Ï€ and square roots of numbers less than 225",
+        "description_es": "Aproximar el valor de un nÃºmero irracional incluyendo Ï€ y raÃ­ces cuadradas de nÃºmeros menores que 225",
         "strand": "Number and Operations",
         "readiness": false
       },
       {
         "code": "8.2(C)",
         "description_en": "Convert between standard decimal notation and scientific notation",
-        "description_es": "Convertir entre notación decimal estándar y notación científica",
+        "description_es": "Convertir entre notaciÃ³n decimal estÃ¡ndar y notaciÃ³n cientÃ­fica",
         "strand": "Number and Operations",
         "readiness": true
       },
       {
         "code": "8.2(D)",
         "description_en": "Order a set of real numbers arising from mathematical and real-world contexts",
-        "description_es": "Ordenar un conjunto de números reales que surgen de contextos matemáticos y del mundo real",
+        "description_es": "Ordenar un conjunto de nÃºmeros reales que surgen de contextos matemÃ¡ticos y del mundo real",
         "strand": "Number and Operations",
         "readiness": false
       },
       {
         "code": "8.4(A)",
         "description_en": "Use similar right triangles to develop an understanding that slope, m, given as the rate comparing the change in y-values to the change in x-values, (y2 - y1)/(x2 - x1), is the same for any two points (x1, y1) and (x2, y2) on the same line",
-        "description_es": "Usar triángulos rectángulos similares para desarrollar una comprensión de que la pendiente, m, dada como la tasa comparando el cambio en valores y al cambio en valores x, (y2 - y1)/(x2 - x1), es la misma para dos puntos cualesquiera (x1, y1) y (x2, y2) en la misma línea",
+        "description_es": "Usar triÃ¡ngulos rectÃ¡ngulos similares para desarrollar una comprensiÃ³n de que la pendiente, m, dada como la tasa comparando el cambio en valores y al cambio en valores x, (y2 - y1)/(x2 - x1), es la misma para dos puntos cualesquiera (x1, y1) y (x2, y2) en la misma lÃ­nea",
         "strand": "Proportionality",
         "readiness": false
       },
       {
         "code": "8.4(B)",
         "description_en": "Graph proportional relationships, interpreting the unit rate as the slope of the line that models the relationship",
-        "description_es": "Graficar relaciones proporcionales, interpretando la tasa unitaria como la pendiente de la línea que modela la relación",
+        "description_es": "Graficar relaciones proporcionales, interpretando la tasa unitaria como la pendiente de la lÃ­nea que modela la relaciÃ³n",
         "strand": "Proportionality",
         "readiness": true
       },
       {
         "code": "8.4(C)",
         "description_en": "Use data from a table or graph to determine the rate of change or slope and y-intercept in mathematical and real-world problems",
-        "description_es": "Usar datos de una tabla o gráfica para determinar la tasa de cambio o pendiente e intercepto en y en problemas matemáticos y del mundo real",
+        "description_es": "Usar datos de una tabla o grÃ¡fica para determinar la tasa de cambio o pendiente e intercepto en y en problemas matemÃ¡ticos y del mundo real",
         "strand": "Proportionality",
         "readiness": true
       },
       {
         "code": "8.5(A)",
         "description_en": "Represent linear proportional situations with tables, graphs, and equations in the form of y = kx",
-        "description_es": "Representar situaciones proporcionales lineales con tablas, gráficas y ecuaciones en la forma de y = kx",
+        "description_es": "Representar situaciones proporcionales lineales con tablas, grÃ¡ficas y ecuaciones en la forma de y = kx",
         "strand": "Proportionality",
         "readiness": true
       },
       {
         "code": "8.5(B)",
-        "description_en": "Represent linear non-proportional situations with tables, graphs, and equations in the form of y = mx + b, where b ≠ 0",
-        "description_es": "Representar situaciones no proporcionales lineales con tablas, gráficas y ecuaciones en la forma de y = mx + b, donde b ≠ 0",
+        "description_en": "Represent linear non-proportional situations with tables, graphs, and equations in the form of y = mx + b, where b â‰  0",
+        "description_es": "Representar situaciones no proporcionales lineales con tablas, grÃ¡ficas y ecuaciones en la forma de y = mx + b, donde b â‰  0",
         "strand": "Proportionality",
         "readiness": true
       },
       {
         "code": "8.5(I)",
         "description_en": "Write an equation in the form y = mx + b to model a linear relationship between two quantities using verbal, numerical, tabular, and graphical representations",
-        "description_es": "Escribir una ecuación en la forma y = mx + b para modelar una relación lineal entre dos cantidades usando representaciones verbales, numéricas, tabulares y gráficas",
+        "description_es": "Escribir una ecuaciÃ³n en la forma y = mx + b para modelar una relaciÃ³n lineal entre dos cantidades usando representaciones verbales, numÃ©ricas, tabulares y grÃ¡ficas",
         "strand": "Proportionality",
         "readiness": true
       },
@@ -2317,7 +2723,7 @@
       {
         "code": "8.8(A)",
         "description_en": "Describe the volume formula V = Bh of a cylinder in terms of its base area and its height",
-        "description_es": "Describir la fórmula de volumen V = Bh de un cilindro en términos de su área de base y su altura",
+        "description_es": "Describir la fÃ³rmula de volumen V = Bh de un cilindro en tÃ©rminos de su Ã¡rea de base y su altura",
         "strand": "Measurement and Data",
         "readiness": false
       }
@@ -2326,35 +2732,35 @@
       {
         "code": "8.2(A)(i)",
         "description_en": "Demonstrate and apply spelling knowledge by spelling multisyllabic words with multiple sound-spelling patterns",
-        "description_es": "Demostrar y aplicar conocimiento de ortografía deletreando palabras multisilábicas con múltiples patrones de sonido-ortografía",
+        "description_es": "Demostrar y aplicar conocimiento de ortografÃ­a deletreando palabras multisilÃ¡bicas con mÃºltiples patrones de sonido-ortografÃ­a",
         "strand": "Foundational Skills",
         "readiness": false
       },
       {
         "code": "8.2(A)(ii)",
         "description_en": "Demonstrate and apply spelling knowledge by spelling homophones",
-        "description_es": "Demostrar y aplicar conocimiento de ortografía deletreando homófonos",
+        "description_es": "Demostrar y aplicar conocimiento de ortografÃ­a deletreando homÃ³fonos",
         "strand": "Foundational Skills",
         "readiness": false
       },
       {
         "code": "8.5(F)",
         "description_en": "Make inferences and use evidence to support understanding",
-        "description_es": "Hacer inferencias y usar evidencia para apoyar la comprensión",
+        "description_es": "Hacer inferencias y usar evidencia para apoyar la comprensiÃ³n",
         "strand": "Comprehension",
         "readiness": true
       },
       {
         "code": "8.5(G)",
         "description_en": "Evaluate details read to determine key ideas",
-        "description_es": "Evaluar detalles leídos para determinar ideas clave",
+        "description_es": "Evaluar detalles leÃ­dos para determinar ideas clave",
         "strand": "Comprehension",
         "readiness": true
       },
       {
         "code": "8.5(H)",
         "description_en": "Synthesize information from a variety of text types to create new understanding",
-        "description_es": "Sintetizar información de una variedad de tipos de texto para crear nueva comprensión",
+        "description_es": "Sintetizar informaciÃ³n de una variedad de tipos de texto para crear nueva comprensiÃ³n",
         "strand": "Comprehension",
         "readiness": false
       },
@@ -2368,14 +2774,14 @@
       {
         "code": "8.7(A)",
         "description_en": "Infer multiple themes within and across texts using text evidence",
-        "description_es": "Inferir múltiples temas dentro y a través de textos usando evidencia del texto",
+        "description_es": "Inferir mÃºltiples temas dentro y a travÃ©s de textos usando evidencia del texto",
         "strand": "Multiple Genres",
         "readiness": true
       },
       {
         "code": "8.7(B)",
         "description_en": "Analyze how characters' behaviors and underlying motivations contribute to moral dilemmas that influence the plot and theme",
-        "description_es": "Analizar cómo los comportamientos de los personajes y las motivaciones subyacentes contribuyen a dilemas morales que influyen en la trama y el tema",
+        "description_es": "Analizar cÃ³mo los comportamientos de los personajes y las motivaciones subyacentes contribuyen a dilemas morales que influyen en la trama y el tema",
         "strand": "Multiple Genres",
         "readiness": false
       },
@@ -2389,7 +2795,7 @@
       {
         "code": "8.8(D)(i)",
         "description_en": "Analyze characteristics of multimodal and digital texts",
-        "description_es": "Analizar características de textos multimodales y digitales",
+        "description_es": "Analizar caracterÃ­sticas de textos multimodales y digitales",
         "strand": "Multiple Genres",
         "readiness": false
       }
@@ -2405,42 +2811,42 @@
       {
         "code": "8.2(B)",
         "description_en": "Design and implement experimental investigations by making observations, asking well-defined questions, formulating testable hypotheses, and using appropriate equipment and technology",
-        "description_es": "Diseñar e implementar investigaciones experimentales haciendo observaciones, haciendo preguntas bien definidas, formulando hipótesis comprobables y usando equipo y tecnología apropiados",
+        "description_es": "DiseÃ±ar e implementar investigaciones experimentales haciendo observaciones, haciendo preguntas bien definidas, formulando hipÃ³tesis comprobables y usando equipo y tecnologÃ­a apropiados",
         "strand": "Scientific Investigation and Reasoning",
         "readiness": false
       },
       {
         "code": "8.5(A)",
         "description_en": "Describe the structure of atoms including the masses, electrical charges, and locations of protons and neutrons in the nucleus and electrons in the electron cloud",
-        "description_es": "Describir la estructura de átomos incluyendo las masas, cargas eléctricas y ubicaciones de protones y neutrones en el núcleo y electrones en la nube de electrones",
+        "description_es": "Describir la estructura de Ã¡tomos incluyendo las masas, cargas elÃ©ctricas y ubicaciones de protones y neutrones en el nÃºcleo y electrones en la nube de electrones",
         "strand": "Matter and Energy",
         "readiness": false
       },
       {
         "code": "8.5(B)",
         "description_en": "Identify that protons determine an element's identity and valence electrons determine its chemical properties including reactivity",
-        "description_es": "Identificar que los protones determinan la identidad de un elemento y los electrones de valencia determinan sus propiedades químicas incluyendo reactividad",
+        "description_es": "Identificar que los protones determinan la identidad de un elemento y los electrones de valencia determinan sus propiedades quÃ­micas incluyendo reactividad",
         "strand": "Matter and Energy",
         "readiness": false
       },
       {
         "code": "8.6(A)",
         "description_en": "Demonstrate and calculate how unbalanced forces change the speed or direction of an object's motion",
-        "description_es": "Demostrar y calcular cómo las fuerzas desequilibradas cambian la velocidad o dirección del movimiento de un objeto",
+        "description_es": "Demostrar y calcular cÃ³mo las fuerzas desequilibradas cambian la velocidad o direcciÃ³n del movimiento de un objeto",
         "strand": "Force, Motion, and Energy",
         "readiness": false
       },
       {
         "code": "8.9(A)",
         "description_en": "Describe the historical development of evidence that supports plate tectonic theory",
-        "description_es": "Describir el desarrollo histórico de evidencia que apoya la teoría de placas tectónicas",
+        "description_es": "Describir el desarrollo histÃ³rico de evidencia que apoya la teorÃ­a de placas tectÃ³nicas",
         "strand": "Earth and Space",
         "readiness": false
       },
       {
         "code": "8.11(A)",
         "description_en": "Describe producer/consumer, predator/prey, and parasite/host relationships as they occur in food webs within marine, freshwater, and terrestrial ecosystems",
-        "description_es": "Describir relaciones productor/consumidor, depredador/presa y parásito/huésped como ocurren en redes alimenticias dentro de ecosistemas marinos, de agua dulce y terrestres",
+        "description_es": "Describir relaciones productor/consumidor, depredador/presa y parÃ¡sito/huÃ©sped como ocurren en redes alimenticias dentro de ecosistemas marinos, de agua dulce y terrestres",
         "strand": "Organisms and Environments",
         "readiness": false
       }
@@ -2448,8 +2854,22 @@
     "Social Studies": [
       {
         "code": "8.1(A)",
-        "description_en": "Identify the major eras in U.S. history through 1877, including colonization, revolution, drafting of the Declaration of Independence, creation and ratification of the Constitution, religious revivals, early republic, slavery, sectionalism, and the Civil War",
-        "description_es": "Identificar las eras principales en la historia de EE.UU. hasta 1877, incluyendo colonización, revolución, redacción de la Declaración de Independencia, creación y ratificación de la Constitución, avivamientos religiosos, república temprana, esclavitud, seccionalismo y la Guerra Civil",
+        "description_en": "Identify the major eras in U.S. history through 1877, including colonization, revolution, drafting of the Declaration of Independence, creation and ratification of the Constitution, religious revivals such as the Second Great Awakening, early republic, slavery and sectionalism, westward expansion, and the Civil War and Reconstruction",
+        "description_es": "Identificar las eras principales en la historia de EE.UU. hasta 1877, incluyendo colonización, revolución, redacción de la Declaración de Independencia, creación y ratificación de la Constitución, avivamientos religiosos como el Segundo Gran Despertar, república temprana, esclavitud y seccionalismo, expansión hacia el oeste, y la Guerra Civil y Reconstrucción",
+        "strand": "History",
+        "readiness": false
+      },
+      {
+        "code": "8.1(B)",
+        "description_en": "Apply absolute and relative chronology through the sequencing of significant individuals, events, and time periods",
+        "description_es": "Aplicar cronología absoluta y relativa a través de la secuencia de individuos significativos, eventos y períodos de tiempo",
+        "strand": "History",
+        "readiness": false
+      },
+      {
+        "code": "8.1(C)",
+        "description_en": "Explain the significance of the following dates: 1607, 1620, 1776, 1787, 1803, and 1861-1865",
+        "description_es": "Explicar la importancia de las siguientes fechas: 1607, 1620, 1776, 1787, 1803 y 1861-1865",
         "strand": "History",
         "readiness": false
       },
@@ -2461,9 +2881,177 @@
         "readiness": false
       },
       {
+        "code": "8.2(B)",
+        "description_en": "Compare political, economic, religious, and social reasons for the establishment of the 13 English colonies",
+        "description_es": "Comparar razones políticas, económicas, religiosas y sociales para el establecimiento de las 13 colonias inglesas",
+        "strand": "History",
+        "readiness": false
+      },
+      {
+        "code": "8.3(A)",
+        "description_en": "Explain the reasons for the growth of representative government and institutions during the colonial period",
+        "description_es": "Explicar las razones para el crecimiento del gobierno representativo e instituciones durante el período colonial",
+        "strand": "History",
+        "readiness": false
+      },
+      {
+        "code": "8.3(B)",
+        "description_en": "Analyze the importance of the Mayflower Compact, the Fundamental Orders of Connecticut, and the Virginia House of Burgesses to the growth of representative government",
+        "description_es": "Analizar la importancia del Pacto del Mayflower, las Órdenes Fundamentales de Connecticut y la Casa de Burgueses de Virginia para el crecimiento del gobierno representativo",
+        "strand": "History",
+        "readiness": false
+      },
+      {
+        "code": "8.3(C)",
+        "description_en": "Describe how religion and virtue contributed to the growth of representative government in the American colonies",
+        "description_es": "Describir cómo la religión y la virtud contribuyeron al crecimiento del gobierno representativo en las colonias americanas",
+        "strand": "History",
+        "readiness": false
+      },
+      {
         "code": "8.4(A)",
-        "description_en": "Analyze causes of the American Revolution including the Proclamation of 1763, the Intolerable Acts, the Stamp Act, mercantilism, lack of representation in Parliament, and British economic policies following the French and Indian War",
-        "description_es": "Analizar causas de la Revolución Americana incluyendo la Proclamación de 1763, los Actos Intolerables, el Acto del Sello, mercantilismo, falta de representación en el Parlamento y políticas económicas británicas después de la Guerra Franco-India",
+        "description_en": "Analyze causes of the American Revolution, including the Proclamation of 1763, the Intolerable Acts, the Stamp Act, mercantilism, lack of representation in Parliament, and British economic policies following the French and Indian War",
+        "description_es": "Analizar causas de la Revolución Americana, incluyendo la Proclamación de 1763, los Actos Intolerables, el Acto del Sello, mercantilismo, falta de representación en el Parlamento y políticas económicas británicas después de la Guerra Franco-India",
+        "strand": "History",
+        "readiness": false
+      },
+      {
+        "code": "8.4(B)",
+        "description_en": "Explain the roles played by significant individuals during the American Revolution",
+        "description_es": "Explicar los roles desempeñados por individuos significativos durante la Revolución Americana",
+        "strand": "History",
+        "readiness": false
+      },
+      {
+        "code": "8.4(C)",
+        "description_en": "Explain the issues surrounding important events of the American Revolution",
+        "description_es": "Explicar los temas en torno a eventos importantes de la Revolución Americana",
+        "strand": "History",
+        "readiness": false
+      },
+      {
+        "code": "8.4(D)",
+        "description_en": "Analyze the issues of the Constitutional Convention of 1787, including the Great Compromise and the Three-Fifths Compromise",
+        "description_es": "Analizar los temas de la Convención Constitucional de 1787, incluyendo el Gran Compromiso y el Compromiso de los Tres Quintos",
+        "strand": "History",
+        "readiness": false
+      },
+      {
+        "code": "8.4(E)",
+        "description_en": "Analyze the arguments for and against ratification of the U.S. Constitution",
+        "description_es": "Analizar los argumentos a favor y en contra de la ratificación de la Constitución de EE.UU.",
+        "strand": "History",
+        "readiness": false
+      },
+      {
+        "code": "8.5(A)",
+        "description_en": "Describe major domestic problems faced by the leaders of the new republic, including maintaining national security, creating a stable economic system, and setting up the court system",
+        "description_es": "Describir problemas domésticos principales enfrentados por los líderes de la nueva república, incluyendo mantener seguridad nacional, crear un sistema económico estable y establecer el sistema judicial",
+        "strand": "History",
+        "readiness": false
+      },
+      {
+        "code": "8.5(B)",
+        "description_en": "Summarize arguments regarding protective tariffs, taxation, and the banking system",
+        "description_es": "Resumir argumentos respecto a aranceles protectores, impuestos y el sistema bancario",
+        "strand": "History",
+        "readiness": false
+      },
+      {
+        "code": "8.5(C)",
+        "description_en": "Explain the origin and development of political parties",
+        "description_es": "Explicar el origen y desarrollo de los partidos políticos",
+        "strand": "History",
+        "readiness": false
+      },
+      {
+        "code": "8.5(D)",
+        "description_en": "Explain the causes, important events, and effects of the War of 1812",
+        "description_es": "Explicar las causas, eventos importantes y efectos de la Guerra de 1812",
+        "strand": "History",
+        "readiness": false
+      },
+      {
+        "code": "8.5(E)",
+        "description_en": "Identify the foreign policies of presidents Washington through Monroe and explain the impact of Washington's Farewell Address and the Monroe Doctrine",
+        "description_es": "Identificar las políticas exteriores de los presidentes Washington a Monroe y explicar el impacto del Discurso de Despedida de Washington y la Doctrina Monroe",
+        "strand": "History",
+        "readiness": false
+      },
+      {
+        "code": "8.6(A)",
+        "description_en": "Identify significant individuals who contributed to the exploration of Texas and the United States such as Álvar Núñez Cabeza de Vaca, Francisco Coronado, and René Robert Cavelier, Sieur de La Salle",
+        "description_es": "Identificar individuos significativos que contribuyeron a la exploración de Texas y los Estados Unidos como Álvar Núñez Cabeza de Vaca, Francisco Coronado y René Robert Cavelier, Sieur de La Salle",
+        "strand": "History",
+        "readiness": false
+      },
+      {
+        "code": "8.6(B)",
+        "description_en": "Identify reasons for westward expansion such as economic opportunities in agriculture and mining",
+        "description_es": "Identificar razones para la expansión hacia el oeste como oportunidades económicas en agricultura y minería",
+        "strand": "History",
+        "readiness": false
+      },
+      {
+        "code": "8.6(C)",
+        "description_en": "Identify areas that were acquired to form the United States, including the Louisiana Purchase",
+        "description_es": "Identificar áreas que fueron adquiridas para formar los Estados Unidos, incluyendo la Compra de Luisiana",
+        "strand": "History",
+        "readiness": false
+      },
+      {
+        "code": "8.7(A)",
+        "description_en": "Analyze the impact of tariff policies on different sections of the United States before the Civil War",
+        "description_es": "Analizar el impacto de políticas arancelarias en diferentes secciones de los Estados Unidos antes de la Guerra Civil",
+        "strand": "History",
+        "readiness": false
+      },
+      {
+        "code": "8.7(B)",
+        "description_en": "Compare the effects of political, economic, and social factors on slaves and free blacks",
+        "description_es": "Comparar los efectos de factores políticos, económicos y sociales en esclavos y negros libres",
+        "strand": "History",
+        "readiness": false
+      },
+      {
+        "code": "8.7(C)",
+        "description_en": "Analyze the impact of slavery on different sections of the United States",
+        "description_es": "Analizar el impacto de la esclavitud en diferentes secciones de los Estados Unidos",
+        "strand": "History",
+        "readiness": false
+      },
+      {
+        "code": "8.8(A)",
+        "description_en": "Explain the roles played by significant individuals during the Civil War",
+        "description_es": "Explicar los roles desempeñados por individuos significativos durante la Guerra Civil",
+        "strand": "History",
+        "readiness": false
+      },
+      {
+        "code": "8.8(B)",
+        "description_en": "Explain the causes of the Civil War, including sectionalism, states' rights, and slavery",
+        "description_es": "Explicar las causas de la Guerra Civil, incluyendo seccionalismo, derechos de los estados y esclavitud",
+        "strand": "History",
+        "readiness": false
+      },
+      {
+        "code": "8.8(C)",
+        "description_en": "Explain significant events of the Civil War",
+        "description_es": "Explicar eventos significativos de la Guerra Civil",
+        "strand": "History",
+        "readiness": false
+      },
+      {
+        "code": "8.9(A)",
+        "description_en": "Evaluate legislative reform programs of the Reconstruction era",
+        "description_es": "Evaluar programas de reforma legislativa de la era de Reconstrucción",
+        "strand": "History",
+        "readiness": false
+      },
+      {
+        "code": "8.9(B)",
+        "description_en": "Explain the impact of the election of Hiram Rhodes Revels",
+        "description_es": "Explicar el impacto de la elección de Hiram Rhodes Revels",
         "strand": "History",
         "readiness": false
       },
@@ -2475,9 +3063,72 @@
         "readiness": false
       },
       {
+        "code": "8.10(B)",
+        "description_en": "Compare places and regions of the United States in terms of physical and human characteristics",
+        "description_es": "Comparar lugares y regiones de los Estados Unidos en términos de características físicas y humanas",
+        "strand": "Geography",
+        "readiness": false
+      },
+      {
+        "code": "8.10(C)",
+        "description_en": "Analyze the effects of physical and human geographic factors on major historical events in the United States",
+        "description_es": "Analizar los efectos de factores geográficos físicos y humanos en eventos históricos principales en los Estados Unidos",
+        "strand": "Geography",
+        "readiness": false
+      },
+      {
+        "code": "8.11(A)",
+        "description_en": "Describe how American Indians adapted to and used the resources in the physical environment",
+        "description_es": "Describir cómo los indígenas americanos se adaptaron y usaron los recursos en el ambiente físico",
+        "strand": "Geography",
+        "readiness": false
+      },
+      {
+        "code": "8.11(B)",
+        "description_en": "Analyze the relationship between the environment and how Europeans adapted to it",
+        "description_es": "Analizar la relación entre el ambiente y cómo los europeos se adaptaron a él",
+        "strand": "Geography",
+        "readiness": false
+      },
+      {
         "code": "8.12(A)",
         "description_en": "Analyze the economic effects of westward expansion on the United States",
         "description_es": "Analizar los efectos económicos de la expansión hacia el oeste en los Estados Unidos",
+        "strand": "Economics",
+        "readiness": false
+      },
+      {
+        "code": "8.12(B)",
+        "description_en": "Explain the economic effects of tariff policy on sections of the United States before the Civil War",
+        "description_es": "Explicar los efectos económicos de la política arancelaria en secciones de los Estados Unidos antes de la Guerra Civil",
+        "strand": "Economics",
+        "readiness": false
+      },
+      {
+        "code": "8.12(C)",
+        "description_en": "Analyze the impact of the growth of technology and the establishment of new industries on various groups in the United States",
+        "description_es": "Analizar el impacto del crecimiento de la tecnología y el establecimiento de nuevas industrias en varios grupos en los Estados Unidos",
+        "strand": "Economics",
+        "readiness": false
+      },
+      {
+        "code": "8.13(A)",
+        "description_en": "Analyze the causes and effects of economic differences among regions of the United States",
+        "description_es": "Analizar las causas y efectos de diferencias económicas entre regiones de los Estados Unidos",
+        "strand": "Economics",
+        "readiness": false
+      },
+      {
+        "code": "8.13(B)",
+        "description_en": "Analyze the causes and effects of economic differences among geographic regions of the United States at selected times in U.S. history",
+        "description_es": "Analizar las causas y efectos de diferencias económicas entre regiones geográficas de los Estados Unidos en momentos seleccionados en la historia de EE.UU.",
+        "strand": "Economics",
+        "readiness": false
+      },
+      {
+        "code": "8.14(A)",
+        "description_en": "Explain why a free enterprise system of economics developed in the new nation",
+        "description_es": "Explicar por qué un sistema de economía de libre empresa se desarrolló en la nueva nación",
         "strand": "Economics",
         "readiness": false
       },
@@ -2486,6 +3137,90 @@
         "description_en": "Identify the origin of judicial review",
         "description_es": "Identificar el origen de la revisión judicial",
         "strand": "Government",
+        "readiness": false
+      },
+      {
+        "code": "8.15(B)",
+        "description_en": "Summarize the issues, decisions, and significance of landmark Supreme Court cases",
+        "description_es": "Resumir los temas, decisiones y significado de casos históricos de la Corte Suprema",
+        "strand": "Government",
+        "readiness": false
+      },
+      {
+        "code": "8.16(A)",
+        "description_en": "Identify the functions of the three branches of government",
+        "description_es": "Identificar las funciones de las tres ramas del gobierno",
+        "strand": "Government",
+        "readiness": false
+      },
+      {
+        "code": "8.16(B)",
+        "description_en": "Explain the impact of the election of Andrew Jackson, including expanded suffrage",
+        "description_es": "Explicar el impacto de la elección de Andrew Jackson, incluyendo sufragio expandido",
+        "strand": "Government",
+        "readiness": false
+      },
+      {
+        "code": "8.17(A)",
+        "description_en": "Analyze the leadership qualities of elected and appointed leaders of the United States such as George Washington, John Marshall, and Abraham Lincoln",
+        "description_es": "Analizar las cualidades de liderazgo de líderes electos y nombrados de los Estados Unidos como George Washington, John Marshall y Abraham Lincoln",
+        "strand": "Government",
+        "readiness": false
+      },
+      {
+        "code": "8.18(A)",
+        "description_en": "Identify the origin of the Whig party and its leadership role in the Mexican War",
+        "description_es": "Identificar el origen del partido Whig y su rol de liderazgo en la Guerra Mexicana",
+        "strand": "Government",
+        "readiness": false
+      },
+      {
+        "code": "8.19(A)",
+        "description_en": "Evaluate the impact of the First Amendment guarantees of religious freedom on the American way of life",
+        "description_es": "Evaluar el impacto de las garantías de la Primera Enmienda de libertad religiosa en el modo de vida americano",
+        "strand": "Culture",
+        "readiness": false
+      },
+      {
+        "code": "8.20(A)",
+        "description_en": "Explain the role of significant individuals such as Thomas Hooker, Charles de Montesquieu, John Locke, William Blackstone, and William Penn",
+        "description_es": "Explicar el rol de individuos significativos como Thomas Hooker, Charles de Montesquieu, John Locke, William Blackstone y William Penn",
+        "strand": "Culture",
+        "readiness": false
+      },
+      {
+        "code": "8.23(A)",
+        "description_en": "Identify selected racial, ethnic, and religious groups that settled in the United States and explain their reasons for immigration",
+        "description_es": "Identificar grupos raciales, étnicos y religiosos seleccionados que se establecieron en los Estados Unidos y explicar sus razones para inmigración",
+        "strand": "Culture",
+        "readiness": false
+      },
+      {
+        "code": "8.23(B)",
+        "description_en": "Explain how immigration and migration to the United States have influenced American society",
+        "description_es": "Explicar cómo la inmigración y migración a los Estados Unidos han influido en la sociedad americana",
+        "strand": "Culture",
+        "readiness": false
+      },
+      {
+        "code": "8.24(A)",
+        "description_en": "Describe the development of the free enterprise system in colonial America and the United States",
+        "description_es": "Describir el desarrollo del sistema de libre empresa en la América colonial y los Estados Unidos",
+        "strand": "Science, Technology, and Society",
+        "readiness": false
+      },
+      {
+        "code": "8.27(A)",
+        "description_en": "Explain the effects of technological and scientific innovations such as the steamboat, the cotton gin, and interchangeable parts",
+        "description_es": "Explicar los efectos de innovaciones tecnológicas y científicas como el barco de vapor, la desmotadora de algodón y partes intercambiables",
+        "strand": "Science, Technology, and Society",
+        "readiness": false
+      },
+      {
+        "code": "8.28(A)",
+        "description_en": "Compare the effects of scientific discoveries and technological innovations that have influenced daily life in different periods in U.S. history",
+        "description_es": "Comparar los efectos de descubrimientos científicos e innovaciones tecnológicas que han influido en la vida diaria en diferentes períodos en la historia de EE.UU.",
+        "strand": "Science, Technology, and Society",
         "readiness": false
       }
     ]
