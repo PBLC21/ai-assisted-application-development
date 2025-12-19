@@ -13,6 +13,7 @@ import os
 from dotenv import load_dotenv
 import openai
 import json
+import re
 
 from database import get_db, engine
 import models
@@ -98,6 +99,144 @@ app.include_router(teks_router)
 
 # OAuth2 scheme
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
+
+
+# ==================== HELPER FUNCTIONS ====================
+
+def detect_teacher_request_type(teacher_notes: str, subject: str) -> str:
+    """
+    Detect what type of content the teacher is requesting
+    
+    Returns:
+        'story' - Generate 400-600 word narrative (ELA)
+        'math_problems' - Create math word problems (Math)
+        'scenarios' - Include scenarios/facts (Science/SS)
+        'standard' - Regular anticipatory set
+    """
+    if not teacher_notes:
+        return 'standard'
+    
+    notes_lower = teacher_notes.lower()
+    
+    # Story keywords (primarily for ELA)
+    story_keywords = ['story', 'narrative', 'create a story', 'write about', 'tale', 
+                      'fiction', 'character', 'plot', 'cuento', 'narrativa']
+    
+    # Math problem keywords
+    math_keywords = ['problem', 'word problem', 'example', 'practice problem', 
+                     'math problem', 'calculation', 'solve', 'compute']
+    
+    # Scenario/facts keywords
+    scenario_keywords = ['scenario', 'fact', 'example', 'real-world', 'situation',
+                        'case study', 'include', 'demonstrate']
+    
+    # Check for story request
+    if any(keyword in notes_lower for keyword in story_keywords):
+        return 'story'
+    
+    # Check for math problems (only for Math subjects)
+    if 'math' in subject.lower() and any(keyword in notes_lower for keyword in math_keywords):
+        return 'math_problems'
+    
+    # Check for scenarios (Science/Social Studies)
+    if any(keyword in notes_lower for keyword in scenario_keywords):
+        return 'scenarios'
+    
+    return 'standard'
+
+
+def generate_story_prompt(teacher_notes: str, grade_level: str, subject: str, language: str) -> str:
+    """Generate detailed story creation prompt"""
+    
+    grade_levels = {
+        'K': 'kindergarten level (very simple sentences, 3-5 words per sentence, basic vocabulary)',
+        '1': '1st grade level (simple sentences, 5-8 words per sentence, basic sight words)',
+        '2': '2nd grade level (simple to moderate sentences, 8-12 words per sentence)',
+        '3': '3rd grade level (moderate complexity, 10-15 words per sentence, expanding vocabulary)',
+        '4': '4th grade level (moderate complexity with some complex sentences, varied vocabulary)',
+        '5': '5th grade level (varied sentence complexity, academic vocabulary)',
+        '6': '6th grade level (complex sentences, academic and subject-specific vocabulary)',
+        '7': '7th grade level (sophisticated vocabulary, varied sentence structures)',
+        '8': '8th grade level (advanced vocabulary, complex sentence structures)'
+    }
+    
+    story_complexity = grade_levels.get(grade_level, '4th grade level')
+    
+    return f"""
+═══════════════════════════════════════════════════════════════════════════════
+🎯 STORY GENERATION REQUEST
+═══════════════════════════════════════════════════════════════════════════════
+
+TEACHER'S REQUEST: {teacher_notes}
+
+🚨 CRITICAL: WRITE A COMPLETE 400-600 WORD NARRATIVE STORY 🚨
+
+YOU MUST write the ACTUAL complete story in the "anticipatorySet" field.
+
+NOT:
+❌ "[Insert story here]"
+❌ A 2-3 sentence summary
+❌ A placeholder
+
+YES:
+✅ Complete 400-600 word narrative story
+✅ Beginning, middle, and end
+✅ Character dialogue: "I'm excited!" she said.
+✅ Sensory details and emotions
+✅ Written at {story_complexity}
+
+STRUCTURE:
+- Opening (100-150 words): Introduce characters, setting, situation
+- Middle (200-300 words): Action, dialogue, events, emotions
+- Ending (100-150 words): Resolution, learning moment
+
+AFTER writing the story, integrate the characters into ALL practice problems and activities throughout the lesson.
+
+═══════════════════════════════════════════════════════════════════════════════
+"""
+
+
+def generate_math_problems_prompt(teacher_notes: str, grade_level: str, teks_standard: str) -> str:
+    """Generate math problems based on teacher request"""
+    return f"""
+═══════════════════════════════════════════════════════════════════════════════
+📐 MATH PROBLEMS REQUEST
+═══════════════════════════════════════════════════════════════════════════════
+
+TEACHER'S REQUEST: {teacher_notes}
+
+Create word problems based on:
+- Grade {grade_level} level
+- TEKS Standard: {teks_standard}
+- Real-world contexts appropriate for this grade
+
+Include the requested number and type of problems in:
+- Guided Practice section (with step-by-step solutions)
+- Independent Practice section (for students to solve)
+
+Make problems engaging and relatable to {grade_level} graders.
+
+═══════════════════════════════════════════════════════════════════════════════
+"""
+
+
+def generate_scenarios_prompt(teacher_notes: str, subject: str) -> str:
+    """Generate scenarios/facts for Science or Social Studies"""
+    return f"""
+═══════════════════════════════════════════════════════════════════════════════
+🔬 SCENARIOS / FACTS REQUEST
+═══════════════════════════════════════════════════════════════════════════════
+
+TEACHER'S REQUEST: {teacher_notes}
+
+For this {subject} lesson:
+- Include the requested scenarios, facts, or examples in the "directInstruction" section
+- Make content engaging and age-appropriate
+- Use real-world connections when possible
+- Ensure accuracy and educational value
+
+═══════════════════════════════════════════════════════════════════════════════
+"""
 
 
 # ==================== AUTHENTICATION ENDPOINTS ====================
@@ -304,6 +443,9 @@ async def generate_lesson_plan(
     # Determine which sections to generate
     sections = request.sections if request.sections else ['mainLessonPlan', 'guidedPractice', 'independentPractice']
     
+    # Detect teacher request type
+    request_type = detect_teacher_request_type(request.teacher_notes or '', request.subject)
+    
     # Generate the prompt
     language_instructions = {
         "english": "Generate all content in English only.",
@@ -332,32 +474,22 @@ CRITICAL BILINGUAL FORMATTING RULES:
     
     language_instruction = language_instructions.get(request.language, language_instructions["bilingual"])
     
-    # Determine grade-appropriate story complexity
-    grade_levels = {
-        'K': 'kindergarten level (very simple sentences, 3-5 words per sentence, basic vocabulary)',
-        '1': '1st grade level (simple sentences, 5-8 words per sentence, basic sight words)',
-        '2': '2nd grade level (simple to moderate sentences, 8-12 words per sentence)',
-        '3': '3rd grade level (moderate complexity, 10-15 words per sentence, expanding vocabulary)',
-        '4': '4th grade level (moderate complexity with some complex sentences, varied vocabulary)',
-        '5': '5th grade level (varied sentence complexity, academic vocabulary)',
-        '6': '6th grade level (complex sentences, academic and subject-specific vocabulary)',
-        '7': '7th grade level (sophisticated vocabulary, varied sentence structures)',
-        '8': '8th grade level (advanced vocabulary, complex sentence structures)'
-    }
+    # Build section-specific prompts based on request type
+    if request_type == 'story':
+        anticipatory_set_instruction = '"anticipatorySet": "WRITE THE COMPLETE 400-600 WORD NARRATIVE STORY HERE. Include character names, dialogue in quotation marks, sensory details, beginning-middle-end structure. NOT a summary or placeholder - the actual full story."'
+    else:
+        anticipatory_set_instruction = '"anticipatorySet": "Brief engaging hook/introduction (2-4 sentences) to capture student interest and connect to prior knowledge"'
     
-    story_complexity = grade_levels.get(request.grade_level, '4th grade level')
-    
-    # Build section-specific prompts
     section_prompts = {
-        'mainLessonPlan': """
-  "mainLessonPlan": {
+        'mainLessonPlan': f"""
+  "mainLessonPlan": {{
     "objective": "Clear, measurable learning objective aligned to TEKS (in requested language)",
     "materials": ["List of required materials (bilingual format if applicable)"],
-    "anticipatorySet": "Hook/engagement activity (5 min)",
-    "directInstruction": "Step-by-step teaching procedure with teacher actions",
-    "modelingAndChecking": "How to model the concept and check for understanding",
-    "closure": "Summary and reflection activity"
-  }""",
+    {anticipatory_set_instruction},
+    "directInstruction": "Step-by-step teaching procedure with clear teacher actions and explanations",
+    "modelingAndChecking": "How to model the concept and check for understanding throughout",
+    "closure": "Summary and reflection activity to close the lesson"
+  }}""",
         'guidedPractice': """
   "guidedPractice": {
     "description": "Detailed guided practice activities where teacher provides support",
@@ -426,6 +558,18 @@ CRITICAL BILINGUAL FORMATTING RULES:
     # Build JSON structure based on selected sections
     selected_section_prompts = ',\n'.join([section_prompts[section] for section in sections if section in section_prompts])
     
+    # Add teacher-specific instructions based on request type
+    teacher_instructions = ""
+    if request.teacher_notes:
+        if request_type == 'story':
+            teacher_instructions = generate_story_prompt(request.teacher_notes, request.grade_level, request.subject, request.language)
+        elif request_type == 'math_problems':
+            teacher_instructions = generate_math_problems_prompt(request.teacher_notes, request.grade_level, request.teks_standard or '')
+        elif request_type == 'scenarios':
+            teacher_instructions = generate_scenarios_prompt(request.teacher_notes, request.subject)
+        else:
+            teacher_instructions = f"\nTEACHER'S ADDITIONAL NOTES:\n{request.teacher_notes}\n"
+    
     prompt = f"""You are an expert K-8 educator specializing in Texas curriculum design with expertise in bilingual education. Generate a comprehensive, standards-aligned lesson plan.
 
 LANGUAGE REQUIREMENT: {language_instruction}
@@ -438,136 +582,7 @@ REQUIREMENTS:
 - Duration: {request.duration} minutes
 - Language Mode: {request.language}
 
-{f'''
-═══════════════════════════════════════════════════════════════════════════════
-🎯 CRITICAL: TEACHER'S CUSTOM STORY REQUEST - READ CAREFULLY
-═══════════════════════════════════════════════════════════════════════════════
-
-TEACHER'S REQUEST:
-{request.teacher_notes}
-
-═══════════════════════════════════════════════════════════════════════════════
-⚠️ MANDATORY STORY WRITING REQUIREMENTS - YOU MUST FOLLOW THESE EXACTLY ⚠️
-═══════════════════════════════════════════════════════════════════════════════
-
-🚨 CRITICAL INSTRUCTION #1: WRITE THE COMPLETE STORY NOW 🚨
-
-You must write a COMPLETE, FULL-LENGTH NARRATIVE STORY of 400-600 words in the "anticipatorySet" field.
-
-DO NOT:
-❌ Write "[Insert story here]" 
-❌ Write "(Narrative of 400-600 words)"
-❌ Write "The story of [characters]..." (this is just a summary)
-❌ Write a 2-3 sentence summary
-❌ Reference that a story should exist
-❌ Tell me to insert a story later
-
-DO:
-✅ Write the ACTUAL complete 400-600 word story RIGHT NOW
-✅ Include full narrative with beginning, middle, and end
-✅ Include character dialogue in quotation marks
-✅ Include sensory details and emotions
-✅ Write at {story_complexity} (age-appropriate for grade {request.grade_level})
-
-🚨 CRITICAL INSTRUCTION #2: STORY FORMAT & STRUCTURE 🚨
-
-Your story MUST include ALL of these elements:
-
-**Opening (100-150 words):**
-- Introduce characters with names, descriptions, and relationships
-- Establish the setting with sensory details (sights, sounds, smells)
-- Set up the situation or goal
-
-**Middle (200-300 words):**
-- Show characters taking action
-- Include dialogue between characters (use "quotation marks")
-- Describe events with specific details
-- Show character emotions and reactions
-- Build towards a climax or important moment
-
-**Ending (100-150 words):**
-- Resolve the situation
-- Show what characters learned or how they changed
-- Provide satisfying conclusion
-- Connect to lesson objective if possible
-
-🚨 CRITICAL INSTRUCTION #3: WRITING QUALITY REQUIREMENTS 🚨
-
-**Dialogue Requirements:**
-- Include at least 4-6 lines of character dialogue
-- Use proper quotation marks: "I'm excited!" Norma said.
-- Show character personalities through their speech
-- Natural conversations between characters
-
-**Descriptive Details:**
-- Use specific names (El Cardenal restaurant, NOT "a restaurant")
-- Include sensory details: colors, sounds, smells, textures
-- Show, don't tell: "Norma's hands trembled" NOT "Norma was nervous"
-- Use vivid adjectives appropriate for grade level
-
-**Cultural Authenticity:**
-- Use authentic cultural details when relevant
-- Respect cultural context in the teacher's request
-- Include appropriate Spanish words if culturally relevant
-- Make characters feel real and relatable
-
-🚨 CRITICAL INSTRUCTION #4: WORD COUNT ENFORCEMENT 🚨
-
-Your story in "anticipatorySet" MUST be 400-600 words of ACTUAL narrative text.
-
-To verify word count:
-- Count every word in your story
-- DO NOT count section headers
-- DO NOT count "Anticipatory Set" label
-- The story text itself must be 400-600 words
-
-If your story is less than 400 words → MAKE IT LONGER
-If your story is more than 600 words → EDIT IT DOWN
-
-🚨 CRITICAL INSTRUCTION #5: INTEGRATION THROUGHOUT LESSON 🚨
-
-After writing your complete story, YOU MUST:
-
-1. **Use character names in EVERY practice problem**
-   - ✅ "Norma and Yesika need to solve..."
-   - ❌ "Two students need to solve..."
-
-2. **Reference story events in examples**
-   - ✅ "Remember when Norma bought tickets? Let's calculate..."
-   - ❌ "Let's calculate ticket prices..."
-
-3. **Maintain story context in all sections:**
-   - Guided Practice: Use story characters and situations
-   - Independent Practice: Continue story scenarios
-   - All sections: Reference story for engagement
-
-═══════════════════════════════════════════════════════════════════════════════
-✅ FINAL CHECKLIST - VERIFY BEFORE SENDING YOUR RESPONSE
-═══════════════════════════════════════════════════════════════════════════════
-
-Before you complete this lesson plan, CHECK:
-
-□ Did I write a complete 400-600 word story in "anticipatorySet"?
-□ Does my story have dialogue with quotation marks?
-□ Does my story have beginning, middle, and end?
-□ Did I use the exact character names from teacher's request?
-□ Did I include the specific locations from teacher's request?
-□ Is my story written at {story_complexity}?
-□ Did I use these characters in guided practice problems?
-□ Did I use these characters in independent practice?
-□ Did I reference the story throughout all sections?
-□ Is my story culturally authentic and respectful?
-
-If you answered NO to any of these → GO BACK AND FIX IT
-
-═══════════════════════════════════════════════════════════════════════════════
-
-''' if request.teacher_notes else f'''
-GRADE-LEVEL STORY REQUIREMENTS:
-- Create an engaging story appropriate for {story_complexity}
-- Use age-appropriate vocabulary and sentence structure
-- Include relatable characters and situations for grade {request.grade_level} students
-'''}
+{teacher_instructions}
 
 Generate a lesson plan with ONLY the following sections in JSON format:
 
@@ -576,7 +591,9 @@ Generate a lesson plan with ONLY the following sections in JSON format:
 {selected_section_prompts}
 }}
 
-Make the content practical, engaging, and directly applicable to {request.grade_level} grade {request.subject}."""
+Make the content practical, engaging, and directly applicable to {request.grade_level} grade {request.subject}.
+
+CRITICAL: If generating a story, write the complete 400-600 word narrative directly in the "anticipatorySet" field. Do not use placeholders."""
 
     try:
         # Call OpenAI API
@@ -585,7 +602,7 @@ Make the content practical, engaging, and directly applicable to {request.grade_
             messages=[
                 {
                     "role": "system",
-                    "content": "You are an expert K-12 educator and curriculum designer specializing in Texas TEKS standards. Generate comprehensive, practical lesson plans in valid JSON format only. Do not include any text before or after the JSON."
+                    "content": "You are an expert K-12 educator and curriculum designer specializing in Texas TEKS standards. Generate comprehensive, practical lesson plans in valid JSON format only. When asked to write a story, write the complete narrative directly in the JSON - never use placeholders. Do not include any text before or after the JSON."
                 },
                 {
                     "role": "user",
@@ -615,7 +632,7 @@ Make the content practical, engaging, and directly applicable to {request.grade_
             duration=request.duration,
             language=request.language,
             lesson_content=lesson_content,
-            api_cost=0.25  # Approximate cost per generation (tracked internally, not displayed)
+            api_cost=0.15  # GPT-4 Turbo cost
         )
         db.add(db_lesson)
         
