@@ -1,7 +1,6 @@
 """
 Edu-SmartAI Lesson Plan Generator - Backend API
 FastAPI server with secure OpenAI integration and multi-tenant support
-VERSION 2.0 - GPT-4 Turbo with Dynamic Section Selection
 """
 
 from fastapi import FastAPI, Depends, HTTPException, status
@@ -13,6 +12,7 @@ from typing import Optional, List
 import os
 from dotenv import load_dotenv
 import openai
+import json
 
 from database import get_db, engine
 import models
@@ -38,12 +38,11 @@ models.Base.metadata.create_all(bind=engine)
 app = FastAPI(
     title="Edu-SmartAI API",
     description="AI-Powered Lesson Plan Generator for K-12 Education",
-    version="2.0.0"
+    version="1.0.0"
 )
 
 # ==================== UTF-8 JSON RESPONSE CLASS ====================
 from fastapi.responses import JSONResponse
-import json
 
 class UTF8JSONResponse(JSONResponse):
     """Custom JSON response ensuring UTF-8 encoding"""
@@ -251,31 +250,7 @@ async def generate_lesson_plan(
     db: Session = Depends(get_db),
     current_user: models.User = Depends(get_current_active_user)
 ):
-    """Generate a new lesson plan using OpenAI GPT-4 Turbo"""
-    
-    # ==================== NEW: VALIDATION ====================
-    # Validate TEKS standard is provided (now required)
-    if not request.teks_standard or request.teks_standard.strip() == "":
-        raise HTTPException(
-            status_code=400,
-            detail="TEKS standard is required. Please select a TEKS standard."
-        )
-    
-    # Validate at least one section is selected
-    if not any([
-        request.include_main_lesson,
-        request.include_guided_practice,
-        request.include_independent_practice,
-        request.include_learning_stations,
-        request.include_small_group,
-        request.include_tier2,
-        request.include_tier3
-    ]):
-        raise HTTPException(
-            status_code=400,
-            detail="At least one lesson plan section must be selected."
-        )
-    # =========================================================
+    """Generate a new lesson plan using OpenAI"""
     
     # Validate grade level (K-8 only)
     valid_grades = ['K', '1', '2', '3', '4', '5', '6', '7', '8']
@@ -283,6 +258,28 @@ async def generate_lesson_plan(
         raise HTTPException(
             status_code=400,
             detail="Invalid grade level. Only Kindergarten through 8th grade are supported."
+        )
+    
+    # Validate subject and grade restrictions
+    valid_subjects = {
+        'Mathematics': ['K', '1', '2', '3', '4', '5', '6', '7', '8'],
+        'Advanced Mathematics': ['6', '7', '8'],
+        'English Language Arts': ['K', '1', '2', '3', '4', '5', '6', '7', '8'],
+        'Spanish Language Arts': ['K', '1', '2', '3', '4', '5'],
+        'Science': ['K', '1', '2', '3', '4', '5', '6', '7', '8'],
+        'Social Studies': ['K', '1', '2', '3', '4', '5', '6', '7', '8']
+    }
+    
+    if request.subject not in valid_subjects:
+        raise HTTPException(
+            status_code=400,
+            detail=f"Invalid subject. Valid subjects are: {', '.join(valid_subjects.keys())}"
+        )
+    
+    if request.grade_level not in valid_subjects[request.subject]:
+        raise HTTPException(
+            status_code=400,
+            detail=f"{request.subject} is only available for grades {', '.join(valid_subjects[request.subject])}"
         )
     
     # Check organization usage limits
@@ -303,6 +300,9 @@ async def generate_lesson_plan(
             status_code=403,
             detail=f"Monthly limit of {org.max_monthly_lessons} lessons reached. Please upgrade your plan."
         )
+    
+    # Determine which sections to generate
+    sections = request.sections if request.sections else ['mainLessonPlan', 'guidedPractice', 'independentPractice']
     
     # Generate the prompt
     language_instructions = {
@@ -347,44 +347,31 @@ CRITICAL BILINGUAL FORMATTING RULES:
     
     story_complexity = grade_levels.get(request.grade_level, '4th grade level')
     
-    # ==================== NEW: DYNAMIC SECTION BUILDING ====================
-    def build_lesson_structure():
-        """Build JSON structure string based on teacher's section selections"""
-        structure = []
-        
-        # Always include lesson title
-        structure.append('  "lessonTitle": "Engaging title for the lesson (bilingual if applicable)"')
-        
-        # Main Lesson Plan
-        if request.include_main_lesson:
-            structure.append('''  "mainLessonPlan": {
+    # Build section-specific prompts
+    section_prompts = {
+        'mainLessonPlan': """
+  "mainLessonPlan": {
     "objective": "Clear, measurable learning objective aligned to TEKS (in requested language)",
     "materials": ["List of required materials (bilingual format if applicable)"],
     "anticipatorySet": "Hook/engagement activity (5 min)",
     "directInstruction": "Step-by-step teaching procedure with teacher actions",
     "modelingAndChecking": "How to model the concept and check for understanding",
     "closure": "Summary and reflection activity"
-  }''')
-        
-        # Guided Practice
-        if request.include_guided_practice:
-            structure.append('''  "guidedPractice": {
+  }""",
+        'guidedPractice': """
+  "guidedPractice": {
     "description": "Detailed guided practice activities where teacher provides support",
     "activities": ["3-4 structured practice activities with teacher guidance"],
     "differentiationStrategies": ["Support strategies for diverse learners"]
-  }''')
-        
-        # Independent Practice
-        if request.include_independent_practice:
-            structure.append('''  "independentPractice": {
+  }""",
+        'independentPractice': """
+  "independentPractice": {
     "description": "Activities students complete with minimal assistance",
     "activities": ["3-4 independent practice tasks"],
     "assessmentCriteria": ["How to assess student work"]
-  }''')
-        
-        # Learning Stations
-        if request.include_learning_stations:
-            structure.append('''  "learningStations": [
+  }""",
+        'learningStations': """
+  "learningStations": [
     {
       "stationName": "Station 1 name",
       "description": "What students do at this station",
@@ -406,32 +393,26 @@ CRITICAL BILINGUAL FORMATTING RULES:
       "instructions": "Detailed steps",
       "duration": "Time needed"
     }
-  ]''')
-        
-        # Small Group Instruction
-        if request.include_small_group:
-            structure.append('''  "smallGroupInstruction": {
+  ]""",
+        'smallGroupInstruction': """
+  "smallGroupInstruction": {
     "groupingStrategy": "How to group students (by skill level, etc.)",
     "focusArea": "Specific skill or concept to target",
     "activities": ["2-3 targeted small group activities"],
     "assessmentMethod": "How to monitor progress",
     "duration": "Recommended time per group"
-  }''')
-        
-        # Tier 2 Intervention
-        if request.include_tier2:
-            structure.append('''  "tier2Intervention": {
+  }""",
+        'tier2Intervention': """
+  "tier2Intervention": {
     "targetPopulation": "Which students need Tier 2 support",
     "interventionGoal": "Specific skill to address",
     "strategies": ["3-4 evidence-based intervention strategies"],
     "frequency": "How often to implement (e.g., 3x per week, 20 min)",
     "progressMonitoring": "How to track improvement",
     "resources": ["Materials and tools needed"]
-  }''')
-        
-        # Tier 3 Intervention
-        if request.include_tier3:
-            structure.append('''  "tier3Intervention": {
+  }""",
+        'tier3Intervention': """
+  "tier3Intervention": {
     "targetPopulation": "Students requiring intensive support",
     "interventionGoal": "Highly specific, measurable goal",
     "intensiveStrategies": ["3-4 intensive, individualized strategies"],
@@ -439,16 +420,12 @@ CRITICAL BILINGUAL FORMATTING RULES:
     "dataCollection": "Detailed progress monitoring plan",
     "collaborationPlan": "Who to involve (specialists, parents, etc.)",
     "resources": ["Specialized materials and supports"]
-  }''')
-        
-        # Join all sections with commas
-        return "{\n" + ",\n".join(structure) + "\n}"
+  }"""
+    }
     
-    # Get the dynamic structure
-    lesson_structure = build_lesson_structure()
-    # =======================================================================
-
-    # Build the prompt with dynamic structure
+    # Build JSON structure based on selected sections
+    selected_section_prompts = ',\n'.join([section_prompts[section] for section in sections if section in section_prompts])
+    
     prompt = f"""You are an expert K-8 educator specializing in Texas curriculum design with expertise in bilingual education. Generate a comprehensive, standards-aligned lesson plan.
 
 LANGUAGE REQUIREMENT: {language_instruction}
@@ -565,26 +542,6 @@ After writing your complete story, YOU MUST:
    - All sections: Reference story for engagement
 
 ═══════════════════════════════════════════════════════════════════════════════
-📝 STORY WRITING EXAMPLE FOR YOUR REFERENCE
-═══════════════════════════════════════════════════════════════════════════════
-
-Here is an example of what a COMPLETE story looks like (THIS IS THE FORMAT YOU MUST FOLLOW):
-
-"Norma adjusted her purple backpack as she stood beside her best friend Yesika at the bustling San Pedro Sula bus terminal. The morning sun cast long shadows across the concrete platform, and the air smelled of diesel fuel and fresh tortillas from a nearby vendor.
-
-'Are you ready for this adventure?' Yesika asked, her dark eyes sparkling with excitement. She clutched a small notebook where she'd written down all the places they wanted to visit in Mexico City.
-
-Norma smiled, feeling a mixture of nervousness and anticipation. 'I've never been away from home for three whole days,' she admitted. 'But I can't wait to see the city and eat at El Cardenal. My aunt says it's the best restaurant in all of Mexico!'
-
-The two friends had saved their money for months, earning it by helping their families and neighbors. Now, at last, they were about to board the bus that would take them on a grand adventure to Mexico City.
-
-[...continue with 250 more words showing their journey, arrival, experiences, the restaurant visit with specific details about food and atmosphere, conversations, challenges overcome, and what they learned...]
-
-As the sun set over Mexico City on their last evening, Norma and Yesika sat in their small hotel room, exhausted but happy. They had shared an unforgettable experience that had taught them about friendship, courage, and the joy of exploring new places together."
-
-THIS is a complete story. THIS is what you must write. Not a summary. Not a reference. The ACTUAL COMPLETE STORY.
-
-═══════════════════════════════════════════════════════════════════════════════
 ✅ FINAL CHECKLIST - VERIFY BEFORE SENDING YOUR RESPONSE
 ═══════════════════════════════════════════════════════════════════════════════
 
@@ -612,17 +569,19 @@ GRADE-LEVEL STORY REQUIREMENTS:
 - Include relatable characters and situations for grade {request.grade_level} students
 '''}
 
-Generate a lesson plan with the following sections in JSON format:
+Generate a lesson plan with ONLY the following sections in JSON format:
 
-{lesson_structure}
+{{
+  "lessonTitle": "Engaging title for the lesson (bilingual if applicable)",
+{selected_section_prompts}
+}}
 
 Make the content practical, engaging, and directly applicable to {request.grade_level} grade {request.subject}."""
 
     try:
-        # ==================== UPDATED: GPT-4 TURBO ====================
-        # Call OpenAI API with GPT-4 Turbo
+        # Call OpenAI API
         response = openai.chat.completions.create(
-            model="gpt-4-turbo",  # CHANGED FROM gpt-4
+            model="gpt-4-turbo-preview",
             messages=[
                 {
                     "role": "system",
@@ -636,7 +595,6 @@ Make the content practical, engaging, and directly applicable to {request.grade_
             temperature=0.7,
             max_tokens=4000
         )
-        # =============================================================
         
         # Extract and parse the response
         content = response.choices[0].message.content.strip()
@@ -657,7 +615,7 @@ Make the content practical, engaging, and directly applicable to {request.grade_
             duration=request.duration,
             language=request.language,
             lesson_content=lesson_content,
-            api_cost=0.15  # UPDATED: GPT-4 Turbo cost
+            api_cost=0.25  # Approximate cost per generation (tracked internally, not displayed)
         )
         db.add(db_lesson)
         
@@ -784,7 +742,7 @@ async def root():
     return {
         "status": "healthy",
         "service": "Edu-SmartAI API",
-        "version": "2.0.0"
+        "version": "1.0.0"
     }
 
 
